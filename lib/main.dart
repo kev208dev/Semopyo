@@ -211,7 +211,41 @@ class MyApp extends StatelessWidget {
                           ],
                         ),
                         SizedBox(height: 10),
-                        pizzaPlusCircle(),
+                        Hero(
+                          tag: 'pizza-select',
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Container(
+                                width: 130,
+                                height: 130,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  shape: BoxShape.circle,
+                                  border: Border.all(
+                                    color: Colors.purple[400]!,
+                                    width: 2,
+                                  ),
+                                ),
+                                child: Center(child: Icon(Icons.add)),
+                              ),
+                              SizedBox(width: 80),
+                              Container(
+                                width: 130,
+                                height: 130,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  shape: BoxShape.circle,
+                                  border: Border.all(
+                                    color: Colors.purple[400]!,
+                                    width: 2,
+                                  ),
+                                ),
+                                child: Center(child: Icon(Icons.add)),
+                              ),
+                            ],
+                          ),
+                        ),
                         SizedBox(height: 20),
                         Container(
                           width: double.infinity,
@@ -238,7 +272,7 @@ class MyApp extends StatelessWidget {
                                 ),
                                 SizedBox(height: 10),
                                 Text(
-                                  "${dominoPizza['name']}은 ${pizzaHutPizza['name']}보다 약 13.4%더 넓습니다.",
+                                  "${dominoPizza['name']}은 ${pizzaHutPizza['name']}보다 약 ${((((dominoPizza['diameter'] as double) * (dominoPizza['diameter'] as double) * 3.14 - (pizzaHutPizza['diameter'] as double) * (pizzaHutPizza['diameter'] as double)) / (pizzaHutPizza['diameter'] as double) * (pizzaHutPizza['diameter'] as double)) * 100).toStringAsFixed(1)}% 더 넓습니다.",
                                   style: TextStyle(
                                     fontSize: 14,
                                     color: Colors.grey[700],
@@ -260,8 +294,8 @@ class MyApp extends StatelessWidget {
                                   children: [
                                     oneline(
                                       '면적',
-                                      '${dominoPizza['area']}cm²',
-                                      '${pizzaHutPizza['area']}cm²',
+                                      '${((dominoPizza['diameter'] as double) * (dominoPizza['diameter'] as double) * 3.14).toStringAsFixed(1)}cm²',
+                                      '${((pizzaHutPizza['diameter'] as double) * (pizzaHutPizza['diameter'] as double) * 3.14).toStringAsFixed(1)}cm²',
                                     ),
                                     oneline(
                                       '가격',
@@ -270,8 +304,8 @@ class MyApp extends StatelessWidget {
                                     ),
                                     oneline(
                                       '면적 당 가격',
-                                      '${(((dominoPizza['price'] as int) / (dominoPizza['area'] as int)).toStringAsFixed(1))}원',
-                                      '${(((pizzaHutPizza['price'] as int) / (pizzaHutPizza['area'] as int)).toStringAsFixed(1))}원',
+                                      '${((dominoPizza['price'] as int) / (((dominoPizza['diameter'] as double) / 2) * ((dominoPizza['diameter'] as double) / 2) * 3.14)).toStringAsFixed(1)}원/cm²',
+                                      '${((pizzaHutPizza['price'] as int) / (((pizzaHutPizza['diameter'] as double) / 2) * ((pizzaHutPizza['diameter'] as double) / 2) * 3.14)).toStringAsFixed(1)}원/cm²',
                                     ),
                                   ],
                                 ),
@@ -334,34 +368,4 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
-
-  
 }
-Row pizzaPlusCircle() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Container(
-          width: 130,
-          height: 130,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            shape: BoxShape.circle,
-            border: Border.all(color: Colors.purple[400]!, width: 2),
-          ),
-          child: Center(child: Icon(Icons.add)),
-        ),
-        SizedBox(width: 80),
-        Container(
-          width: 130,
-          height: 130,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            shape: BoxShape.circle,
-            border: Border.all(color: Colors.purple[400]!, width: 2),
-          ),
-          child: Center(child: Icon(Icons.add)),
-        ),
-      ],
-    );
-  }
