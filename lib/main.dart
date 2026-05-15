@@ -2,16 +2,104 @@ import 'package:flutter/material.dart';
 import 'cellfunc.dart';
 import 'pizza_data.dart';
 import 'pizza_page_popup.dart';
+import 'dart:convert';
+import 'package:shared_preferences/shared_preferences.dart';
+
+Map<String, dynamic>? pizza1 = null;
+Map<String, dynamic>? pizza2 = null;
 
 const backgroundcolor = Color(0xFFece6cc);
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
   @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  void initState() {
+    super.initState();
+    loadPizzaData();
+  }
+
+  Future<void> loadPizzaData() async {
+    final prefs = await SharedPreferences.getInstance();
+
+    final pizza1String = prefs.getString('pizza1');
+    final pizza2String = prefs.getString('pizza2');
+
+    setState(() {
+      if (pizza1String != null) {
+        pizza1 = Map<String, dynamic>.from(jsonDecode(pizza1String));
+      }
+
+      if (pizza2String != null) {
+        pizza2 = Map<String, dynamic>.from(jsonDecode(pizza2String));
+      }
+    });
+  }
+
+  double pizzaArea(Map<String, dynamic>? pizza) {
+    if (pizza == null) {
+      return 0;
+    }
+
+    final diameter = pizza['diameter'] as double;
+    final radius = diameter / 2;
+    return radius * radius * 3.14;
+  }
+
+  double pricePerSlice(Map<String, dynamic>? pizza) {
+    if (pizza == null) {
+      return 0;
+    }
+
+    return (pizza['price'] as int) / 8;
+  }
+
+  String biggerPizzaText() {
+    if (pizza1 == null || pizza2 == null) {
+      return '피자 미선택';
+    }
+
+    final pizza1Area = pizzaArea(pizza1);
+    final pizza2Area = pizzaArea(pizza2);
+
+    if (pizza1Area > pizza2Area) {
+      return '${pizza1!['name']}가 더 큽니다!';
+    } else if (pizza2Area > pizza1Area) {
+      return '${pizza2!['name']}가 더 큽니다!';
+    } else {
+      return '두 피자의 크기가 같습니다!';
+    }
+  }
+
+  String areaCompareText() {
+    if (pizza1 == null || pizza2 == null) {
+      return '두 피자를 모두 선택해주세요.';
+    }
+
+    final pizza1Area = pizzaArea(pizza1);
+    final pizza2Area = pizzaArea(pizza2);
+
+    if (pizza1Area == pizza2Area) {
+      return '${pizza1!['name']}와 ${pizza2!['name']}의 면적은 같습니다.';
+    }
+
+    final biggerPizza = pizza1Area > pizza2Area ? pizza1 : pizza2;
+    final smallerPizza = pizza1Area > pizza2Area ? pizza2 : pizza1;
+    final biggerArea = pizza1Area > pizza2Area ? pizza1Area : pizza2Area;
+    final smallerArea = pizza1Area > pizza2Area ? pizza2Area : pizza1Area;
+    final percent = ((biggerArea - smallerArea) / smallerArea) * 100;
+
+    return '${biggerPizza!['name']}은 ${smallerPizza!['name']}보다 약 ${percent.toStringAsFixed(1)}% 더 넓습니다.';
+  }
+
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Semopyo',
@@ -23,6 +111,7 @@ class MyApp extends StatelessWidget {
             style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
           ),
         ),
+
         body: Container(
           decoration: BoxDecoration(
             color: backgroundcolor,
@@ -98,7 +187,7 @@ class MyApp extends StatelessWidget {
                                     ),
                                   ),
                                   Text(
-                                    "${dominoPizza['name']}",
+                                    "${pizza1 != null ? pizza1!['name'] : '피자 미선택'}",
                                     style: TextStyle(
                                       fontSize: 21,
                                       fontWeight: FontWeight.w800,
@@ -106,7 +195,7 @@ class MyApp extends StatelessWidget {
                                     ),
                                   ),
                                   Text(
-                                    "${dominoPizza['size']}사이즈",
+                                    "${pizza1 != null ? '${pizza1!['size']}사이즈' : ''}",
                                     style: TextStyle(
                                       fontSize: 20,
                                       fontWeight: FontWeight.w600,
@@ -167,7 +256,7 @@ class MyApp extends StatelessWidget {
                                     ),
                                   ),
                                   Text(
-                                    "${pizzaHutPizza['name']}",
+                                    "${pizza2 != null ? pizza2!['name'] : '피자 미선택'}",
                                     style: TextStyle(
                                       fontSize: 21,
                                       fontWeight: FontWeight.w800,
@@ -175,7 +264,7 @@ class MyApp extends StatelessWidget {
                                     ),
                                   ),
                                   Text(
-                                    "${pizzaHutPizza['size']}사이즈",
+                                    "${pizza2 != null ? '${pizza2!['size']}사이즈' : ''}",
                                     style: TextStyle(
                                       fontSize: 20,
                                       fontWeight: FontWeight.w600,
@@ -192,7 +281,7 @@ class MyApp extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              "지름: 33cm",
+                              "지름: ${pizza1 != null ? '${pizza1!['diameter']}cm' : '피자 미선택'}",
                               style: TextStyle(
                                 fontSize: 16,
                                 color: Colors.black,
@@ -201,7 +290,7 @@ class MyApp extends StatelessWidget {
                             ),
                             SizedBox(width: 130),
                             Text(
-                              "지름: 31cm",
+                              "지름: ${pizza2 != null ? '${pizza2!['diameter']}cm' : '피자 미선택'}",
                               style: TextStyle(
                                 fontSize: 16,
                                 color: Colors.black,
@@ -227,7 +316,7 @@ class MyApp extends StatelessWidget {
                                     width: 2,
                                   ),
                                 ),
-                                child: Center(child: Icon(Icons.add)),
+                                child: Center(child: pizza1 == null ? Icon(Icons.add) : Image.asset(pizza1!['thumbnail'] as String)),
                               ),
                               SizedBox(width: 80),
                               Container(
@@ -241,7 +330,7 @@ class MyApp extends StatelessWidget {
                                     width: 2,
                                   ),
                                 ),
-                                child: Center(child: Icon(Icons.add)),
+                                child: Center(child: pizza2 == null ? Icon(Icons.add) : Image.asset(pizza2!['thumbnail'] as String)),
                               ),
                             ],
                           ),
@@ -264,7 +353,7 @@ class MyApp extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  "${dominoPizza['name']}가 더 큽니다!",
+                                  biggerPizzaText(),
                                   style: TextStyle(
                                     fontSize: 25,
                                     fontWeight: FontWeight.w600,
@@ -272,7 +361,7 @@ class MyApp extends StatelessWidget {
                                 ),
                                 SizedBox(height: 10),
                                 Text(
-                                  "${dominoPizza['name']}은 ${pizzaHutPizza['name']}보다 약 ${((((dominoPizza['diameter'] as double) * (dominoPizza['diameter'] as double) * 3.14 - (pizzaHutPizza['diameter'] as double) * (pizzaHutPizza['diameter'] as double)) / (pizzaHutPizza['diameter'] as double) * (pizzaHutPizza['diameter'] as double)) * 100).toStringAsFixed(1)}% 더 넓습니다.",
+                                  areaCompareText(),
                                   style: TextStyle(
                                     fontSize: 14,
                                     color: Colors.grey[700],
@@ -294,18 +383,18 @@ class MyApp extends StatelessWidget {
                                   children: [
                                     oneline(
                                       '면적',
-                                      '${((dominoPizza['diameter'] as double) * (dominoPizza['diameter'] as double) * 3.14).toStringAsFixed(1)}cm²',
-                                      '${((pizzaHutPizza['diameter'] as double) * (pizzaHutPizza['diameter'] as double) * 3.14).toStringAsFixed(1)}cm²',
+                                      '${pizzaArea(pizza1).toStringAsFixed(1)}cm²',
+                                      '${pizzaArea(pizza2).toStringAsFixed(1)}cm²',
                                     ),
                                     oneline(
                                       '가격',
-                                      '${dominoPizza['price']}원',
-                                      '${pizzaHutPizza['price']}원',
+                                      '${pizza1 != null ? '${pizza1!['price']}원' : '0원'}',
+                                      '${pizza2 != null ? '${pizza2!['price']}원' : '0원'}',
                                     ),
                                     oneline(
-                                      '면적 당 가격',
-                                      '${((dominoPizza['price'] as int) / (((dominoPizza['diameter'] as double) / 2) * ((dominoPizza['diameter'] as double) / 2) * 3.14)).toStringAsFixed(1)}원/cm²',
-                                      '${((pizzaHutPizza['price'] as int) / (((pizzaHutPizza['diameter'] as double) / 2) * ((pizzaHutPizza['diameter'] as double) / 2) * 3.14)).toStringAsFixed(1)}원/cm²',
+                                      '조각 당 가격',
+                                      '${pricePerSlice(pizza1).toStringAsFixed(0)}원/조각',
+                                      '${pricePerSlice(pizza2).toStringAsFixed(0)}원/조각',
                                     ),
                                   ],
                                 ),
@@ -322,14 +411,16 @@ class MyApp extends StatelessWidget {
                               child: SizedBox(
                                 width: double.infinity,
                                 child: ElevatedButton(
-                                  onPressed: () {
-                                    Navigator.push(
+                                  onPressed: () async {
+                                    await Navigator.push(
                                       context,
                                       MaterialPageRoute(
                                         fullscreenDialog: true,
                                         builder: (context) => PizzaPagePopup(),
                                       ),
                                     );
+
+                                    setState(() {});
                                   },
 
                                   style: ElevatedButton.styleFrom(
@@ -343,7 +434,7 @@ class MyApp extends StatelessWidget {
                                     ),
                                   ),
                                   child: Text(
-                                    "다른 피자 비교하러 가기",
+                                    "피자 선택하기",
                                     style: TextStyle(
                                       fontSize: 16,
                                       color: Colors.white,
@@ -355,8 +446,6 @@ class MyApp extends StatelessWidget {
                             );
                           },
                         ),
-
-                        // 추가 ......
                       ],
                     ),
                   ],
