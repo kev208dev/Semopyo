@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'main.dart';
+import 'pizza_page.dart';
 import 'pizza_data.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
@@ -20,7 +20,7 @@ class _PizzaPagePopupState extends State<PizzaPagePopup> {
       backgroundColor: backgroundcolor,
       appBar: AppBar(
         title: const Text(
-          '피자 선택',
+          '피자를 선택해주세요',
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
         ),
         backgroundColor: Colors.white,
@@ -35,11 +35,9 @@ class _PizzaPagePopupState extends State<PizzaPagePopup> {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: ElevatedButton(
-                onPressed: () async{
+                onPressed: () async {
                   if (pizza1 != null && pizza2 != null) {
-                    Navigator.pop(
-                      context,
-                    );
+                    Navigator.pop(context);
                     setState(() {
                       selectedSlot = 0;
                     });
@@ -53,7 +51,8 @@ class _PizzaPagePopupState extends State<PizzaPagePopup> {
                   }
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.black87,
+                  backgroundColor: const Color(0xFF7C3AED),
+
                   padding: EdgeInsets.symmetric(vertical: 12, horizontal: 24),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8),
@@ -124,7 +123,7 @@ class _PizzaPagePopupState extends State<PizzaPagePopup> {
                           color: Colors.white,
                           shape: BoxShape.circle,
                           border: selectedSlot == 1
-                              ? Border.all(color: Colors.purple, width: 5)
+                              ? Border.all(color: Colors.purple, width: 3.5)
                               : Border.all(
                                   color: Colors.purple.withAlpha(100),
                                   width: 2,
@@ -227,13 +226,17 @@ class _PizzaPagePopupState extends State<PizzaPagePopup> {
                   };
                 });
               }
+              setState(() {});
             },
             child: Container(
               width: double.infinity,
               height: 100,
               decoration: BoxDecoration(
                 color: Colors.white,
-                border: Border.all(color: Colors.black, width: 2),
+                border: Border.all(
+                  color: pizza1 == name ? Colors.purple : Colors.white,
+                  width: 1.5,
+                ),
                 borderRadius: BorderRadius.circular(10),
                 boxShadow: [
                   BoxShadow(
@@ -253,45 +256,47 @@ class _PizzaPagePopupState extends State<PizzaPagePopup> {
                       children: [
                         ClipOval(
                           child: Image.asset(
-                          thumbnail,
-                          width: 84,
-                          height: 84,
-                          fit: BoxFit.cover,
+                            thumbnail,
+                            width: 80,
+                            height: 80,
+                            fit: BoxFit.cover,
+                          ),
                         ),
-                      ),
-                      const SizedBox(width: 20),
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              name,
-                              style: const TextStyle(
-                                fontSize: 22,
-                                fontWeight: FontWeight.w800,
+                        const SizedBox(width: 20),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                name,
+                                style: const TextStyle(
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.w900,
+                                ),
                               ),
-                            ),
-                            Text(
-                              '사이즈: $size, 지름: ${diameter.toStringAsFixed(1)}cm, 면적: ${area}cm²\n가격: $price원',
-                              style: TextStyle(
-                                fontSize: 16,
-                                color: Colors.grey[600]!,
+                              Text(
+                                '사이즈: $size, 지름: ${diameter.toStringAsFixed(1)}cm, 면적: ${area}cm²\n가격: $price원',
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  color: Colors.grey[600]!,
+                                ),
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 2,
                               ),
-                              overflow: TextOverflow.ellipsis,
-                              maxLines: 2,
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 10),
-      ],),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
         ),
+
+        SizedBox(height: 5),
       ],
     );
   }
