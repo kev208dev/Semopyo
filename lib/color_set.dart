@@ -1,73 +1,79 @@
 import 'package:flutter/material.dart';
 
-final white = [
-  Color(0xFF5A5A5A),
-  Color(0xFF2A2A2A),
-  Color(0xFF111111),
-];
-
-final red = [
-  Color(0xFF7A1E1E),
-  Color(0xFF3A1212),
-  Color(0xFF111111),
-];
-
-final blue = [
-  Color(0xFF1E3D7A),
-  Color(0xFF14253F),
-  Color(0xFF111111),
-];
-
-final green = [
-  Color(0xFF2E6B47),
-  Color(0xFF173728),
-  Color(0xFF0D0D0D),
-];
-
-final purple = [
-  Color(0xFF5B2A7A),
-  Color(0xFF2A1638),
-  Color(0xFF111111),
-];
-
-final orange = [
-  Color(0xFF8A4B1F),
-  Color(0xFF4A2410),
-  Color(0xFF111111),
-];
-
-final pink = [
-  Color(0xFF7A3557),
-  Color(0xFF3A1A2A),
-  Color(0xFF111111),
-];
-
-final beige = [
-  Color(0xFF6B6255),
-  Color(0xFF353028),
-  Color(0xFF111111),
-];
-
-final gray = [
-  Color(0xFF4F565E),
-  Color(0xFF24282D),
-  Color(0xFF111111),
-];
-
-final skyblue = [
-  Color(0xFF4A6B7A),
-  Color(0xFF23323A),
-  Color(0xFF111111),
-];
-
-final yellow = [
-  Color(0xFF7A7420),
-  Color(0xFF3A360F),
-  Color(0xFF111111),
-];
-
-final black = [
-  Color(0xFF2A2A2A),
-  Color(0xFF171717),
-  Color(0xFF090909),
-];
+List<Color> getColorSet(String color) {
+  if (color.contains('White')) {
+    return [
+      Color(0xFFEAEAEA),
+      Color(0xFFB8B8B8),
+      Color(0xFF5C5C5C),
+    ];
+  } else if (color.contains('Red')) {
+    return [
+      Color(0xFFFF3B30),
+      Color(0xFF8B0000),
+      Color(0xFF1A1A1A),
+    ];
+  } else if (color.contains('Blue')) {
+    return [
+      Color(0xFF2563EB),
+      Color(0xFF0F172A),
+      Color(0xFF000000),
+    ];
+  } else if (color.contains('Black')) {
+    return [
+      Color(0xFF4B5563),
+      Color(0xFF111827),
+      Color(0xFF000000),
+    ];
+  } else if (color.contains('Green')) {
+    return [
+      Color(0xFF10B981),
+      Color(0xFF064E3B),
+      Color(0xFF000000),
+    ];
+  } else if (color.contains('Yellow')) {
+    return [
+      Color(0xFFFACC15),
+      Color(0xFFCA8A04),
+      Color(0xFF1C1917),
+    ];
+  } else if (color.contains('Purple')) {
+    return [
+      Color(0xFF9333EA),
+      Color(0xFF4C1D95),
+      Color(0xFF000000),
+    ];
+  } else if (color.contains('Pink')) {
+    return [
+      Color(0xFFFF4FA3),
+      Color(0xFF831843),
+      Color(0xFF000000),
+    ];
+  } else if (color.contains('Brown')) {
+    return [
+      Color(0xFFB45309),
+      Color(0xFF451A03),
+      Color(0xFF000000),
+    ];
+  } else if (
+      color.contains('Grey') ||
+      color.contains('Gray')) {
+    return [
+      Color(0xFF9CA3AF),
+      Color(0xFF374151),
+      Color(0xFF111827),
+    ];
+  } else if (color.contains('Orange')) {
+    return [
+      Color(0xFFFF7A00),
+      Color(0xFF7C2D12),
+      Color(0xFF000000),
+    ];
+  } else {
+    return [
+      Color(0xFF3B82F6),
+      Color(0xFF1E1B4B),
+      Color(0xFF000000),
+    ];
+  }
+}

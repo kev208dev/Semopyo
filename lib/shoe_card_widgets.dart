@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
 import 'color_set.dart';
 
 class MainShoeCard extends StatelessWidget {
@@ -16,15 +17,11 @@ class MainShoeCard extends StatelessWidget {
   final String name;
   final String price;
   final String thumbnail;
-  final List<Color> color;
+  final String color;
   @override
-  
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 10,
-        vertical: 20,
-      ),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
       child: Container(
         decoration: BoxDecoration(
           boxShadow: [
@@ -34,22 +31,19 @@ class MainShoeCard extends StatelessWidget {
               offset: Offset(5, 10),
             ),
           ],
-    
+
           gradient: LinearGradient(
             begin: Alignment.topLeft,
-    
+
             end: Alignment.bottomRight,
-            colors: color,
+            colors: getColorSet(color),
           ),
           borderRadius: BorderRadius.circular(10),
         ),
         width: 300,
-        height: 350,
+        height: 360,
         child: Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 20,
-            vertical: 20,
-          ),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
           child: Stack(
             clipBehavior: Clip.none,
             children: [
@@ -59,8 +53,7 @@ class MainShoeCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Row(
-                    mainAxisAlignment:
-                        MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
                         brand,
@@ -78,7 +71,7 @@ class MainShoeCard extends StatelessWidget {
                       ),
                     ],
                   ),
-    
+
                   SizedBox(height: 17),
                   Text(
                     name,
@@ -98,26 +91,39 @@ class MainShoeCard extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                     ),
                   ),
+                  DropdownButtonHideUnderline(
+                    child: DropdownButton<int>(
+                      value: 280,
+                      isExpanded: true,
+                      items: [250, 255, 260, 265, 270, 275, 280, 285, 290].map(size) => DropdownMenuItem(
+                        value: size,
+                        child: Text(
+                          'KR ${size}',
+                          style: TextStyle(
+                            fontSize:18,
+                            fontWeight: Fontweight.w700),
+                        )
+                        ).toList(),
+
+                    ),
+                  ),
                 ],
               ),
-              Positioned(
-                right: -50,
-                bottom: -30,
-    
+              
+              Positioned( // 핑크 그림자
+                right: -70,
+                bottom: -11,
+
                 child: Transform.rotate(
                   angle: -0.65,
                   child: ImageFiltered(
-                   
-                    imageFilter: ImageFilter.blur(
-                      sigmaX: 18,
-                      sigmaY: 18,
-                    ),
+                    imageFilter: ImageFilter.blur(sigmaX: 18, sigmaY: 18),
                     child: Opacity(
-                      opacity: 0.25,
+                      opacity: 0.35,
                       child: Image.asset(
                         'assets/images/nike-airforce107.png',
                         width: 300,
-                        color: Colors.pink.withAlpha(100),
+                        color: Colors.pink.withAlpha(200),
                         colorBlendMode: BlendMode.srcATop,
                         fit: BoxFit.contain,
                       ),
@@ -126,8 +132,8 @@ class MainShoeCard extends StatelessWidget {
                 ),
               ),
               Positioned(
-                right: -50,
-                bottom: -7,
+                right: -70,
+                bottom: -11,
                 child: Transform.rotate(
                   angle: -0.65,
                   child: Image.asset(
@@ -145,13 +151,7 @@ class MainShoeCard extends StatelessWidget {
   }
 }
 
-
-
 ////////////////////////////////////
-
-
-
-
 
 class SubShoeCard extends StatelessWidget {
   const SubShoeCard({
@@ -167,40 +167,34 @@ class SubShoeCard extends StatelessWidget {
   final String name;
   final String price;
   final String thumbnail;
-  final List<Color> color;
+  final String color;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 10,
-        vertical: 20,
-      ),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
       child: Container(
         decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(
-              color: Colors.pink.withAlpha(77),
+              color: Colors.black.withAlpha(77),
               blurRadius: 15,
               offset: Offset(5, 10),
             ),
           ],
-    
+
           gradient: LinearGradient(
             begin: Alignment.topLeft,
-    
+
             end: Alignment.bottomRight,
-            colors: color,
+            colors: getColorSet(color),
           ),
           borderRadius: BorderRadius.circular(10),
         ),
-        width: 300,
-        height: 150,
+        width: 100,
+        height: 160,
         child: Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 20,
-            vertical: 20,
-          ),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
           child: Stack(
             clipBehavior: Clip.none,
             children: [
@@ -210,13 +204,15 @@ class SubShoeCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Row(
-                    mainAxisAlignment:
-                        MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
                         brand,
                         style: TextStyle(
-                          color: Colors.white,
+                          color: thumbnail.contains("white")
+                              ? Colors.black
+                              : Colors.white,
+
                           fontSize: 30,
                           fontStyle: FontStyle.italic,
                           fontWeight: FontWeight.w900,
@@ -229,39 +225,53 @@ class SubShoeCard extends StatelessWidget {
                       ),
                     ],
                   ),
-    
-                  SizedBox(height: 17),
-                  Text(
-                    name,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontStyle: FontStyle.italic,
-                      fontSize: 15,
-                      fontWeight: FontWeight.w600,
+
+                  SizedBox(height: 8),
+                  SizedBox(
+                    width: 180,
+                    child: Text(
+                      name,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        color: thumbnail.contains("white")
+                            ? Colors.black
+                            : Colors.white,
+                        fontStyle: FontStyle.italic,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                      ),
                     ),
                   ),
                   Text(
-                    '${price}원',
+                    '\$ ${price}',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: thumbnail.contains("white")
+                          ? Colors.black
+                          : Colors.white,
                       fontStyle: FontStyle.italic,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w800,
                     ),
                   ),
                 ],
               ),
-             
+
               Positioned(
-                right: -10,
-                bottom: -7,
-                child: Image.asset(
-                    thumbnail,
-                    width: 160,
-                    fit: BoxFit.contain,
-                  ),
+                right: -20,
+                bottom: -60,
+                child: SizedBox(
+                  width: 200,
+                  height: 200,
+                  child: thumbnail.isEmpty
+                      ? SizedBox()
+                      : Transform(
+                          alignment: .center,
+                          transform: Matrix4.rotationY(3.14159),
+                          child: Image.network(thumbnail, fit: BoxFit.contain),
+                        ),
                 ),
-              
+              ),
             ],
           ),
         ),
