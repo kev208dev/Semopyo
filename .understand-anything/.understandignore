@@ -1,0 +1,45 @@
+# .understandignore — patterns for files/dirs to exclude from analysis
+# Syntax: same as .gitignore
+
+# --- From .gitignore (uncomment to exclude) ---
+
+# *.class
+# *.pyc
+# *.swp
+# .DS_Store
+# .atom/
+# .build/
+# .buildlog/
+# .history
+# .svn/
+# .swiftpm/
+# migrate_working_dir/
+# *.iml
+# *.ipr
+# *.iws
+# **/doc/api/
+# **/ios/Flutter/.last_build_id
+# .dart_tool/
+# .flutter-plugins-dependencies
+# .pub-cache/
+# .pub/
+# /build/
+# /coverage/
+# app.*.symbols
+# app.*.map.json
+# /android/app/debug
+# /android/app/profile
+# /android/app/release
+
+# Flutter platform dirs (active exclusions)
+android/
+ios/
+macos/
+linux/
+windows/
+web/
+.dart_tool/
+.flutter-plugins-dependencies
+*.iml
+assets/
+flutter_01.png

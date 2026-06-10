@@ -1,0 +1,164 @@
+{
+  "scriptCompleted": true,
+  "files": [
+    {
+      "path": ".metadata",
+      "language": "unknown",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".understand-anything/.understandignore",
+      "language": "unknown",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".understand-anything/config.json",
+      "language": "json",
+      "sizeLines": 3,
+      "fileCategory": "config"
+    },
+    {
+      "path": "analysis_options.yaml",
+      "language": "yaml",
+      "sizeLines": 28,
+      "fileCategory": "config"
+    },
+    {
+      "path": "data/manual_todo.csv",
+      "language": "csv",
+      "sizeLines": 4,
+      "fileCategory": "data"
+    },
+    {
+      "path": "data/README.md",
+      "language": "markdown",
+      "sizeLines": 105,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "data/shoes_sizing.csv",
+      "language": "csv",
+      "sizeLines": 62,
+      "fileCategory": "data"
+    },
+    {
+      "path": "devtools_options.yaml",
+      "language": "yaml",
+      "sizeLines": 3,
+      "fileCategory": "config"
+    },
+    {
+      "path": "lib/cellfunc.dart",
+      "language": "dart",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/color_set.dart",
+      "language": "dart",
+      "sizeLines": 78,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/fit_data.dart",
+      "language": "dart",
+      "sizeLines": 95,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/main.dart",
+      "language": "dart",
+      "sizeLines": 285,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/pizza_data.dart",
+      "language": "dart",
+      "sizeLines": 114,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/pizza_page_popup.dart",
+      "language": "dart",
+      "sizeLines": 303,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/pizza_page.dart",
+      "language": "dart",
+      "sizeLines": 437,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/shoe_card_widgets.dart",
+      "language": "dart",
+      "sizeLines": 420,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/shoe_select_page.dart",
+      "language": "dart",
+      "sizeLines": 289,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/shoes_data.dart",
+      "language": "dart",
+      "sizeLines": 118,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lib/shoes_page.dart",
+      "language": "dart",
+      "sizeLines": 306,
+      "fileCategory": "code"
+    },
+    {
+      "path": "pubspec.yaml",
+      "language": "yaml",
+      "sizeLines": 94,
+      "fileCategory": "config"
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "sizeLines": 17,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "scripts/build_dataset.py",
+      "language": "python",
+      "sizeLines": 210,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scripts/validate.py",
+      "language": "python",
+      "sizeLines": 118,
+      "fileCategory": "code"
+    }
+  ],
+  "totalFiles": 23,
+  "filteredByIgnore": 83,
+  "estimatedComplexity": "small",
+  "stats": {
+    "filesScanned": 23,
+    "byCategory": {
+      "code": 15,
+      "config": 4,
+      "data": 2,
+      "docs": 2
+    },
+    "byLanguage": {
+      "unknown": 2,
+      "json": 1,
+      "yaml": 3,
+      "csv": 2,
+      "markdown": 2,
+      "dart": 11,
+      "python": 2
+    }
+  }
+}

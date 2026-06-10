@@ -1,0 +1,33 @@
+{
+  "issues": [],
+  "warnings": [
+    "Node 'config:devtools_options.yaml' has no edges (orphan)",
+    "Node 'file:.metadata' has no edges (orphan)",
+    "Node 'file:.understand-anything/.understandignore' has no edges (orphan)"
+  ],
+  "stats": {
+    "totalNodes": 41,
+    "totalEdges": 67,
+    "totalLayers": 6,
+    "tourSteps": 10,
+    "nodeTypes": {
+      "document": 2,
+      "config": 4,
+      "table": 2,
+      "file": 15,
+      "function": 3,
+      "class": 15
+    },
+    "edgeTypes": {
+      "depends_on": 1,
+      "configures": 8,
+      "documents": 5,
+      "defines_schema": 2,
+      "related": 2,
+      "imports": 16,
+      "contains": 18,
+      "exports": 14,
+      "calls": 1
+    }
+  }
+}

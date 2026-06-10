@@ -1,0 +1,512 @@
+{
+  "scriptCompleted": true,
+  "entryPointCandidates": [
+    {
+      "id": "document:README.md",
+      "name": "README.md",
+      "score": 5,
+      "summary": "Flutter 기본 템플릿에서 자동 생성된 프로젝트 소개 문서로, semopyo 프로젝트의 시작점과 Flutter 학습 리소스 링크를 제공합니다. 아직 프로젝트 고유의 도메인(브랜드별 신발/피자/음료 치수 표준화) 설명은 포함되어 있지 않습니다."
+    },
+    {
+      "id": "file:lib/main.dart",
+      "name": "main.dart",
+      "score": 4,
+      "summary": "Flutter 앱의 진입점으로 MyApp/MyHomePage를 정의하고 신발·피자·음료·의류 카테고리 버튼을 가진 홈 화면을 구성한다."
+    },
+    {
+      "id": "config:analysis_options.yaml",
+      "name": "analysis_options.yaml",
+      "score": 2,
+      "summary": "Dart 정적 분석기 설정 파일로 `package:flutter_lints/flutter.yaml`의 권장 lint 규칙을 활성화하며, 프로젝트별 커스텀 규칙은 추가되어 있지 않습니다. `flutter analyze` 실행 및 IDE 경고 표시에 사용됩니다."
+    },
+    {
+      "id": "config:devtools_options.yaml",
+      "name": "devtools_options.yaml",
+      "score": 2,
+      "summary": "Dart 및 Flutter DevTools 확장 기능 활성화 상태를 저장하는 설정 파일로, 현재는 확장 목록이 비어 있는 기본 상태입니다."
+    },
+    {
+      "id": "config:pubspec.yaml",
+      "name": "pubspec.yaml",
+      "score": 2,
+      "summary": "Flutter 프로젝트의 메타데이터, SDK 제약(`^3.11.4`), 런타임 의존성(http, cupertino_icons, shared_preferences) 및 개발 의존성(flutter_test, flutter_lints)을 정의하는 핵심 패키지 매니페스트입니다. `assets/images/` 디렉터리를 앱 자산으로 등록하고 Material Design 아이콘 사용을 활성화합니다."
+    }
+  ],
+  "fanInRanking": [
+    {
+      "id": "file:lib/fit_data.dart",
+      "name": "fit_data.dart",
+      "fanIn": 4
+    },
+    {
+      "id": "file:lib/main.dart",
+      "name": "main.dart",
+      "fanIn": 4
+    },
+    {
+      "id": "file:lib/shoes_data.dart",
+      "name": "shoes_data.dart",
+      "fanIn": 4
+    },
+    {
+      "id": "file:lib/shoe_card_widgets.dart",
+      "name": "shoe_card_widgets.dart",
+      "fanIn": 3
+    },
+    {
+      "id": "file:lib/shoes_page.dart",
+      "name": "shoes_page.dart",
+      "fanIn": 3
+    },
+    {
+      "id": "table:data/shoes_sizing.csv",
+      "name": "shoes_sizing.csv",
+      "fanIn": 2
+    },
+    {
+      "id": "file:lib/pizza_data.dart",
+      "name": "pizza_data.dart",
+      "fanIn": 2
+    },
+    {
+      "id": "file:lib/pizza_page.dart",
+      "name": "pizza_page.dart",
+      "fanIn": 2
+    },
+    {
+      "id": "file:lib/shoe_select_page.dart",
+      "name": "shoe_select_page.dart",
+      "fanIn": 2
+    },
+    {
+      "id": "file:scripts/build_dataset.py",
+      "name": "build_dataset.py",
+      "fanIn": 2
+    },
+    {
+      "id": "config:pubspec.yaml",
+      "name": "pubspec.yaml",
+      "fanIn": 1
+    },
+    {
+      "id": "table:data/manual_todo.csv",
+      "name": "manual_todo.csv",
+      "fanIn": 1
+    },
+    {
+      "id": "file:lib/cellfunc.dart",
+      "name": "cellfunc.dart",
+      "fanIn": 1
+    },
+    {
+      "id": "file:lib/color_set.dart",
+      "name": "color_set.dart",
+      "fanIn": 1
+    },
+    {
+      "id": "file:lib/pizza_page_popup.dart",
+      "name": "pizza_page_popup.dart",
+      "fanIn": 1
+    },
+    {
+      "id": "file:scripts/validate.py",
+      "name": "validate.py",
+      "fanIn": 1
+    },
+    {
+      "id": "document:README.md",
+      "name": "README.md",
+      "fanIn": 0
+    },
+    {
+      "id": "config:analysis_options.yaml",
+      "name": "analysis_options.yaml",
+      "fanIn": 0
+    },
+    {
+      "id": "config:devtools_options.yaml",
+      "name": "devtools_options.yaml",
+      "fanIn": 0
+    },
+    {
+      "id": "document:data/README.md",
+      "name": "README.md",
+      "fanIn": 0
+    }
+  ],
+  "fanOutRanking": [
+    {
+      "id": "config:pubspec.yaml",
+      "name": "pubspec.yaml",
+      "fanOut": 6
+    },
+    {
+      "id": "document:data/README.md",
+      "name": "README.md",
+      "fanOut": 4
+    },
+    {
+      "id": "file:lib/shoe_select_page.dart",
+      "name": "shoe_select_page.dart",
+      "fanOut": 4
+    },
+    {
+      "id": "file:lib/shoes_page.dart",
+      "name": "shoes_page.dart",
+      "fanOut": 4
+    },
+    {
+      "id": "file:lib/pizza_page.dart",
+      "name": "pizza_page.dart",
+      "fanOut": 3
+    },
+    {
+      "id": "config:analysis_options.yaml",
+      "name": "analysis_options.yaml",
+      "fanOut": 2
+    },
+    {
+      "id": "table:data/shoes_sizing.csv",
+      "name": "shoes_sizing.csv",
+      "fanOut": 2
+    },
+    {
+      "id": "file:lib/main.dart",
+      "name": "main.dart",
+      "fanOut": 2
+    },
+    {
+      "id": "file:lib/pizza_page_popup.dart",
+      "name": "pizza_page_popup.dart",
+      "fanOut": 2
+    },
+    {
+      "id": "document:README.md",
+      "name": "README.md",
+      "fanOut": 1
+    },
+    {
+      "id": "table:data/manual_todo.csv",
+      "name": "manual_todo.csv",
+      "fanOut": 1
+    },
+    {
+      "id": "config:.understand-anything/config.json",
+      "name": "config.json",
+      "fanOut": 1
+    },
+    {
+      "id": "file:lib/shoe_card_widgets.dart",
+      "name": "shoe_card_widgets.dart",
+      "fanOut": 1
+    },
+    {
+      "id": "file:scripts/validate.py",
+      "name": "validate.py",
+      "fanOut": 1
+    },
+    {
+      "id": "config:devtools_options.yaml",
+      "name": "devtools_options.yaml",
+      "fanOut": 0
+    },
+    {
+      "id": "file:.metadata",
+      "name": ".metadata",
+      "fanOut": 0
+    },
+    {
+      "id": "file:.understand-anything/.understandignore",
+      "name": ".understandignore",
+      "fanOut": 0
+    },
+    {
+      "id": "file:lib/cellfunc.dart",
+      "name": "cellfunc.dart",
+      "fanOut": 0
+    },
+    {
+      "id": "file:lib/color_set.dart",
+      "name": "color_set.dart",
+      "fanOut": 0
+    },
+    {
+      "id": "file:lib/fit_data.dart",
+      "name": "fit_data.dart",
+      "fanOut": 0
+    }
+  ],
+  "bfsTraversal": {
+    "startNode": "file:lib/main.dart",
+    "order": [
+      "file:lib/main.dart",
+      "file:lib/pizza_page.dart",
+      "file:lib/shoes_page.dart",
+      "file:lib/cellfunc.dart",
+      "file:lib/pizza_data.dart",
+      "file:lib/pizza_page_popup.dart",
+      "file:lib/shoe_select_page.dart",
+      "file:lib/shoe_card_widgets.dart",
+      "file:lib/shoes_data.dart",
+      "file:lib/fit_data.dart",
+      "file:lib/color_set.dart"
+    ],
+    "depthMap": {
+      "file:lib/main.dart": 0,
+      "file:lib/pizza_page.dart": 1,
+      "file:lib/shoes_page.dart": 1,
+      "file:lib/cellfunc.dart": 2,
+      "file:lib/pizza_data.dart": 2,
+      "file:lib/pizza_page_popup.dart": 2,
+      "file:lib/shoe_select_page.dart": 2,
+      "file:lib/shoe_card_widgets.dart": 2,
+      "file:lib/shoes_data.dart": 2,
+      "file:lib/fit_data.dart": 2,
+      "file:lib/color_set.dart": 3
+    },
+    "byDepth": {
+      "0": [
+        "file:lib/main.dart"
+      ],
+      "1": [
+        "file:lib/pizza_page.dart",
+        "file:lib/shoes_page.dart"
+      ],
+      "2": [
+        "file:lib/cellfunc.dart",
+        "file:lib/pizza_data.dart",
+        "file:lib/pizza_page_popup.dart",
+        "file:lib/shoe_select_page.dart",
+        "file:lib/shoe_card_widgets.dart",
+        "file:lib/shoes_data.dart",
+        "file:lib/fit_data.dart"
+      ],
+      "3": [
+        "file:lib/color_set.dart"
+      ]
+    }
+  },
+  "nonCodeFiles": {
+    "documentation": [
+      {
+        "id": "document:README.md",
+        "name": "README.md",
+        "summary": "Flutter 기본 템플릿에서 자동 생성된 프로젝트 소개 문서로, semopyo 프로젝트의 시작점과 Flutter 학습 리소스 링크를 제공합니다. 아직 프로젝트 고유의 도메인(브랜드별 신발/피자/음료 치수 표준화) 설명은 포함되어 있지 않습니다."
+      },
+      {
+        "id": "document:data/README.md",
+        "name": "README.md",
+        "summary": "세모표 신발 사이즈 데이터셋의 스키마, 품질 규칙, 수집 원칙, 출처, 한계를 정리한 데이터셋 문서. 19개 컬럼 모델(official_spec vs perception 분리), enum 허용값, validate.py가 강제하는 6가지 품질 규칙, 그리고 61행/29 브랜드 현재 스냅샷 요약을 포함."
+      }
+    ],
+    "infrastructure": [],
+    "data": [
+      {
+        "id": "table:data/manual_todo.csv",
+        "name": "manual_todo.csv",
+        "summary": "manual_collection=TRUE 인 3개 브랜드(아식스 JS차트, 크록스 fit-guide, 무신사 로그인 게이트) 수동수집 백로그. shoes_sizing.csv와 동일한 19컬럼 스키마를 따르며 scripts/build_dataset.py가 함께 생성."
+      },
+      {
+        "id": "table:data/shoes_sizing.csv",
+        "name": "shoes_sizing.csv",
+        "summary": "세모표 앱의 신발 사이즈/핏 정규화 데이터셋. 61행 29브랜드(글로벌 43/국산 18, official_spec 16/perception 45)로 라벨 사이즈, 의도 발길이, fit_verdict, 발볼/강성, 가격대, 출처 신뢰도를 정리. lib/shoes_data.dart 와 lib/fit_data.dart 의 최종 원천 데이터."
+      }
+    ],
+    "config": [
+      {
+        "id": "config:analysis_options.yaml",
+        "name": "analysis_options.yaml",
+        "summary": "Dart 정적 분석기 설정 파일로 `package:flutter_lints/flutter.yaml`의 권장 lint 규칙을 활성화하며, 프로젝트별 커스텀 규칙은 추가되어 있지 않습니다. `flutter analyze` 실행 및 IDE 경고 표시에 사용됩니다."
+      },
+      {
+        "id": "config:devtools_options.yaml",
+        "name": "devtools_options.yaml",
+        "summary": "Dart 및 Flutter DevTools 확장 기능 활성화 상태를 저장하는 설정 파일로, 현재는 확장 목록이 비어 있는 기본 상태입니다."
+      },
+      {
+        "id": "config:pubspec.yaml",
+        "name": "pubspec.yaml",
+        "summary": "Flutter 프로젝트의 메타데이터, SDK 제약(`^3.11.4`), 런타임 의존성(http, cupertino_icons, shared_preferences) 및 개발 의존성(flutter_test, flutter_lints)을 정의하는 핵심 패키지 매니페스트입니다. `assets/images/` 디렉터리를 앱 자산으로 등록하고 Material Design 아이콘 사용을 활성화합니다."
+      },
+      {
+        "id": "config:.understand-anything/config.json",
+        "name": "config.json",
+        "summary": "understand-anything 분석 도구의 출력 언어(한국어) 등 프로젝트 단위 설정을 보관하는 JSON 설정 파일."
+      }
+    ]
+  },
+  "clusters": [
+    {
+      "nodes": [
+        "file:lib/shoe_select_page.dart",
+        "file:lib/shoes_page.dart",
+        "config:pubspec.yaml",
+        "file:lib/shoes_data.dart",
+        "file:lib/shoe_card_widgets.dart"
+      ],
+      "edgeCount": 9
+    },
+    {
+      "nodes": [
+        "file:lib/pizza_page.dart",
+        "file:lib/pizza_page_popup.dart",
+        "file:lib/pizza_data.dart"
+      ],
+      "edgeCount": 3
+    }
+  ],
+  "layers": {
+    "count": 6,
+    "list": [
+      {
+        "id": "layer:entry",
+        "name": "앱 진입점 레이어",
+        "description": "Flutter 앱의 main 함수와 카테고리(신발/피자/음료/의류) 선택 홈 화면을 정의하여 모든 기능 페이지로의 진입을 라우팅합니다."
+      },
+      {
+        "id": "layer:ui",
+        "name": "Page UI 레이어",
+        "description": "신발 및 피자 비교 기능의 Page/Dialog/Card widget을 구현하는 StatefulWidget 화면 코드로, 사용자 입력 처리와 shared_preferences 영속화를 담당합니다."
+      },
+      {
+        "id": "layer:domain-data",
+        "name": "도메인 데이터 & API 레이어",
+        "description": "브랜드별 신발 핏 규칙·피자 메뉴 상수와 the-sneaker-database RapidAPI 클라이언트를 정의하여 비교 화면에 도메인 데이터를 공급합니다."
+      },
+      {
+        "id": "layer:utility",
+        "name": "공용 UI 유틸리티 레이어",
+        "description": "여러 화면이 공유하는 색상 팔레트 매핑(getColorSet)과 표 행 생성(oneline) 등의 횡단 헬퍼 함수를 모아 둔 보조 모듈입니다."
+      },
+      {
+        "id": "layer:data",
+        "name": "데이터셋 & 파이프라인 레이어",
+        "description": "신발 사이즈 정규화 CSV 데이터셋(shoes_sizing.csv, manual_todo.csv)과 이를 생성·검증하는 Python ETL 스크립트로 구성된 오프라인 데이터 파이프라인입니다."
+      },
+      {
+        "id": "layer:project-config",
+        "name": "프로젝트 설정 & 문서 레이어",
+        "description": "pubspec/analysis_options 등 Flutter 빌드·린트 설정, 루트 README와 .metadata, understand-anything 분석 도구 설정을 포함한 프로젝트 단위 메타·구성 파일 묶음입니다."
+      }
+    ]
+  },
+  "nodeSummaryIndex": {
+    "document:README.md": {
+      "name": "README.md",
+      "type": "document",
+      "summary": "Flutter 기본 템플릿에서 자동 생성된 프로젝트 소개 문서로, semopyo 프로젝트의 시작점과 Flutter 학습 리소스 링크를 제공합니다. 아직 프로젝트 고유의 도메인(브랜드별 신발/피자/음료 치수 표준화) 설명은 포함되어 있지 않습니다."
+    },
+    "config:analysis_options.yaml": {
+      "name": "analysis_options.yaml",
+      "type": "config",
+      "summary": "Dart 정적 분석기 설정 파일로 `package:flutter_lints/flutter.yaml`의 권장 lint 규칙을 활성화하며, 프로젝트별 커스텀 규칙은 추가되어 있지 않습니다. `flutter analyze` 실행 및 IDE 경고 표시에 사용됩니다."
+    },
+    "config:devtools_options.yaml": {
+      "name": "devtools_options.yaml",
+      "type": "config",
+      "summary": "Dart 및 Flutter DevTools 확장 기능 활성화 상태를 저장하는 설정 파일로, 현재는 확장 목록이 비어 있는 기본 상태입니다."
+    },
+    "config:pubspec.yaml": {
+      "name": "pubspec.yaml",
+      "type": "config",
+      "summary": "Flutter 프로젝트의 메타데이터, SDK 제약(`^3.11.4`), 런타임 의존성(http, cupertino_icons, shared_preferences) 및 개발 의존성(flutter_test, flutter_lints)을 정의하는 핵심 패키지 매니페스트입니다. `assets/images/` 디렉터리를 앱 자산으로 등록하고 Material Design 아이콘 사용을 활성화합니다."
+    },
+    "document:data/README.md": {
+      "name": "README.md",
+      "type": "document",
+      "summary": "세모표 신발 사이즈 데이터셋의 스키마, 품질 규칙, 수집 원칙, 출처, 한계를 정리한 데이터셋 문서. 19개 컬럼 모델(official_spec vs perception 분리), enum 허용값, validate.py가 강제하는 6가지 품질 규칙, 그리고 61행/29 브랜드 현재 스냅샷 요약을 포함."
+    },
+    "table:data/manual_todo.csv": {
+      "name": "manual_todo.csv",
+      "type": "table",
+      "summary": "manual_collection=TRUE 인 3개 브랜드(아식스 JS차트, 크록스 fit-guide, 무신사 로그인 게이트) 수동수집 백로그. shoes_sizing.csv와 동일한 19컬럼 스키마를 따르며 scripts/build_dataset.py가 함께 생성."
+    },
+    "table:data/shoes_sizing.csv": {
+      "name": "shoes_sizing.csv",
+      "type": "table",
+      "summary": "세모표 앱의 신발 사이즈/핏 정규화 데이터셋. 61행 29브랜드(글로벌 43/국산 18, official_spec 16/perception 45)로 라벨 사이즈, 의도 발길이, fit_verdict, 발볼/강성, 가격대, 출처 신뢰도를 정리. lib/shoes_data.dart 와 lib/fit_data.dart 의 최종 원천 데이터."
+    },
+    "file:.metadata": {
+      "name": ".metadata",
+      "type": "file",
+      "summary": "Flutter 도구가 자동 생성·관리하는 프로젝트 메타데이터 파일로, 채널/리비전 및 마이그레이션 추적 정보를 보관한다."
+    },
+    "file:.understand-anything/.understandignore": {
+      "name": ".understandignore",
+      "type": "file",
+      "summary": "understand-anything 분석 도구가 무시할 경로 패턴을 정의하는 ignore 파일로, 빌드 산출물과 외부 의존성을 분석 대상에서 제외한다."
+    },
+    "config:.understand-anything/config.json": {
+      "name": "config.json",
+      "type": "config",
+      "summary": "understand-anything 분석 도구의 출력 언어(한국어) 등 프로젝트 단위 설정을 보관하는 JSON 설정 파일."
+    },
+    "file:lib/cellfunc.dart": {
+      "name": "cellfunc.dart",
+      "type": "file",
+      "summary": "피자 비교 표의 한 행(TableRow)을 생성하는 oneline 유틸 위젯 함수를 제공하여 pizza_page의 표 셀 구성을 단순화한다."
+    },
+    "file:lib/color_set.dart": {
+      "name": "color_set.dart",
+      "type": "file",
+      "summary": "신발 색상 문자열을 입력받아 메인/서브/액센트용 Color 3종을 반환하는 getColorSet 함수를 제공하여 카드 위젯의 색조를 결정한다."
+    },
+    "file:lib/fit_data.dart": {
+      "name": "fit_data.dart",
+      "type": "file",
+      "summary": "브랜드별 신발 핏(작게/정사이즈/크게) 규칙을 정의한 FitInfo 모델과 추천 사이즈 계산 함수(fitFor, recommendedLabel, verdictPhrase)를 제공한다."
+    },
+    "file:lib/main.dart": {
+      "name": "main.dart",
+      "type": "file",
+      "summary": "Flutter 앱의 진입점으로 MyApp/MyHomePage를 정의하고 신발·피자·음료·의류 카테고리 버튼을 가진 홈 화면을 구성한다."
+    },
+    "file:lib/pizza_data.dart": {
+      "name": "pizza_data.dart",
+      "type": "file",
+      "summary": "도미노/피자헛/파파존스/미스터피자 등 브랜드별 피자 메뉴와 사이즈, 가격, 지름을 담은 상수 Map 데이터를 제공한다."
+    },
+    "file:lib/pizza_page_popup.dart": {
+      "name": "pizza_page_popup.dart",
+      "type": "file",
+      "summary": "피자 비교 페이지의 추가/편집 팝업 다이얼로그를 StatefulWidget으로 구현하며, shared_preferences로 사용자 선택을 영속화한다."
+    },
+    "file:lib/pizza_page.dart": {
+      "name": "pizza_page.dart",
+      "type": "file",
+      "summary": "여러 브랜드 피자의 지름·가격·100원당 면적 등을 표로 비교하는 PizzaPage StatefulWidget으로, shared_preferences로 선택을 저장한다."
+    },
+    "file:lib/shoe_card_widgets.dart": {
+      "name": "shoe_card_widgets.dart",
+      "type": "file",
+      "summary": "신발 비교 페이지에서 사용하는 MainShoeCard·SubShoeCard·_SizeSelector·_SizeBadge 등 카드 UI 위젯을 정의한다."
+    },
+    "file:lib/shoe_select_page.dart": {
+      "name": "shoe_select_page.dart",
+      "type": "file",
+      "summary": "사용자가 비교할 신발을 검색·선택하는 ShoeSelectPage StatefulWidget으로, shoes_data와 fit_data를 기반으로 추천 사이즈를 계산해 표시한다."
+    },
+    "file:lib/shoes_data.dart": {
+      "name": "shoes_data.dart",
+      "type": "file",
+      "summary": "the-sneaker-database RapidAPI에서 Nike 신발 목록을 가져오는 SneakerApiService와 응답을 매핑하는 ShoeModel을 정의한다."
+    },
+    "file:lib/shoes_page.dart": {
+      "name": "shoes_page.dart",
+      "type": "file",
+      "summary": "선택된 기준 신발과 비교 대상 신발들의 사이즈·핏을 나란히 보여주는 ShoesPage StatefulWidget으로, 비교 화면의 메인 컨테이너 역할을 한다."
+    },
+    "file:scripts/build_dataset.py": {
+      "name": "build_dataset.py",
+      "type": "file",
+      "summary": "research_shoes.md를 수작업 파싱한 ROWS를 기반으로 data/shoes_sizing.csv와 data/manual_todo.csv를 생성하는 데이터셋 빌더 스크립트."
+    },
+    "file:scripts/validate.py": {
+      "name": "validate.py",
+      "type": "file",
+      "summary": "shoes_sizing.csv의 헤더·enum·정수 필드·날짜·source_url에 대한 reliability 제약을 검증하고 위반 시 라인 번호와 사유를 출력하는 스키마 검증 스크립트."
+    }
+  },
+  "totalNodes": 23,
+  "totalEdges": 67
+}

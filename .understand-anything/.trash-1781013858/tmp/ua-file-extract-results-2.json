@@ -1,0 +1,89 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "data/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 105,
+      "nonEmptyLines": 85,
+      "sections": [
+        {
+          "heading": "세모표 신발 사이즈 데이터셋",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "산출물",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "재생성 & 검증",
+          "level": 3,
+          "line": 17
+        },
+        {
+          "heading": "데이터 모델 (컬럼 순서 고정)",
+          "level": 2,
+          "line": 24
+        },
+        {
+          "heading": "데이터 품질 규칙 (validate.py 가 강제)",
+          "level": 2,
+          "line": 48
+        },
+        {
+          "heading": "수집 원칙",
+          "level": 2,
+          "line": 59
+        },
+        {
+          "heading": "출처",
+          "level": 2,
+          "line": 69
+        },
+        {
+          "heading": "한계 (Caveats)",
+          "level": 2,
+          "line": 79
+        },
+        {
+          "heading": "수동수집 목록 (`data/manual_todo.csv`, 3건)",
+          "level": 2,
+          "line": 91
+        },
+        {
+          "heading": "요약 (현재 스냅샷)",
+          "level": 2,
+          "line": 99
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "data/manual_todo.csv",
+      "language": "csv",
+      "fileCategory": "data",
+      "totalLines": 4,
+      "nonEmptyLines": 4,
+      "metrics": {}
+    },
+    {
+      "path": "data/shoes_sizing.csv",
+      "language": "csv",
+      "fileCategory": "data",
+      "totalLines": 62,
+      "nonEmptyLines": 62,
+      "metrics": {}
+    }
+  ]
+}

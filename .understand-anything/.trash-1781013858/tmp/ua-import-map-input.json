@@ -1,0 +1,28 @@
+{
+  "projectRoot": "/Users/chaeho/SMP/Semopyo",
+  "files": [
+    {"path": ".metadata", "language": "unknown", "fileCategory": "code"},
+    {"path": ".understand-anything/.understandignore", "language": "unknown", "fileCategory": "code"},
+    {"path": ".understand-anything/config.json", "language": "json", "fileCategory": "config"},
+    {"path": "analysis_options.yaml", "language": "yaml", "fileCategory": "config"},
+    {"path": "data/manual_todo.csv", "language": "csv", "fileCategory": "data"},
+    {"path": "data/README.md", "language": "markdown", "fileCategory": "docs"},
+    {"path": "data/shoes_sizing.csv", "language": "csv", "fileCategory": "data"},
+    {"path": "devtools_options.yaml", "language": "yaml", "fileCategory": "config"},
+    {"path": "lib/cellfunc.dart", "language": "dart", "fileCategory": "code"},
+    {"path": "lib/color_set.dart", "language": "dart", "fileCategory": "code"},
+    {"path": "lib/fit_data.dart", "language": "dart", "fileCategory": "code"},
+    {"path": "lib/main.dart", "language": "dart", "fileCategory": "code"},
+    {"path": "lib/pizza_data.dart", "language": "dart", "fileCategory": "code"},
+    {"path": "lib/pizza_page_popup.dart", "language": "dart", "fileCategory": "code"},
+    {"path": "lib/pizza_page.dart", "language": "dart", "fileCategory": "code"},
+    {"path": "lib/shoe_card_widgets.dart", "language": "dart", "fileCategory": "code"},
+    {"path": "lib/shoe_select_page.dart", "language": "dart", "fileCategory": "code"},
+    {"path": "lib/shoes_data.dart", "language": "dart", "fileCategory": "code"},
+    {"path": "lib/shoes_page.dart", "language": "dart", "fileCategory": "code"},
+    {"path": "pubspec.yaml", "language": "yaml", "fileCategory": "config"},
+    {"path": "README.md", "language": "markdown", "fileCategory": "docs"},
+    {"path": "scripts/build_dataset.py", "language": "python", "fileCategory": "code"},
+    {"path": "scripts/validate.py", "language": "python", "fileCategory": "code"}
+  ]
+}

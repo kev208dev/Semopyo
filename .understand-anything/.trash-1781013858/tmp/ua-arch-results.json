@@ -1,0 +1,228 @@
+{
+  "scriptCompleted": true,
+  "commonPrefix": "",
+  "directoryGroups": {
+    "(root)": [
+      "document:README.md",
+      "config:analysis_options.yaml",
+      "config:devtools_options.yaml",
+      "config:pubspec.yaml",
+      "file:.metadata"
+    ],
+    "data": [
+      "document:data/README.md",
+      "table:data/manual_todo.csv",
+      "table:data/shoes_sizing.csv"
+    ],
+    ".understand-anything": [
+      "file:.understand-anything/.understandignore",
+      "config:.understand-anything/config.json"
+    ],
+    "lib": [
+      "file:lib/cellfunc.dart",
+      "file:lib/color_set.dart",
+      "file:lib/fit_data.dart",
+      "file:lib/main.dart",
+      "file:lib/pizza_data.dart",
+      "file:lib/pizza_page_popup.dart",
+      "file:lib/pizza_page.dart",
+      "file:lib/shoe_card_widgets.dart",
+      "file:lib/shoe_select_page.dart",
+      "file:lib/shoes_data.dart",
+      "file:lib/shoes_page.dart"
+    ],
+    "scripts": [
+      "file:scripts/build_dataset.py",
+      "file:scripts/validate.py"
+    ]
+  },
+  "nodeTypeGroups": {
+    "document": [
+      "document:README.md",
+      "document:data/README.md"
+    ],
+    "config": [
+      "config:analysis_options.yaml",
+      "config:devtools_options.yaml",
+      "config:pubspec.yaml",
+      "config:.understand-anything/config.json"
+    ],
+    "table": [
+      "table:data/manual_todo.csv",
+      "table:data/shoes_sizing.csv"
+    ],
+    "file": [
+      "file:.metadata",
+      "file:.understand-anything/.understandignore",
+      "file:lib/cellfunc.dart",
+      "file:lib/color_set.dart",
+      "file:lib/fit_data.dart",
+      "file:lib/main.dart",
+      "file:lib/pizza_data.dart",
+      "file:lib/pizza_page_popup.dart",
+      "file:lib/pizza_page.dart",
+      "file:lib/shoe_card_widgets.dart",
+      "file:lib/shoe_select_page.dart",
+      "file:lib/shoes_data.dart",
+      "file:lib/shoes_page.dart",
+      "file:scripts/build_dataset.py",
+      "file:scripts/validate.py"
+    ]
+  },
+  "crossCategoryEdges": [
+    {
+      "fromType": "config",
+      "toType": "file",
+      "edgeType": "configures",
+      "count": 8
+    },
+    {
+      "fromType": "document",
+      "toType": "file",
+      "edgeType": "documents",
+      "count": 3
+    },
+    {
+      "fromType": "document",
+      "toType": "table",
+      "edgeType": "documents",
+      "count": 2
+    },
+    {
+      "fromType": "table",
+      "toType": "file",
+      "edgeType": "defines_schema",
+      "count": 2
+    }
+  ],
+  "interGroupImports": [],
+  "intraGroupDensity": {
+    "(root)": {
+      "internalEdges": 0,
+      "totalEdges": 0,
+      "density": 0
+    },
+    "data": {
+      "internalEdges": 0,
+      "totalEdges": 0,
+      "density": 0
+    },
+    ".understand-anything": {
+      "internalEdges": 0,
+      "totalEdges": 0,
+      "density": 0
+    },
+    "lib": {
+      "internalEdges": 16,
+      "totalEdges": 16,
+      "density": 1
+    },
+    "scripts": {
+      "internalEdges": 0,
+      "totalEdges": 0,
+      "density": 0
+    }
+  },
+  "patternMatches": {
+    "(root)": null,
+    "data": "data",
+    ".understand-anything": null,
+    "lib": "service",
+    "scripts": "utility"
+  },
+  "deploymentTopology": {
+    "hasDockerfile": false,
+    "hasCompose": false,
+    "hasK8s": false,
+    "hasTerraform": false,
+    "hasCI": false,
+    "infraFiles": []
+  },
+  "dataPipeline": {
+    "schemaFiles": [],
+    "migrationFiles": [],
+    "dataModelFiles": [
+      "lib/fit_data.dart",
+      "lib/pizza_data.dart",
+      "lib/shoes_data.dart"
+    ],
+    "apiHandlerFiles": []
+  },
+  "docCoverage": {
+    "groupsWithDocs": 2,
+    "totalGroups": 5,
+    "coverageRatio": 0.4,
+    "undocumentedGroups": [
+      ".understand-anything",
+      "lib",
+      "scripts"
+    ]
+  },
+  "dependencyDirection": [],
+  "fileStats": {
+    "totalFileNodes": 23,
+    "filesPerGroup": {
+      "(root)": 5,
+      "data": 3,
+      ".understand-anything": 2,
+      "lib": 11,
+      "scripts": 2
+    },
+    "nodeTypeCounts": {
+      "document": 2,
+      "config": 4,
+      "table": 2,
+      "file": 15
+    }
+  },
+  "fileFanIn": {
+    "document:README.md": 0,
+    "config:analysis_options.yaml": 0,
+    "config:devtools_options.yaml": 0,
+    "config:pubspec.yaml": 0,
+    "document:data/README.md": 0,
+    "table:data/manual_todo.csv": 0,
+    "table:data/shoes_sizing.csv": 0,
+    "file:.metadata": 0,
+    "file:.understand-anything/.understandignore": 0,
+    "config:.understand-anything/config.json": 0,
+    "file:lib/cellfunc.dart": 1,
+    "file:lib/color_set.dart": 1,
+    "file:lib/fit_data.dart": 2,
+    "file:lib/main.dart": 0,
+    "file:lib/pizza_data.dart": 2,
+    "file:lib/pizza_page_popup.dart": 1,
+    "file:lib/pizza_page.dart": 2,
+    "file:lib/shoe_card_widgets.dart": 2,
+    "file:lib/shoe_select_page.dart": 1,
+    "file:lib/shoes_data.dart": 2,
+    "file:lib/shoes_page.dart": 2,
+    "file:scripts/build_dataset.py": 0,
+    "file:scripts/validate.py": 0
+  },
+  "fileFanOut": {
+    "document:README.md": 0,
+    "config:analysis_options.yaml": 0,
+    "config:devtools_options.yaml": 0,
+    "config:pubspec.yaml": 0,
+    "document:data/README.md": 0,
+    "table:data/manual_todo.csv": 0,
+    "table:data/shoes_sizing.csv": 0,
+    "file:.metadata": 0,
+    "file:.understand-anything/.understandignore": 0,
+    "config:.understand-anything/config.json": 0,
+    "file:lib/cellfunc.dart": 0,
+    "file:lib/color_set.dart": 0,
+    "file:lib/fit_data.dart": 0,
+    "file:lib/main.dart": 2,
+    "file:lib/pizza_data.dart": 0,
+    "file:lib/pizza_page_popup.dart": 2,
+    "file:lib/pizza_page.dart": 3,
+    "file:lib/shoe_card_widgets.dart": 1,
+    "file:lib/shoe_select_page.dart": 4,
+    "file:lib/shoes_data.dart": 0,
+    "file:lib/shoes_page.dart": 4,
+    "file:scripts/build_dataset.py": 0,
+    "file:scripts/validate.py": 0
+  }
+}

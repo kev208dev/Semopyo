@@ -1,0 +1,15 @@
+{
+  "projectRoot": "/Users/chaeho/SMP/Semopyo",
+  "batchFiles": [
+    {"path": "README.md", "language": "markdown", "sizeLines": 17, "fileCategory": "docs"},
+    {"path": "analysis_options.yaml", "language": "yaml", "sizeLines": 28, "fileCategory": "config"},
+    {"path": "devtools_options.yaml", "language": "yaml", "sizeLines": 3, "fileCategory": "config"},
+    {"path": "pubspec.yaml", "language": "yaml", "sizeLines": 94, "fileCategory": "config"}
+  ],
+  "batchImportData": {
+    "README.md": [],
+    "analysis_options.yaml": [],
+    "devtools_options.yaml": [],
+    "pubspec.yaml": []
+  }
+}

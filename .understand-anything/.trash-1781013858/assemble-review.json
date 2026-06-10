@@ -1,0 +1,16 @@
+{
+  "fixedSectionOk": true,
+  "nodesRecovered": 0,
+  "edgesRestored": 0,
+  "crossBatchEdgesAdded": 0,
+  "typesRemapped": 0,
+  "complexityRemapped": 0,
+  "notes": [
+    "Merge script reported zero mechanical fixes and zero unfixable issues: input 41 nodes / 67 edges == output 41 nodes / 67 edges. Batch outputs were already conformant.",
+    "All 41 node IDs are unique and well-formed (no double prefixes, no missing prefixes). Type distribution: file 15, class 15, config 4, function 3, table 2, document 2.",
+    "All node `complexity` values are valid (`simple` 17, `moderate` 8, `complex` 16). No unknown values needed remapping.",
+    "All 67 edges reference existing nodes — zero dangling, zero duplicates, zero self-references. Edge types: contains 18, imports 16, exports 14, configures 8, documents 5, defines_schema 2, related 2, depends_on 1, calls 1.",
+    "Step 3 (cross-batch edge gap check): importMap was empty by design — Dart unsupported by import-map extractor and Python files have no project-internal imports. All 15 relative Dart imports plus 1 package:semopyo/... self-package import (16 total) were correctly derived inside batch-3 from source analysis and are present in the assembled graph. No gaps to fill.",
+    "Manual cross-check confirmed: lib/shoes_page.dart -> lib/shoe_select_page.dart (which uses `package:semopyo/...` form) is correctly captured as an `imports` edge by batch-3."
+  ]
+}

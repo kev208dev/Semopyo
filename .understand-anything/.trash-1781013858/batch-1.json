@@ -1,0 +1,107 @@
+{
+  "nodes": [
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "Flutter 기본 템플릿에서 자동 생성된 프로젝트 소개 문서로, semopyo 프로젝트의 시작점과 Flutter 학습 리소스 링크를 제공합니다. 아직 프로젝트 고유의 도메인(브랜드별 신발/피자/음료 치수 표준화) 설명은 포함되어 있지 않습니다.",
+      "tags": ["documentation", "entry-point", "overview", "flutter-template"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:analysis_options.yaml",
+      "type": "config",
+      "name": "analysis_options.yaml",
+      "filePath": "analysis_options.yaml",
+      "summary": "Dart 정적 분석기 설정 파일로 `package:flutter_lints/flutter.yaml`의 권장 lint 규칙을 활성화하며, 프로젝트별 커스텀 규칙은 추가되어 있지 않습니다. `flutter analyze` 실행 및 IDE 경고 표시에 사용됩니다.",
+      "tags": ["configuration", "linter", "dart", "code-quality", "build-system"],
+      "complexity": "simple",
+      "languageNotes": "Flutter 기본 lint 세트를 그대로 사용하며 규칙 오버라이드 섹션은 비어 있습니다."
+    },
+    {
+      "id": "config:devtools_options.yaml",
+      "type": "config",
+      "name": "devtools_options.yaml",
+      "filePath": "devtools_options.yaml",
+      "summary": "Dart 및 Flutter DevTools 확장 기능 활성화 상태를 저장하는 설정 파일로, 현재는 확장 목록이 비어 있는 기본 상태입니다.",
+      "tags": ["configuration", "devtools", "flutter", "tooling"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:pubspec.yaml",
+      "type": "config",
+      "name": "pubspec.yaml",
+      "filePath": "pubspec.yaml",
+      "summary": "Flutter 프로젝트의 메타데이터, SDK 제약(`^3.11.4`), 런타임 의존성(http, cupertino_icons, shared_preferences) 및 개발 의존성(flutter_test, flutter_lints)을 정의하는 핵심 패키지 매니페스트입니다. `assets/images/` 디렉터리를 앱 자산으로 등록하고 Material Design 아이콘 사용을 활성화합니다.",
+      "tags": ["configuration", "build-system", "dependencies", "flutter", "package-manifest"],
+      "complexity": "moderate",
+      "languageNotes": "pub.dev 게시 방지를 위해 `publish_to: none`이 설정되어 있어 비공개 패키지로 관리됩니다."
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:analysis_options.yaml",
+      "target": "config:pubspec.yaml",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:pubspec.yaml",
+      "target": "file:lib/main.dart",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:pubspec.yaml",
+      "target": "file:lib/shoes_page.dart",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:pubspec.yaml",
+      "target": "file:lib/shoe_select_page.dart",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:pubspec.yaml",
+      "target": "file:lib/shoe_card_widgets.dart",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:pubspec.yaml",
+      "target": "file:lib/shoes_data.dart",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:pubspec.yaml",
+      "target": "file:lib/fit_data.dart",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:analysis_options.yaml",
+      "target": "file:lib/main.dart",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:README.md",
+      "target": "file:lib/main.dart",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

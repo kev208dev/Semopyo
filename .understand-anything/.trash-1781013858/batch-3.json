@@ -1,0 +1,389 @@
+{
+  "nodes": [
+    {
+      "id": "file:.metadata",
+      "type": "file",
+      "name": ".metadata",
+      "filePath": ".metadata",
+      "summary": "Flutter 도구가 자동 생성·관리하는 프로젝트 메타데이터 파일로, 채널/리비전 및 마이그레이션 추적 정보를 보관한다.",
+      "tags": ["flutter", "metadata", "tooling", "auto-generated"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:.understand-anything/.understandignore",
+      "type": "file",
+      "name": ".understandignore",
+      "filePath": ".understand-anything/.understandignore",
+      "summary": "understand-anything 분석 도구가 무시할 경로 패턴을 정의하는 ignore 파일로, 빌드 산출물과 외부 의존성을 분석 대상에서 제외한다.",
+      "tags": ["ignore-file", "tooling", "configuration"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.understand-anything/config.json",
+      "type": "config",
+      "name": "config.json",
+      "filePath": ".understand-anything/config.json",
+      "summary": "understand-anything 분석 도구의 출력 언어(한국어) 등 프로젝트 단위 설정을 보관하는 JSON 설정 파일.",
+      "tags": ["configuration", "tooling", "json"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:lib/cellfunc.dart",
+      "type": "file",
+      "name": "cellfunc.dart",
+      "filePath": "lib/cellfunc.dart",
+      "summary": "피자 비교 표의 한 행(TableRow)을 생성하는 oneline 유틸 위젯 함수를 제공하여 pizza_page의 표 셀 구성을 단순화한다.",
+      "tags": ["utility", "ui-helper", "flutter", "table"],
+      "complexity": "simple",
+      "languageNotes": "Dart 함수가 Flutter TableRow 위젯을 반환하는 위젯 팩토리 패턴."
+    },
+    {
+      "id": "file:lib/color_set.dart",
+      "type": "file",
+      "name": "color_set.dart",
+      "filePath": "lib/color_set.dart",
+      "summary": "신발 색상 문자열을 입력받아 메인/서브/액센트용 Color 3종을 반환하는 getColorSet 함수를 제공하여 카드 위젯의 색조를 결정한다.",
+      "tags": ["utility", "color-palette", "ui-helper", "flutter"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:lib/fit_data.dart",
+      "type": "file",
+      "name": "fit_data.dart",
+      "filePath": "lib/fit_data.dart",
+      "summary": "브랜드별 신발 핏(작게/정사이즈/크게) 규칙을 정의한 FitInfo 모델과 추천 사이즈 계산 함수(fitFor, recommendedLabel, verdictPhrase)를 제공한다.",
+      "tags": ["data-model", "fit-logic", "domain-data", "shoes"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:lib/main.dart",
+      "type": "file",
+      "name": "main.dart",
+      "filePath": "lib/main.dart",
+      "summary": "Flutter 앱의 진입점으로 MyApp/MyHomePage를 정의하고 신발·피자·음료·의류 카테고리 버튼을 가진 홈 화면을 구성한다.",
+      "tags": ["entry-point", "flutter", "home-screen", "navigation"],
+      "complexity": "complex",
+      "languageNotes": "Korean UI(\"세모표\") with category buttons routing to pizza/shoes pages."
+    },
+    {
+      "id": "file:lib/pizza_data.dart",
+      "type": "file",
+      "name": "pizza_data.dart",
+      "filePath": "lib/pizza_data.dart",
+      "summary": "도미노/피자헛/파파존스/미스터피자 등 브랜드별 피자 메뉴와 사이즈, 가격, 지름을 담은 상수 Map 데이터를 제공한다.",
+      "tags": ["data-model", "static-data", "pizza", "domain-data"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:lib/pizza_page_popup.dart",
+      "type": "file",
+      "name": "pizza_page_popup.dart",
+      "filePath": "lib/pizza_page_popup.dart",
+      "summary": "피자 비교 페이지의 추가/편집 팝업 다이얼로그를 StatefulWidget으로 구현하며, shared_preferences로 사용자 선택을 영속화한다.",
+      "tags": ["ui-component", "dialog", "stateful-widget", "persistence"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:lib/pizza_page.dart",
+      "type": "file",
+      "name": "pizza_page.dart",
+      "filePath": "lib/pizza_page.dart",
+      "summary": "여러 브랜드 피자의 지름·가격·100원당 면적 등을 표로 비교하는 PizzaPage StatefulWidget으로, shared_preferences로 선택을 저장한다.",
+      "tags": ["page", "comparison-view", "stateful-widget", "persistence"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:lib/shoe_card_widgets.dart",
+      "type": "file",
+      "name": "shoe_card_widgets.dart",
+      "filePath": "lib/shoe_card_widgets.dart",
+      "summary": "신발 비교 페이지에서 사용하는 MainShoeCard·SubShoeCard·_SizeSelector·_SizeBadge 등 카드 UI 위젯을 정의한다.",
+      "tags": ["ui-component", "card-widget", "shoes", "flutter"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:lib/shoe_select_page.dart",
+      "type": "file",
+      "name": "shoe_select_page.dart",
+      "filePath": "lib/shoe_select_page.dart",
+      "summary": "사용자가 비교할 신발을 검색·선택하는 ShoeSelectPage StatefulWidget으로, shoes_data와 fit_data를 기반으로 추천 사이즈를 계산해 표시한다.",
+      "tags": ["page", "selection-screen", "stateful-widget", "shoes"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:lib/shoes_data.dart",
+      "type": "file",
+      "name": "shoes_data.dart",
+      "filePath": "lib/shoes_data.dart",
+      "summary": "the-sneaker-database RapidAPI에서 Nike 신발 목록을 가져오는 SneakerApiService와 응답을 매핑하는 ShoeModel을 정의한다.",
+      "tags": ["api-client", "data-model", "http", "shoes"],
+      "complexity": "moderate",
+      "languageNotes": "API 키가 소스 코드에 하드코딩되어 있어 보안상 주의가 필요함."
+    },
+    {
+      "id": "file:lib/shoes_page.dart",
+      "type": "file",
+      "name": "shoes_page.dart",
+      "filePath": "lib/shoes_page.dart",
+      "summary": "선택된 기준 신발과 비교 대상 신발들의 사이즈·핏을 나란히 보여주는 ShoesPage StatefulWidget으로, 비교 화면의 메인 컨테이너 역할을 한다.",
+      "tags": ["page", "comparison-view", "stateful-widget", "shoes"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:scripts/build_dataset.py",
+      "type": "file",
+      "name": "build_dataset.py",
+      "filePath": "scripts/build_dataset.py",
+      "summary": "research_shoes.md를 수작업 파싱한 ROWS를 기반으로 data/shoes_sizing.csv와 data/manual_todo.csv를 생성하는 데이터셋 빌더 스크립트.",
+      "tags": ["data-pipeline", "csv", "etl", "shoes-dataset"],
+      "complexity": "complex",
+      "languageNotes": "UTF-8 BOM CSV 출력으로 한국어 컬럼명을 엑셀에서 안정적으로 열도록 한다."
+    },
+    {
+      "id": "function:scripts/build_dataset.py:write_csv",
+      "type": "function",
+      "name": "write_csv",
+      "filePath": "scripts/build_dataset.py",
+      "lineRange": [183, 192],
+      "summary": "ROWS 튜플 리스트를 UTF-8 BOM CSV 파일로 기록하고, 각 행에 collected_date 컬럼을 삽입한다.",
+      "tags": ["utility", "csv-writer", "io"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/build_dataset.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "scripts/build_dataset.py",
+      "lineRange": [195, 206],
+      "summary": "프로젝트 루트 기준 data/ 디렉터리에 전체 데이터셋과 manual_collection=TRUE 하위셋을 각각 생성하고 행 수를 출력한다.",
+      "tags": ["entry-point", "cli", "data-pipeline"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/validate.py",
+      "type": "file",
+      "name": "validate.py",
+      "filePath": "scripts/validate.py",
+      "summary": "shoes_sizing.csv의 헤더·enum·정수 필드·날짜·source_url에 대한 reliability 제약을 검증하고 위반 시 라인 번호와 사유를 출력하는 스키마 검증 스크립트.",
+      "tags": ["validation", "schema-check", "csv", "data-quality"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:scripts/validate.py:validate",
+      "type": "function",
+      "name": "validate",
+      "filePath": "scripts/validate.py",
+      "lineRange": [37, 113],
+      "summary": "CSV를 읽어 헤더/필수 컬럼/enum 값/정수 범위/source_url 빈값 시 reliability=하 강제/날짜 포맷을 검사하고 위반 목록을 출력 후 종료 코드를 결정한다.",
+      "tags": ["validation", "schema-check", "data-quality"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:lib/fit_data.dart:FitInfo",
+      "type": "class",
+      "name": "FitInfo",
+      "filePath": "lib/fit_data.dart",
+      "lineRange": [10, 20],
+      "summary": "신발 핏 정보를 표현하는 모델로 verdict(작게/정사이즈/크게)와 mmOffset 등 보정값을 보관한다.",
+      "tags": ["data-model", "domain-data", "fit-logic"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:lib/main.dart:MyApp",
+      "type": "class",
+      "name": "MyApp",
+      "filePath": "lib/main.dart",
+      "lineRange": [9, 20],
+      "summary": "MaterialApp을 구성하는 루트 StatelessWidget으로, 테마와 홈 라우트(MyHomePage)를 설정한다.",
+      "tags": ["entry-point", "stateless-widget", "flutter"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:lib/main.dart:MyHomePage",
+      "type": "class",
+      "name": "MyHomePage",
+      "filePath": "lib/main.dart",
+      "lineRange": [22, 285],
+      "summary": "검정 배경에 '세모표' 헤더와 신발/피자/음료/의류 카테고리 버튼을 배치한 홈 화면 StatelessWidget으로, 터치 시 각 카테고리 페이지로 라우팅한다.",
+      "tags": ["home-screen", "stateless-widget", "navigation", "ui-component"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:lib/pizza_page_popup.dart:PizzaPagePopup",
+      "type": "class",
+      "name": "PizzaPagePopup",
+      "filePath": "lib/pizza_page_popup.dart",
+      "lineRange": [9, 15],
+      "summary": "피자 페이지의 추가/편집 팝업을 외부로 노출하는 StatefulWidget.",
+      "tags": ["ui-component", "stateful-widget", "dialog"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:lib/pizza_page_popup.dart:_PizzaPagePopupState",
+      "type": "class",
+      "name": "_PizzaPagePopupState",
+      "filePath": "lib/pizza_page_popup.dart",
+      "lineRange": [16, 303],
+      "summary": "PizzaPagePopup의 State로, 브랜드·메뉴·사이즈 선택 UI와 shared_preferences 영속화 로직을 보유한다.",
+      "tags": ["state", "stateful-widget", "persistence", "dialog"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:lib/shoe_card_widgets.dart:MainShoeCard",
+      "type": "class",
+      "name": "MainShoeCard",
+      "filePath": "lib/shoe_card_widgets.dart",
+      "lineRange": [44, 216],
+      "summary": "사용자가 기준으로 삼는 신발의 이미지·가격·사이즈 셀렉터를 표시하는 큰 카드 위젯.",
+      "tags": ["ui-component", "card-widget", "shoes"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:lib/shoe_card_widgets.dart:SubShoeCard",
+      "type": "class",
+      "name": "SubShoeCard",
+      "filePath": "lib/shoe_card_widgets.dart",
+      "lineRange": [298, 420],
+      "summary": "비교 대상 신발의 추천 사이즈와 핏 결과를 표시하는 보조 카드 위젯.",
+      "tags": ["ui-component", "card-widget", "shoes", "comparison-view"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:lib/shoe_select_page.dart:ShoeSelectPage",
+      "type": "class",
+      "name": "ShoeSelectPage",
+      "filePath": "lib/shoe_select_page.dart",
+      "lineRange": [9, 15],
+      "summary": "비교할 신발을 선택하기 위한 StatefulWidget 진입 클래스.",
+      "tags": ["page", "stateful-widget", "selection-screen"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:lib/shoe_select_page.dart:_ShoeSelectPageState",
+      "type": "class",
+      "name": "_ShoeSelectPageState",
+      "filePath": "lib/shoe_select_page.dart",
+      "lineRange": [16, 289],
+      "summary": "신발 검색·필터·선택 로직을 담는 State로, fit_data와 shoes_data를 사용해 후보 목록과 추천 사이즈를 계산한다.",
+      "tags": ["state", "stateful-widget", "selection-screen"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:lib/shoes_data.dart:SneakerApiService",
+      "type": "class",
+      "name": "SneakerApiService",
+      "filePath": "lib/shoes_data.dart",
+      "lineRange": [6, 38],
+      "summary": "the-sneaker-database RapidAPI에서 Nike 신발 목록을 fetch하여 ShoeModel 리스트로 변환하는 HTTP 클라이언트.",
+      "tags": ["api-client", "http", "service"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:lib/shoes_data.dart:ShoeModel",
+      "type": "class",
+      "name": "ShoeModel",
+      "filePath": "lib/shoes_data.dart",
+      "lineRange": [40, 118],
+      "summary": "외부 API 응답을 매핑하는 신발 도메인 모델로 brand·name·price·image·color 필드를 보유한다.",
+      "tags": ["data-model", "serialization", "shoes"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:lib/pizza_page.dart:PizzaPage",
+      "type": "class",
+      "name": "PizzaPage",
+      "filePath": "lib/pizza_page.dart",
+      "lineRange": [13, 19],
+      "summary": "피자 비교 화면의 진입 StatefulWidget.",
+      "tags": ["page", "stateful-widget", "comparison-view"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:lib/pizza_page.dart:_PizzaPageState",
+      "type": "class",
+      "name": "_PizzaPageState",
+      "filePath": "lib/pizza_page.dart",
+      "lineRange": [20, 437],
+      "summary": "피자 비교 표 렌더링·선택 저장·100원당 면적 계산 로직을 보유한 State 클래스.",
+      "tags": ["state", "stateful-widget", "comparison-view", "persistence"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:lib/shoes_page.dart:ShoesPage",
+      "type": "class",
+      "name": "ShoesPage",
+      "filePath": "lib/shoes_page.dart",
+      "lineRange": [14, 19],
+      "summary": "신발 비교 화면의 진입 StatefulWidget.",
+      "tags": ["page", "stateful-widget", "comparison-view"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:lib/shoes_page.dart:_ShoesPageState",
+      "type": "class",
+      "name": "_ShoesPageState",
+      "filePath": "lib/shoes_page.dart",
+      "lineRange": [20, 306],
+      "summary": "기준 신발과 비교 신발들의 카드 리스트 렌더링·라우팅·상태 관리를 담당하는 State 클래스.",
+      "tags": ["state", "stateful-widget", "comparison-view", "shoes"],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {"source": "file:lib/main.dart", "target": "file:lib/pizza_page.dart", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:lib/main.dart", "target": "file:lib/shoes_page.dart", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:lib/shoe_card_widgets.dart", "target": "file:lib/color_set.dart", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:lib/pizza_page_popup.dart", "target": "file:lib/pizza_page.dart", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:lib/pizza_page_popup.dart", "target": "file:lib/pizza_data.dart", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:lib/pizza_page.dart", "target": "file:lib/cellfunc.dart", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:lib/pizza_page.dart", "target": "file:lib/pizza_data.dart", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:lib/pizza_page.dart", "target": "file:lib/pizza_page_popup.dart", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:lib/shoe_select_page.dart", "target": "file:lib/shoes_data.dart", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:lib/shoe_select_page.dart", "target": "file:lib/shoe_card_widgets.dart", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:lib/shoe_select_page.dart", "target": "file:lib/fit_data.dart", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:lib/shoe_select_page.dart", "target": "file:lib/shoes_page.dart", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:lib/shoes_page.dart", "target": "file:lib/shoe_select_page.dart", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:lib/shoes_page.dart", "target": "file:lib/shoe_card_widgets.dart", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:lib/shoes_page.dart", "target": "file:lib/shoes_data.dart", "type": "imports", "direction": "forward", "weight": 0.7},
+    {"source": "file:lib/shoes_page.dart", "target": "file:lib/fit_data.dart", "type": "imports", "direction": "forward", "weight": 0.7},
+
+    {"source": "file:lib/main.dart", "target": "class:lib/main.dart:MyApp", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:lib/main.dart", "target": "class:lib/main.dart:MyHomePage", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:lib/fit_data.dart", "target": "class:lib/fit_data.dart:FitInfo", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:lib/pizza_page_popup.dart", "target": "class:lib/pizza_page_popup.dart:PizzaPagePopup", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:lib/pizza_page_popup.dart", "target": "class:lib/pizza_page_popup.dart:_PizzaPagePopupState", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:lib/shoe_card_widgets.dart", "target": "class:lib/shoe_card_widgets.dart:MainShoeCard", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:lib/shoe_card_widgets.dart", "target": "class:lib/shoe_card_widgets.dart:SubShoeCard", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:lib/shoe_select_page.dart", "target": "class:lib/shoe_select_page.dart:ShoeSelectPage", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:lib/shoe_select_page.dart", "target": "class:lib/shoe_select_page.dart:_ShoeSelectPageState", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:lib/shoes_data.dart", "target": "class:lib/shoes_data.dart:SneakerApiService", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:lib/shoes_data.dart", "target": "class:lib/shoes_data.dart:ShoeModel", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:lib/pizza_page.dart", "target": "class:lib/pizza_page.dart:PizzaPage", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:lib/pizza_page.dart", "target": "class:lib/pizza_page.dart:_PizzaPageState", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:lib/shoes_page.dart", "target": "class:lib/shoes_page.dart:ShoesPage", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:lib/shoes_page.dart", "target": "class:lib/shoes_page.dart:_ShoesPageState", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:scripts/build_dataset.py", "target": "function:scripts/build_dataset.py:write_csv", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:scripts/build_dataset.py", "target": "function:scripts/build_dataset.py:main", "type": "contains", "direction": "forward", "weight": 1.0},
+    {"source": "file:scripts/validate.py", "target": "function:scripts/validate.py:validate", "type": "contains", "direction": "forward", "weight": 1.0},
+
+    {"source": "file:lib/main.dart", "target": "class:lib/main.dart:MyApp", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:lib/main.dart", "target": "class:lib/main.dart:MyHomePage", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:lib/pizza_page_popup.dart", "target": "class:lib/pizza_page_popup.dart:PizzaPagePopup", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:lib/shoe_card_widgets.dart", "target": "class:lib/shoe_card_widgets.dart:MainShoeCard", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:lib/shoe_card_widgets.dart", "target": "class:lib/shoe_card_widgets.dart:SubShoeCard", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:lib/shoe_select_page.dart", "target": "class:lib/shoe_select_page.dart:ShoeSelectPage", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:lib/shoes_data.dart", "target": "class:lib/shoes_data.dart:SneakerApiService", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:lib/shoes_data.dart", "target": "class:lib/shoes_data.dart:ShoeModel", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:lib/pizza_page.dart", "target": "class:lib/pizza_page.dart:PizzaPage", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:lib/shoes_page.dart", "target": "class:lib/shoes_page.dart:ShoesPage", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:lib/fit_data.dart", "target": "class:lib/fit_data.dart:FitInfo", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:scripts/build_dataset.py", "target": "function:scripts/build_dataset.py:write_csv", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:scripts/build_dataset.py", "target": "function:scripts/build_dataset.py:main", "type": "exports", "direction": "forward", "weight": 0.8},
+    {"source": "file:scripts/validate.py", "target": "function:scripts/validate.py:validate", "type": "exports", "direction": "forward", "weight": 0.8},
+
+    {"source": "function:scripts/build_dataset.py:main", "target": "function:scripts/build_dataset.py:write_csv", "type": "calls", "direction": "forward", "weight": 0.8},
+
+    {"source": "config:.understand-anything/config.json", "target": "file:lib/main.dart", "type": "configures", "direction": "forward", "weight": 0.6},
+    {"source": "file:scripts/validate.py", "target": "file:scripts/build_dataset.py", "type": "related", "direction": "forward", "weight": 0.5}
+  ]
+}

@@ -17,7 +17,7 @@ class _PizzaPagePopupState extends State<PizzaPagePopup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backgroundcolor,
+      backgroundColor: Colors.black,
       appBar: AppBar(
         title: const Text(
           '피자를 선택해주세요',
@@ -98,7 +98,7 @@ class _PizzaPagePopupState extends State<PizzaPagePopup> {
             top: 0,
             child: Container(
               height: 200,
-              color: backgroundcolor,
+              color: Colors.black,
               child: Hero(
                 tag: 'pizza-select',
                 child: Row(

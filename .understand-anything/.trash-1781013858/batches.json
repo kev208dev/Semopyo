@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "louvain",
+  "totalFiles": 23,
+  "totalBatches": 3,
+  "exportsByPath": {
+    ".metadata": [],
+    ".understand-anything/.understandignore": [],
+    "lib/cellfunc.dart": [],
+    "lib/color_set.dart": [],
+    "lib/fit_data.dart": [],
+    "lib/main.dart": [],
+    "lib/pizza_data.dart": [],
+    "lib/pizza_page_popup.dart": [],
+    "lib/pizza_page.dart": [],
+    "lib/shoe_card_widgets.dart": [],
+    "lib/shoe_select_page.dart": [],
+    "lib/shoes_data.dart": [],
+    "lib/shoes_page.dart": [],
+    "scripts/build_dataset.py": [
+      "write_csv",
+      "main"
+    ],
+    "scripts/validate.py": [
+      "validate"
+    ]
+  },
+  "batches": [
+    {
+      "batchIndex": 1,
+      "files": [
+        {
+          "path": "README.md",
+          "language": "markdown",
+          "sizeLines": 17,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "analysis_options.yaml",
+          "language": "yaml",
+          "sizeLines": 28,
+          "fileCategory": "config"
+        },
+        {
+          "path": "devtools_options.yaml",
+          "language": "yaml",
+          "sizeLines": 3,
+          "fileCategory": "config"
+        },
+        {
+          "path": "pubspec.yaml",
+          "language": "yaml",
+          "sizeLines": 94,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "README.md": [],
+        "analysis_options.yaml": [],
+        "devtools_options.yaml": [],
+        "pubspec.yaml": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 2,
+      "files": [
+        {
+          "path": "data/README.md",
+          "language": "markdown",
+          "sizeLines": 105,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "data/manual_todo.csv",
+          "language": "csv",
+          "sizeLines": 4,
+          "fileCategory": "data"
+        },
+        {
+          "path": "data/shoes_sizing.csv",
+          "language": "csv",
+          "sizeLines": 62,
+          "fileCategory": "data"
+        }
+      ],
+      "batchImportData": {
+        "data/README.md": [],
+        "data/manual_todo.csv": [],
+        "data/shoes_sizing.csv": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 3,
+      "files": [
+        {
+          "path": ".metadata",
+          "language": "unknown",
+          "sizeLines": 30,
+          "fileCategory": "code"
+        },
+        {
+          "path": ".understand-anything/.understandignore",
+          "language": "unknown",
+          "sizeLines": 45,
+          "fileCategory": "code"
+        },
+        {
+          "path": ".understand-anything/config.json",
+          "language": "json",
+          "sizeLines": 3,
+          "fileCategory": "config"
+        },
+        {
+          "path": "lib/cellfunc.dart",
+          "language": "dart",
+          "sizeLines": 32,
+          "fileCategory": "code"
+        },
+        {
+          "path": "lib/color_set.dart",
+          "language": "dart",
+          "sizeLines": 78,
+          "fileCategory": "code"
+        },
+        {
+          "path": "lib/fit_data.dart",
+          "language": "dart",
+          "sizeLines": 95,
+          "fileCategory": "code"
+        },
+        {
+          "path": "lib/main.dart",
+          "language": "dart",
+          "sizeLines": 285,
+          "fileCategory": "code"
+        },
+        {
+          "path": "lib/pizza_data.dart",
+          "language": "dart",
+          "sizeLines": 114,
+          "fileCategory": "code"
+        },
+        {
+          "path": "lib/pizza_page_popup.dart",
+          "language": "dart",
+          "sizeLines": 303,
+          "fileCategory": "code"
+        },
+        {
+          "path": "lib/pizza_page.dart",
+          "language": "dart",
+          "sizeLines": 437,
+          "fileCategory": "code"
+        },
+        {
+          "path": "lib/shoe_card_widgets.dart",
+          "language": "dart",
+          "sizeLines": 420,
+          "fileCategory": "code"
+        },
+        {
+          "path": "lib/shoe_select_page.dart",
+          "language": "dart",
+          "sizeLines": 289,
+          "fileCategory": "code"
+        },
+        {
+          "path": "lib/shoes_data.dart",
+          "language": "dart",
+          "sizeLines": 118,
+          "fileCategory": "code"
+        },
+        {
+          "path": "lib/shoes_page.dart",
+          "language": "dart",
+          "sizeLines": 306,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/build_dataset.py",
+          "language": "python",
+          "sizeLines": 210,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scripts/validate.py",
+          "language": "python",
+          "sizeLines": 118,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        ".metadata": [],
+        ".understand-anything/.understandignore": [],
+        ".understand-anything/config.json": [],
+        "lib/cellfunc.dart": [],
+        "lib/color_set.dart": [],
+        "lib/fit_data.dart": [],
+        "lib/main.dart": [],
+        "lib/pizza_data.dart": [],
+        "lib/pizza_page_popup.dart": [],
+        "lib/pizza_page.dart": [],
+        "lib/shoe_card_widgets.dart": [],
+        "lib/shoe_select_page.dart": [],
+        "lib/shoes_data.dart": [],
+        "lib/shoes_page.dart": [],
+        "scripts/build_dataset.py": [],
+        "scripts/validate.py": []
+      },
+      "neighborMap": {}
+    }
+  ]
+}

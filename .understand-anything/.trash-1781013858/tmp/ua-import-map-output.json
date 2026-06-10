@@ -1,0 +1,33 @@
+{
+  "scriptCompleted": true,
+  "stats": {
+    "filesScanned": 23,
+    "filesWithImports": 0,
+    "totalEdges": 0
+  },
+  "importMap": {
+    ".metadata": [],
+    ".understand-anything/.understandignore": [],
+    ".understand-anything/config.json": [],
+    "analysis_options.yaml": [],
+    "data/manual_todo.csv": [],
+    "data/README.md": [],
+    "data/shoes_sizing.csv": [],
+    "devtools_options.yaml": [],
+    "lib/cellfunc.dart": [],
+    "lib/color_set.dart": [],
+    "lib/fit_data.dart": [],
+    "lib/main.dart": [],
+    "lib/pizza_data.dart": [],
+    "lib/pizza_page_popup.dart": [],
+    "lib/pizza_page.dart": [],
+    "lib/shoe_card_widgets.dart": [],
+    "lib/shoe_select_page.dart": [],
+    "lib/shoes_data.dart": [],
+    "lib/shoes_page.dart": [],
+    "pubspec.yaml": [],
+    "README.md": [],
+    "scripts/build_dataset.py": [],
+    "scripts/validate.py": []
+  }
+}

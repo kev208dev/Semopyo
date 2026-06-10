@@ -1,0 +1,13 @@
+{
+  "projectRoot": "/Users/chaeho/SMP/Semopyo",
+  "batchFiles": [
+    {"path": "data/README.md", "language": "markdown", "sizeLines": 105, "fileCategory": "docs"},
+    {"path": "data/manual_todo.csv", "language": "csv", "sizeLines": 4, "fileCategory": "data"},
+    {"path": "data/shoes_sizing.csv", "language": "csv", "sizeLines": 62, "fileCategory": "data"}
+  ],
+  "batchImportData": {
+    "data/README.md": [],
+    "data/manual_todo.csv": [],
+    "data/shoes_sizing.csv": []
+  }
+}

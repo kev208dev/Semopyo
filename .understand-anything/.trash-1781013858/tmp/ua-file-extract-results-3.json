@@ -1,0 +1,488 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 16,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": ".metadata",
+      "language": "unknown",
+      "fileCategory": "code",
+      "totalLines": 30,
+      "nonEmptyLines": 25,
+      "metrics": {}
+    },
+    {
+      "path": ".understand-anything/.understandignore",
+      "language": "unknown",
+      "fileCategory": "code",
+      "totalLines": 45,
+      "nonEmptyLines": 42,
+      "metrics": {}
+    },
+    {
+      "path": ".understand-anything/config.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 3,
+      "nonEmptyLines": 3,
+      "sections": [
+        {
+          "heading": "outputLanguage",
+          "level": 1,
+          "line": 2
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "lib/cellfunc.dart",
+      "language": "dart",
+      "fileCategory": "code",
+      "totalLines": 32,
+      "nonEmptyLines": 31,
+      "metrics": {}
+    },
+    {
+      "path": "lib/color_set.dart",
+      "language": "dart",
+      "fileCategory": "code",
+      "totalLines": 79,
+      "nonEmptyLines": 78,
+      "metrics": {}
+    },
+    {
+      "path": "lib/fit_data.dart",
+      "language": "dart",
+      "fileCategory": "code",
+      "totalLines": 95,
+      "nonEmptyLines": 87,
+      "metrics": {}
+    },
+    {
+      "path": "lib/main.dart",
+      "language": "dart",
+      "fileCategory": "code",
+      "totalLines": 285,
+      "nonEmptyLines": 249,
+      "metrics": {}
+    },
+    {
+      "path": "lib/pizza_data.dart",
+      "language": "dart",
+      "fileCategory": "code",
+      "totalLines": 115,
+      "nonEmptyLines": 102,
+      "metrics": {}
+    },
+    {
+      "path": "lib/pizza_page_popup.dart",
+      "language": "dart",
+      "fileCategory": "code",
+      "totalLines": 303,
+      "nonEmptyLines": 296,
+      "metrics": {}
+    },
+    {
+      "path": "lib/pizza_page.dart",
+      "language": "dart",
+      "fileCategory": "code",
+      "totalLines": 437,
+      "nonEmptyLines": 412,
+      "metrics": {}
+    },
+    {
+      "path": "lib/shoe_card_widgets.dart",
+      "language": "dart",
+      "fileCategory": "code",
+      "totalLines": 420,
+      "nonEmptyLines": 408,
+      "metrics": {}
+    },
+    {
+      "path": "lib/shoe_select_page.dart",
+      "language": "dart",
+      "fileCategory": "code",
+      "totalLines": 289,
+      "nonEmptyLines": 279,
+      "metrics": {}
+    },
+    {
+      "path": "lib/shoes_data.dart",
+      "language": "dart",
+      "fileCategory": "code",
+      "totalLines": 118,
+      "nonEmptyLines": 105,
+      "metrics": {}
+    },
+    {
+      "path": "lib/shoes_page.dart",
+      "language": "dart",
+      "fileCategory": "code",
+      "totalLines": 306,
+      "nonEmptyLines": 290,
+      "metrics": {}
+    },
+    {
+      "path": "scripts/build_dataset.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 210,
+      "nonEmptyLines": 184,
+      "functions": [
+        {
+          "name": "write_csv",
+          "startLine": 183,
+          "endLine": 192,
+          "params": [
+            "path",
+            "records"
+          ]
+        },
+        {
+          "name": "main",
+          "startLine": 195,
+          "endLine": 206,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "write_csv",
+          "line": 183,
+          "isDefault": false
+        },
+        {
+          "name": "main",
+          "line": 195,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "write_csv",
+          "callee": "os.makedirs",
+          "lineNumber": 184
+        },
+        {
+          "caller": "write_csv",
+          "callee": "os.path.dirname",
+          "lineNumber": 184
+        },
+        {
+          "caller": "write_csv",
+          "callee": "open",
+          "lineNumber": 186
+        },
+        {
+          "caller": "write_csv",
+          "callee": "csv.writer",
+          "lineNumber": 187
+        },
+        {
+          "caller": "write_csv",
+          "callee": "w.writerow",
+          "lineNumber": 188
+        },
+        {
+          "caller": "write_csv",
+          "callee": "list",
+          "lineNumber": 190
+        },
+        {
+          "caller": "write_csv",
+          "callee": "r.insert",
+          "lineNumber": 191
+        },
+        {
+          "caller": "write_csv",
+          "callee": "w.writerow",
+          "lineNumber": 192
+        },
+        {
+          "caller": "main",
+          "callee": "os.path.dirname",
+          "lineNumber": 196
+        },
+        {
+          "caller": "main",
+          "callee": "os.path.dirname",
+          "lineNumber": 196
+        },
+        {
+          "caller": "main",
+          "callee": "os.path.abspath",
+          "lineNumber": 196
+        },
+        {
+          "caller": "main",
+          "callee": "os.path.join",
+          "lineNumber": 197
+        },
+        {
+          "caller": "main",
+          "callee": "os.path.join",
+          "lineNumber": 198
+        },
+        {
+          "caller": "main",
+          "callee": "write_csv",
+          "lineNumber": 200
+        },
+        {
+          "caller": "main",
+          "callee": "write_csv",
+          "lineNumber": 203
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 205
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 205
+        },
+        {
+          "caller": "main",
+          "callee": "print",
+          "lineNumber": 206
+        },
+        {
+          "caller": "main",
+          "callee": "len",
+          "lineNumber": 206
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scripts/validate.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 118,
+      "nonEmptyLines": 96,
+      "functions": [
+        {
+          "name": "validate",
+          "startLine": 37,
+          "endLine": 113,
+          "params": [
+            "path"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "validate",
+          "line": 37,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "validate",
+          "callee": "open",
+          "lineNumber": 40
+        },
+        {
+          "caller": "validate",
+          "callee": "csv.reader",
+          "lineNumber": 41
+        },
+        {
+          "caller": "validate",
+          "callee": "list",
+          "lineNumber": 42
+        },
+        {
+          "caller": "validate",
+          "callee": "print",
+          "lineNumber": 45
+        },
+        {
+          "caller": "validate",
+          "callee": "print",
+          "lineNumber": 50
+        },
+        {
+          "caller": "validate",
+          "callee": "print",
+          "lineNumber": 51
+        },
+        {
+          "caller": "validate",
+          "callee": "print",
+          "lineNumber": 52
+        },
+        {
+          "caller": "validate",
+          "callee": "enumerate",
+          "lineNumber": 56
+        },
+        {
+          "caller": "validate",
+          "callee": "len",
+          "lineNumber": 58
+        },
+        {
+          "caller": "validate",
+          "callee": "len",
+          "lineNumber": 58
+        },
+        {
+          "caller": "validate",
+          "callee": "violations.append",
+          "lineNumber": 59
+        },
+        {
+          "caller": "validate",
+          "callee": "len",
+          "lineNumber": 59
+        },
+        {
+          "caller": "validate",
+          "callee": "len",
+          "lineNumber": 59
+        },
+        {
+          "caller": "validate",
+          "callee": "dict",
+          "lineNumber": 61
+        },
+        {
+          "caller": "validate",
+          "callee": "zip",
+          "lineNumber": 61
+        },
+        {
+          "caller": "validate",
+          "callee": "rec[col].strip",
+          "lineNumber": 66
+        },
+        {
+          "caller": "validate",
+          "callee": "violations.append",
+          "lineNumber": 67
+        },
+        {
+          "caller": "validate",
+          "callee": "ENUMS.items",
+          "lineNumber": 70
+        },
+        {
+          "caller": "validate",
+          "callee": "violations.append",
+          "lineNumber": 72
+        },
+        {
+          "caller": "validate",
+          "callee": "sorted",
+          "lineNumber": 72
+        },
+        {
+          "caller": "validate",
+          "callee": "violations.append",
+          "lineNumber": 76
+        },
+        {
+          "caller": "validate",
+          "callee": "rec[col].strip",
+          "lineNumber": 81
+        },
+        {
+          "caller": "validate",
+          "callee": "re.match",
+          "lineNumber": 85
+        },
+        {
+          "caller": "validate",
+          "callee": "violations.append",
+          "lineNumber": 86
+        },
+        {
+          "caller": "validate",
+          "callee": "int",
+          "lineNumber": 89
+        },
+        {
+          "caller": "validate",
+          "callee": "ints.get",
+          "lineNumber": 92
+        },
+        {
+          "caller": "validate",
+          "callee": "ints.get",
+          "lineNumber": 92
+        },
+        {
+          "caller": "validate",
+          "callee": "violations.append",
+          "lineNumber": 94
+        },
+        {
+          "caller": "validate",
+          "callee": "violations.append",
+          "lineNumber": 96
+        },
+        {
+          "caller": "validate",
+          "callee": "rec[\"source_url\"].strip",
+          "lineNumber": 99
+        },
+        {
+          "caller": "validate",
+          "callee": "violations.append",
+          "lineNumber": 100
+        },
+        {
+          "caller": "validate",
+          "callee": "DATE_RE.match",
+          "lineNumber": 103
+        },
+        {
+          "caller": "validate",
+          "callee": "violations.append",
+          "lineNumber": 104
+        },
+        {
+          "caller": "validate",
+          "callee": "print",
+          "lineNumber": 107
+        },
+        {
+          "caller": "validate",
+          "callee": "len",
+          "lineNumber": 107
+        },
+        {
+          "caller": "validate",
+          "callee": "print",
+          "lineNumber": 109
+        },
+        {
+          "caller": "validate",
+          "callee": "print",
+          "lineNumber": 112
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,299 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "14d11e02356f8af2f655f14e2d81cd3e2c788a18",
+  "generatedAt": "2026-06-09T14:04:06.037Z",
+  "files": {
+    ".metadata": {
+      "filePath": ".metadata",
+      "contentHash": "65c0e9400c44ddbaade5a8baacd98bf1e50ff8921fda3a3e5b4b10fb9b188cf2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 31,
+      "hasStructuralAnalysis": false
+    },
+    ".understand-anything/.understandignore": {
+      "filePath": ".understand-anything/.understandignore",
+      "contentHash": "6682bf7ead91246d80600341f9a8cb89815e5107b569b64535eaf3cf721d0bc4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 46,
+      "hasStructuralAnalysis": false
+    },
+    ".understand-anything/config.json": {
+      "filePath": ".understand-anything/config.json",
+      "contentHash": "6241daac28ec1ac6166af17c73964fef9fa7e728b98c19706b07b7b8f0712b20",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 4,
+      "hasStructuralAnalysis": true
+    },
+    "analysis_options.yaml": {
+      "filePath": "analysis_options.yaml",
+      "contentHash": "e0ea485cfdbc3e12b93efb8679a5ea73ebfe20ea4ca0c473dc594fc2fb274ed5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 29,
+      "hasStructuralAnalysis": true
+    },
+    "data/manual_todo.csv": {
+      "filePath": "data/manual_todo.csv",
+      "contentHash": "25eef4f9cc5e2f57376f33494b1d10787d74f925ae103ca27e61f1bd6eeb3f4f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 5,
+      "hasStructuralAnalysis": false
+    },
+    "data/README.md": {
+      "filePath": "data/README.md",
+      "contentHash": "d7bac5484420d916f8d28001246af73f2d9ac79164b9c01d97755bf2e6c85a10",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 106,
+      "hasStructuralAnalysis": true
+    },
+    "data/shoes_sizing.csv": {
+      "filePath": "data/shoes_sizing.csv",
+      "contentHash": "66b6fba4059ded5a730505d9ba62c38894a607253f9228ae27370241aca11c1e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 63,
+      "hasStructuralAnalysis": false
+    },
+    "devtools_options.yaml": {
+      "filePath": "devtools_options.yaml",
+      "contentHash": "e8ba6877169885107d577db47d3e9eb10b32b7aded5959dfc52cae8022a5de84",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 4,
+      "hasStructuralAnalysis": true
+    },
+    "lib/cellfunc.dart": {
+      "filePath": "lib/cellfunc.dart",
+      "contentHash": "d53b2b4c1935bf1e809a76e0808d3d3f4f3d216f810f7ad3f7751145536138b9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 33,
+      "hasStructuralAnalysis": false
+    },
+    "lib/color_set.dart": {
+      "filePath": "lib/color_set.dart",
+      "contentHash": "28ae4f5c20f73ffd293d745c51e93a53bbac0d25bf5b552fb9c006c3df0aa0f8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 79,
+      "hasStructuralAnalysis": false
+    },
+    "lib/fit_data.dart": {
+      "filePath": "lib/fit_data.dart",
+      "contentHash": "afbdec0405bc85f49de8273e87de6ae8be320e4ca73f5cf834649f4407393334",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 96,
+      "hasStructuralAnalysis": false
+    },
+    "lib/main.dart": {
+      "filePath": "lib/main.dart",
+      "contentHash": "5c0a79ae14b7727d50bba08ab8ac0892032a9b231106acec109e46268a4b1476",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 286,
+      "hasStructuralAnalysis": false
+    },
+    "lib/pizza_data.dart": {
+      "filePath": "lib/pizza_data.dart",
+      "contentHash": "23fcfcb3cbe55241b6e34c2b9b64e66af4365fe95ad11dbea56438935e63d9f6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 115,
+      "hasStructuralAnalysis": false
+    },
+    "lib/pizza_page_popup.dart": {
+      "filePath": "lib/pizza_page_popup.dart",
+      "contentHash": "001ab2a3f47a4b0d59c3cd8b8772d807cd997ab51ded1877fd40856cc6774f7e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 304,
+      "hasStructuralAnalysis": false
+    },
+    "lib/pizza_page.dart": {
+      "filePath": "lib/pizza_page.dart",
+      "contentHash": "9cad37f6590967e239723aa2dc43442498bc0a2d6bf7e4518e3d5ae439c4136b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 438,
+      "hasStructuralAnalysis": false
+    },
+    "lib/shoe_card_widgets.dart": {
+      "filePath": "lib/shoe_card_widgets.dart",
+      "contentHash": "faab843ce2c19542e6fc814918999d97b7955721765aa6bbd4504668d15a4599",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 421,
+      "hasStructuralAnalysis": false
+    },
+    "lib/shoe_select_page.dart": {
+      "filePath": "lib/shoe_select_page.dart",
+      "contentHash": "db752ebc58043ca986e6f7d50b0f9582273b1ff5b174cb1e09294d6d21a0d2de",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 290,
+      "hasStructuralAnalysis": false
+    },
+    "lib/shoes_data.dart": {
+      "filePath": "lib/shoes_data.dart",
+      "contentHash": "7a3b9b2711946514ec651d7ffa1ccfab8d0ebbb05274ac1e47e4c95838a8ba79",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 119,
+      "hasStructuralAnalysis": false
+    },
+    "lib/shoes_page.dart": {
+      "filePath": "lib/shoes_page.dart",
+      "contentHash": "17f49da21d656f25885440528b954ac17671a6e41cf71e39533d36fea2dd28a3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 307,
+      "hasStructuralAnalysis": false
+    },
+    "pubspec.yaml": {
+      "filePath": "pubspec.yaml",
+      "contentHash": "b152dd1be893b3a74f9e1a23b6606e06bf2a6f522191d461a4161b57c28eb400",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 95,
+      "hasStructuralAnalysis": true
+    },
+    "README.md": {
+      "filePath": "README.md",
+      "contentHash": "c0c6b15251b4a43bf8816ada0a009e1faf97b2cad89da8ab75e34d7c7174e5fb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 18,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/build_dataset.py": {
+      "filePath": "scripts/build_dataset.py",
+      "contentHash": "7678d0c7a8c7971920fa2004e486e466f8a2925b41231d2c371c8130c7cc2979",
+      "functions": [
+        {
+          "name": "write_csv",
+          "params": [
+            "path",
+            "records"
+          ],
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "main",
+          "params": [],
+          "exported": true,
+          "lineCount": 12
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "csv",
+          "specifiers": [
+            "csv"
+          ]
+        },
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        }
+      ],
+      "exports": [
+        "write_csv",
+        "main"
+      ],
+      "totalLines": 211,
+      "hasStructuralAnalysis": true
+    },
+    "scripts/validate.py": {
+      "filePath": "scripts/validate.py",
+      "contentHash": "0dbcc2481eaf46815cf1bbae2098b2c80a9b33e7bdeb9bd3febfbe4d35bc2a7d",
+      "functions": [
+        {
+          "name": "validate",
+          "params": [
+            "path"
+          ],
+          "exported": true,
+          "lineCount": 77
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "csv",
+          "specifiers": [
+            "csv"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        }
+      ],
+      "exports": [
+        "validate"
+      ],
+      "totalLines": 119,
+      "hasStructuralAnalysis": true
+    }
+  }
+}

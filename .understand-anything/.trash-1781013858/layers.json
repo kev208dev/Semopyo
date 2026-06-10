@@ -1,0 +1,67 @@
+[
+  {
+    "id": "layer:entry",
+    "name": "앱 진입점 레이어",
+    "description": "Flutter 앱의 main 함수와 카테고리(신발/피자/음료/의류) 선택 홈 화면을 정의하여 모든 기능 페이지로의 진입을 라우팅합니다.",
+    "nodeIds": [
+      "file:lib/main.dart"
+    ]
+  },
+  {
+    "id": "layer:ui",
+    "name": "Page UI 레이어",
+    "description": "신발 및 피자 비교 기능의 Page/Dialog/Card widget을 구현하는 StatefulWidget 화면 코드로, 사용자 입력 처리와 shared_preferences 영속화를 담당합니다.",
+    "nodeIds": [
+      "file:lib/shoes_page.dart",
+      "file:lib/shoe_select_page.dart",
+      "file:lib/shoe_card_widgets.dart",
+      "file:lib/pizza_page.dart",
+      "file:lib/pizza_page_popup.dart"
+    ]
+  },
+  {
+    "id": "layer:domain-data",
+    "name": "도메인 데이터 & API 레이어",
+    "description": "브랜드별 신발 핏 규칙·피자 메뉴 상수와 the-sneaker-database RapidAPI 클라이언트를 정의하여 비교 화면에 도메인 데이터를 공급합니다.",
+    "nodeIds": [
+      "file:lib/fit_data.dart",
+      "file:lib/pizza_data.dart",
+      "file:lib/shoes_data.dart"
+    ]
+  },
+  {
+    "id": "layer:utility",
+    "name": "공용 UI 유틸리티 레이어",
+    "description": "여러 화면이 공유하는 색상 팔레트 매핑(getColorSet)과 표 행 생성(oneline) 등의 횡단 헬퍼 함수를 모아 둔 보조 모듈입니다.",
+    "nodeIds": [
+      "file:lib/cellfunc.dart",
+      "file:lib/color_set.dart"
+    ]
+  },
+  {
+    "id": "layer:data",
+    "name": "데이터셋 & 파이프라인 레이어",
+    "description": "신발 사이즈 정규화 CSV 데이터셋(shoes_sizing.csv, manual_todo.csv)과 이를 생성·검증하는 Python ETL 스크립트로 구성된 오프라인 데이터 파이프라인입니다.",
+    "nodeIds": [
+      "table:data/shoes_sizing.csv",
+      "table:data/manual_todo.csv",
+      "document:data/README.md",
+      "file:scripts/build_dataset.py",
+      "file:scripts/validate.py"
+    ]
+  },
+  {
+    "id": "layer:project-config",
+    "name": "프로젝트 설정 & 문서 레이어",
+    "description": "pubspec/analysis_options 등 Flutter 빌드·린트 설정, 루트 README와 .metadata, understand-anything 분석 도구 설정을 포함한 프로젝트 단위 메타·구성 파일 묶음입니다.",
+    "nodeIds": [
+      "document:README.md",
+      "config:pubspec.yaml",
+      "config:analysis_options.yaml",
+      "config:devtools_options.yaml",
+      "file:.metadata",
+      "config:.understand-anything/config.json",
+      "file:.understand-anything/.understandignore"
+    ]
+  }
+]

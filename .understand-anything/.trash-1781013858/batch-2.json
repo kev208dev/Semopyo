@@ -1,0 +1,85 @@
+{
+  "nodes": [
+    {
+      "id": "document:data/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "data/README.md",
+      "summary": "세모표 신발 사이즈 데이터셋의 스키마, 품질 규칙, 수집 원칙, 출처, 한계를 정리한 데이터셋 문서. 19개 컬럼 모델(official_spec vs perception 분리), enum 허용값, validate.py가 강제하는 6가지 품질 규칙, 그리고 61행/29 브랜드 현재 스냅샷 요약을 포함.",
+      "tags": ["documentation", "data-dictionary", "schema-definition", "dataset", "korean-content"],
+      "complexity": "moderate",
+      "languageNotes": "한글 데이터셋 문서. 19컬럼 고정 스키마와 official_spec/perception 분리 정책이 핵심."
+    },
+    {
+      "id": "table:data/manual_todo.csv",
+      "type": "table",
+      "name": "manual_todo.csv",
+      "filePath": "data/manual_todo.csv",
+      "summary": "manual_collection=TRUE 인 3개 브랜드(아식스 JS차트, 크록스 fit-guide, 무신사 로그인 게이트) 수동수집 백로그. shoes_sizing.csv와 동일한 19컬럼 스키마를 따르며 scripts/build_dataset.py가 함께 생성.",
+      "tags": ["data", "csv", "manual-collection", "backlog", "dataset"],
+      "complexity": "simple",
+      "languageNotes": "shoes_sizing.csv의 부분집합 스키마. UTF-8 BOM, 19컬럼 고정 순서."
+    },
+    {
+      "id": "table:data/shoes_sizing.csv",
+      "type": "table",
+      "name": "shoes_sizing.csv",
+      "filePath": "data/shoes_sizing.csv",
+      "summary": "세모표 앱의 신발 사이즈/핏 정규화 데이터셋. 61행 29브랜드(글로벌 43/국산 18, official_spec 16/perception 45)로 라벨 사이즈, 의도 발길이, fit_verdict, 발볼/강성, 가격대, 출처 신뢰도를 정리. lib/shoes_data.dart 와 lib/fit_data.dart 의 최종 원천 데이터.",
+      "tags": ["data", "csv", "canonical-dataset", "shoe-sizing", "korean-content"],
+      "complexity": "moderate",
+      "languageNotes": "UTF-8 with BOM, 19컬럼 고정 스키마. official_spec과 perception 행이 한 파일에 공존하며 fit_verdict 는 perception 행에만 채워짐."
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:data/README.md",
+      "target": "table:data/shoes_sizing.csv",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:data/README.md",
+      "target": "table:data/manual_todo.csv",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:data/README.md",
+      "target": "file:scripts/build_dataset.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:data/README.md",
+      "target": "file:scripts/validate.py",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "table:data/shoes_sizing.csv",
+      "target": "file:lib/shoes_data.dart",
+      "type": "defines_schema",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "table:data/shoes_sizing.csv",
+      "target": "file:lib/fit_data.dart",
+      "type": "defines_schema",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "table:data/manual_todo.csv",
+      "target": "table:data/shoes_sizing.csv",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}
