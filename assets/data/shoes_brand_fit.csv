@@ -1,0 +1,13 @@
+﻿brand,fit_tendency,recommend_adjust_mm,note,reliability,source
+Nike,작게,+5,"좁은 last, half size up 권장",med,RunRepeat
+Adidas,정사이즈,0,Nike대비 0.5 크게,med,RunRepeat
+New Balance,정사이즈~약간크게,0,와이드 폭옵션 풍부,med,RunRepeat
+Converse,크게,-5,Chuck 0.5 다운 권장,high,Converse공식
+Vans,정사이즈,0,클래식 대체로 정사이즈,med,RunRepeat
+Asics,작게,+5,"좁은 핏, 0.5 업",med,FootwearMag
+Salomon,작게,+5,"EU last, 짧고 좁음",high,SoleSupplier
+Hoka,정사이즈(폭좁음),0,Clifton/Bondi는 +5,high,HOKA공식
+On,작게,+5,Cloud 작고 좁음,med,RunRepeat
+Birkenstock,크게,-5~-10,"EU사이즈, 1다운 권장",high,BIRKENSTOCK공식
+Dr.Martens,크게,-5~-10,0.5~1 작게 권장,med,Righsize
+Crocs,크게,-5,보통 1다운/정사이즈,med,Sizetab

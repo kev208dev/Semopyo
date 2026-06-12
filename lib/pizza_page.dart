@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'pizza_data.dart';
 import 'pizza_page_popup.dart';
 
 // 선택 팝업과 공유하는 전역 상태.
@@ -43,13 +44,18 @@ class _PizzaPageState extends State<PizzaPage> {
 
   double _pricePerSlice(Map<String, dynamic>? p) {
     if (p == null) return 0;
-    return (p['price'] as int) / 8;
+    final price = (p['price'] as int?) ?? 0;
+    if (price == 0) return 0;
+    final slices = (p['slices'] as int?) ?? 8;
+    return price / slices;
   }
 
   double _pricePerArea(Map<String, dynamic>? p) {
     final a = _area(p);
     if (p == null || a == 0) return 0;
-    return (p['price'] as int) / a;
+    final price = (p['price'] as int?) ?? 0;
+    if (price == 0) return 0;
+    return price / a;
   }
 
   Future<void> _openSelect() async {
@@ -166,24 +172,40 @@ class _PizzaPageState extends State<PizzaPage> {
                     fontSize: 11,
                     fontWeight: FontWeight.w700)),
             const SizedBox(height: 6),
-            Container(
-              width: 90,
-              height: 90,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                shape: BoxShape.circle,
-                boxShadow: [
-                  BoxShadow(
-                      color: Colors.black.withAlpha(80),
-                      blurRadius: 6,
-                      offset: const Offset(0, 3))
+            SizedBox(
+              width: 96,
+              height: 96,
+              child: Stack(
+                clipBehavior: Clip.none,
+                children: [
+                  Container(
+                    width: 90,
+                    height: 90,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      shape: BoxShape.circle,
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.black.withAlpha(80),
+                            blurRadius: 6,
+                            offset: const Offset(0, 3))
+                      ],
+                    ),
+                    padding: const EdgeInsets.all(6),
+                    child: p == null
+                        ? const Center(
+                            child: Icon(Icons.add,
+                                color: Colors.black54, size: 36))
+                        : _pizzaThumbWidget(
+                            (p['thumbnail'] as String?) ?? ''),
+                  ),
+                  if (p != null)
+                    Positioned(
+                      right: -2,
+                      bottom: -2,
+                      child: pizzaBrandLogo(p['name'] as String, 32, ring: true),
+                    ),
                 ],
-              ),
-              padding: const EdgeInsets.all(6),
-              child: ClipOval(
-                child: p == null
-                    ? const Icon(Icons.add, color: Colors.black54, size: 36)
-                    : Image.asset(p['thumbnail'] as String, fit: BoxFit.cover),
               ),
             ),
             const SizedBox(height: 8),
@@ -212,7 +234,11 @@ class _PizzaPageState extends State<PizzaPage> {
               children: [
                 _miniStat('ø ${p == null ? '-' : '${p['diameter']}cm'}'),
                 const SizedBox(width: 6),
-                _miniStat(p == null ? '-원' : '${p['price']}원'),
+                _miniStat(p == null
+                    ? '-원'
+                    : (((p['price'] as int?) ?? 0) == 0
+                        ? '가격?'
+                        : '${p['price']}원')),
               ],
             ),
           ],
@@ -260,12 +286,14 @@ class _PizzaPageState extends State<PizzaPage> {
           Positioned(
             top: 10,
             left: 14,
-            child: _legend(_slot1, '피자 1'),
+            child: _legend(
+                _slot1, pizza1 == null ? '피자 1' : (pizza1!['name'] as String)),
           ),
           Positioned(
             top: 10,
             right: 14,
-            child: _legend(_slot2, '피자 2'),
+            child: _legend(
+                _slot2, pizza2 == null ? '피자 2' : (pizza2!['name'] as String)),
           ),
         ],
       ),
@@ -273,17 +301,28 @@ class _PizzaPageState extends State<PizzaPage> {
   }
 
   Widget _legend(Color c, String label) {
-    return Row(
-      children: [
-        Container(width: 12, height: 12, decoration: BoxDecoration(
-            color: c, borderRadius: BorderRadius.circular(3))),
-        const SizedBox(width: 6),
-        Text(label,
-            style: const TextStyle(
-                color: Colors.white,
-                fontSize: 12,
-                fontWeight: FontWeight.w800)),
-      ],
+    return ConstrainedBox(
+      constraints: const BoxConstraints(maxWidth: 130),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Container(
+              width: 12,
+              height: 12,
+              decoration: BoxDecoration(
+                  color: c, borderRadius: BorderRadius.circular(3))),
+          const SizedBox(width: 6),
+          Flexible(
+            child: Text(label,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w800)),
+          ),
+        ],
+      ),
     );
   }
 
@@ -334,8 +373,16 @@ class _PizzaPageState extends State<PizzaPage> {
               winner: a1 == a2 ? 0 : (a1 > a2 ? 1 : 2)),
           const SizedBox(height: 6),
           _statRow('가격 (원)',
-              pizza1 == null ? '-' : '${pizza1!['price']}',
-              pizza2 == null ? '-' : '${pizza2!['price']}'),
+              pizza1 == null
+                  ? '-'
+                  : (((pizza1!['price'] as int?) ?? 0) == 0
+                      ? '정보없음'
+                      : '${pizza1!['price']}'),
+              pizza2 == null
+                  ? '-'
+                  : (((pizza2!['price'] as int?) ?? 0) == 0
+                      ? '정보없음'
+                      : '${pizza2!['price']}')),
           const SizedBox(height: 6),
           _statRow('조각당 가격',
               '${_pricePerSlice(pizza1).toStringAsFixed(0)}원',
@@ -411,6 +458,13 @@ class _PizzaPageState extends State<PizzaPage> {
       ],
     );
   }
+}
+
+Widget _pizzaThumbWidget(String path) {
+  if (path.isEmpty) {
+    return const Center(child: Text('🍕', style: TextStyle(fontSize: 44)));
+  }
+  return ClipOval(child: Image.asset(path, fit: BoxFit.cover));
 }
 
 /// 두 피자 면적 비례 원을 같은 중심에 겹쳐 그림.

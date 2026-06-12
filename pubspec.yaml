@@ -38,6 +38,9 @@ dependencies:
   cupertino_icons: ^1.0.8
   shared_preferences: ^2.5.5
 
+  # 바코드 스캔 (카메라로 EAN-13 등 인식)
+  mobile_scanner: ^7.2.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -61,6 +64,8 @@ flutter:
   assets:
     - assets/images/
     - assets/products/
+    - assets/data/
+    - assets/barcode_db.json
 
 
   # To add assets to your application, add an assets section, like this:

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'app_theme.dart';
 import 'pizza_page.dart';
 import 'shoes_page.dart';
 import 'beverages_page.dart';
 import 'apparel_page.dart';
 import 'spiciness_page.dart';
 import 'portions_page.dart';
+import 'barcode_scan_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +19,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Semopyo',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        scaffoldBackgroundColor: AppColors.bgBottom,
+        colorScheme: const ColorScheme.dark(
+          primary: AppColors.brandA,
+          surface: AppColors.surface,
+        ),
+        useMaterial3: true,
+      ),
       home: const MyHomePage(),
     );
   }
@@ -36,9 +46,9 @@ class _Tile {
     required this.gradient,
     required this.build,
   });
-}
 
-const Color _bg = Color(0xFF0B0B0F);
+  CategoryPalette get palette => CategoryPalette(gradient);
+}
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
@@ -50,79 +60,90 @@ class MyHomePage extends StatelessWidget {
         label: '피자',
         subtitle: '한 조각이 얼마나 클까',
         emoji: '🍕',
-        gradient: const [Color(0xFFFF7A45), Color(0xFFD9381E)],
+        gradient: const [Color(0xFFFF8A4C), Color(0xFFE0381F)],
         build: () => const PizzaPage(),
       ),
       _Tile(
         label: '신발',
         subtitle: '내 발에 맞는 핏 찾기',
         emoji: '👟',
-        gradient: const [Color(0xFF4F8CFF), Color(0xFF2649C4)],
+        gradient: const [Color(0xFF5C95FF), Color(0xFF2C46D6)],
         build: () => const ShoesPage(),
       ),
       _Tile(
         label: '음료',
         subtitle: '카페별 사이즈 환산',
         emoji: '🥤',
-        gradient: const [Color(0xFFB07A4B), Color(0xFF7A4A21)],
+        gradient: const [Color(0xFFC98A53), Color(0xFF7A4A21)],
         build: () => const BeveragesPage(),
       ),
       _Tile(
         label: '옷',
         subtitle: '브랜드별 사이즈 환산',
         emoji: '👗',
-        gradient: const [Color(0xFFFF6FA5), Color(0xFF9A2F77)],
+        gradient: const [Color(0xFFFF7FB0), Color(0xFF9A2F77)],
         build: () => const ApparelPage(),
       ),
       _Tile(
         label: '맵기',
         subtitle: '스코빌로 매움 탐험',
         emoji: '🌶️',
-        gradient: const [Color(0xFFE53935), Color(0xFF7B1FA2)],
+        gradient: const [Color(0xFFF24A4A), Color(0xFF8E24AA)],
         build: () => const SpicinessPage(),
       ),
       _Tile(
         label: '1인분',
         subtitle: '밥 한공기 대비 양',
         emoji: '🍚',
-        gradient: const [Color(0xFF5BB95E), Color(0xFF2E7D32)],
+        gradient: const [Color(0xFF63C766), Color(0xFF2E7D32)],
         build: () => const PortionsPage(),
       ),
     ];
 
     return Scaffold(
-      backgroundColor: _bg,
-      body: SafeArea(
-        child: CustomScrollView(
-          slivers: [
-            SliverToBoxAdapter(child: _header()),
-            SliverPadding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              sliver: SliverGrid(
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  mainAxisSpacing: 14,
-                  crossAxisSpacing: 14,
-                  childAspectRatio: 0.95,
-                ),
-                delegate: SliverChildBuilderDelegate(
-                  (ctx, i) => _CategoryCard(tile: tiles[i]),
-                  childCount: tiles.length,
+      body: Container(
+        decoration: const BoxDecoration(gradient: AppColors.bgGradient),
+        child: SafeArea(
+          child: CustomScrollView(
+            slivers: [
+              const SliverToBoxAdapter(child: _Header()),
+              const SliverToBoxAdapter(child: _ScanCta()),
+              SliverPadding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: AppSpace.lg),
+                sliver: SliverGrid(
+                  gridDelegate:
+                      const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    mainAxisSpacing: AppSpace.md,
+                    crossAxisSpacing: AppSpace.md,
+                    childAspectRatio: 0.92,
+                  ),
+                  delegate: SliverChildBuilderDelegate(
+                    (ctx, i) => _CategoryCard(tile: tiles[i]),
+                    childCount: tiles.length,
+                  ),
                 ),
               ),
-            ),
-            const SliverToBoxAdapter(child: SizedBox(height: 18)),
-            SliverToBoxAdapter(child: _footerStats()),
-            const SliverToBoxAdapter(child: SizedBox(height: 24)),
-          ],
+              const SliverToBoxAdapter(child: SizedBox(height: AppSpace.lg)),
+              const SliverToBoxAdapter(child: _FooterStats()),
+              const SliverToBoxAdapter(child: SizedBox(height: AppSpace.xl)),
+            ],
+          ),
         ),
       ),
     );
   }
+}
 
-  Widget _header() {
+class _Header extends StatelessWidget {
+  const _Header();
+
+  @override
+  Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(20, 18, 20, 22),
+      padding: const EdgeInsets.fromLTRB(
+          AppSpace.lg, AppSpace.lg, AppSpace.lg, AppSpace.xl - 6),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -132,59 +153,44 @@ class MyHomePage extends StatelessWidget {
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text(
-                    '세모표',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 42,
-                      fontWeight: FontWeight.w900,
-                      letterSpacing: -1,
-                    ),
-                  ),
+                  Text('세모표', style: AppText.display),
                   Padding(
-                    padding: EdgeInsets.only(left: 2, top: 4),
+                    padding: EdgeInsets.only(left: 3, top: 4),
                     child: Icon(Icons.change_history,
-                        color: Colors.white, size: 44),
+                        color: AppColors.brandA, size: 40),
                   ),
                 ],
               ),
-              _IconChip(icon: Icons.settings),
+              _IconChip(),
             ],
           ),
-          const SizedBox(height: 6),
+          const SizedBox(height: AppSpace.sm),
           const Text(
             '세상 모든 크기의 표준',
             style: TextStyle(
-              fontSize: 16,
-              color: Colors.white60,
+              fontSize: 15,
+              color: AppColors.textSecondary,
               fontWeight: FontWeight.w600,
               letterSpacing: 0.2,
             ),
           ),
-          const SizedBox(height: 18),
+          const SizedBox(height: AppSpace.lg),
           Container(
-            padding:
-                const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+            padding: const EdgeInsets.symmetric(
+                horizontal: AppSpace.md, vertical: AppSpace.md),
             decoration: BoxDecoration(
-              gradient: const LinearGradient(
-                colors: [Color(0xFF1A1A22), Color(0xFF15151B)],
-              ),
-              borderRadius: BorderRadius.circular(14),
-              border: Border.all(color: Colors.white10),
+              color: AppColors.surface,
+              borderRadius: BorderRadius.circular(AppRadius.md),
+              border: Border.all(color: AppColors.border),
             ),
             child: Row(
               children: const [
                 Text('👋', style: TextStyle(fontSize: 22)),
-                SizedBox(width: 10),
+                SizedBox(width: AppSpace.md),
                 Expanded(
                   child: Text(
                     '오늘은 뭘 비교해볼까요?\n카테고리를 골라 시작해보세요.',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 13,
-                      height: 1.4,
-                      fontWeight: FontWeight.w600,
-                    ),
+                    style: AppText.body,
                   ),
                 ),
               ],
@@ -194,52 +200,134 @@ class MyHomePage extends StatelessWidget {
       ),
     );
   }
-
-  Widget _footerStats() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
-        decoration: BoxDecoration(
-          color: Colors.white.withAlpha(10),
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: Colors.white10),
-        ),
-        child: Row(
-          children: const [
-            Icon(Icons.dataset, color: Colors.white54, size: 18),
-            SizedBox(width: 8),
-            Expanded(
-              child: Text(
-                '6개 도메인 · 200+ 데이터 · 2026-06-10 스냅샷',
-                style: TextStyle(
-                  color: Colors.white54,
-                  fontSize: 12,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
 }
 
 class _IconChip extends StatelessWidget {
-  final IconData icon;
-  const _IconChip({required this.icon});
+  const _IconChip();
+
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 42,
       height: 42,
       decoration: BoxDecoration(
-        color: Colors.white.withAlpha(20),
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: Colors.white12),
+        color: AppColors.surface,
+        borderRadius: BorderRadius.circular(AppRadius.sm),
+        border: Border.all(color: AppColors.borderHi),
       ),
-      child: Icon(icon, color: Colors.white, size: 22),
+      child: const Icon(Icons.settings_outlined,
+          color: AppColors.textSecondary, size: 22),
+    );
+  }
+}
+
+/// 눌렀을 때 살짝 줄어드는 반응 래퍼.
+class _Pressable extends StatefulWidget {
+  final Widget child;
+  final VoidCallback onTap;
+  const _Pressable({required this.child, required this.onTap});
+
+  @override
+  State<_Pressable> createState() => _PressableState();
+}
+
+class _PressableState extends State<_Pressable> {
+  double _scale = 1.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTapDown: (_) => setState(() => _scale = 0.96),
+      onTapUp: (_) => setState(() => _scale = 1.0),
+      onTapCancel: () => setState(() => _scale = 1.0),
+      onTap: widget.onTap,
+      child: AnimatedScale(
+        scale: _scale,
+        duration: const Duration(milliseconds: 110),
+        curve: Curves.easeOut,
+        child: widget.child,
+      ),
+    );
+  }
+}
+
+class _ScanCta extends StatelessWidget {
+  const _ScanCta();
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(
+          AppSpace.lg, 0, AppSpace.lg, AppSpace.lg),
+      child: _Pressable(
+        onTap: () => Navigator.push(
+          context,
+          MaterialPageRoute(builder: (_) => const BarcodeScanPage()),
+        ),
+        child: Container(
+          padding: const EdgeInsets.symmetric(
+              horizontal: AppSpace.md, vertical: AppSpace.md + 2),
+          decoration: BoxDecoration(
+            gradient: const LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [AppColors.brandA, AppColors.brandB],
+            ),
+            borderRadius: BorderRadius.circular(AppRadius.lg),
+            boxShadow: [
+              BoxShadow(
+                color: AppColors.brandA.withValues(alpha: 0.40),
+                blurRadius: 24,
+                offset: const Offset(0, 10),
+              ),
+            ],
+          ),
+          child: Row(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: Colors.white.withValues(alpha: 0.22),
+                  borderRadius: BorderRadius.circular(AppRadius.sm),
+                  border: Border.all(
+                      color: Colors.white.withValues(alpha: 0.30)),
+                ),
+                child: const Icon(Icons.qr_code_scanner,
+                    color: Colors.white, size: 26),
+              ),
+              const SizedBox(width: AppSpace.md),
+              const Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      '바코드로 바로 비교',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 17,
+                        fontWeight: FontWeight.w800,
+                        letterSpacing: -0.3,
+                      ),
+                    ),
+                    SizedBox(height: 2),
+                    Text(
+                      '제품 찍으면 바로 비교 페이지로',
+                      style: TextStyle(
+                        color: Colors.white70,
+                        fontSize: 12.5,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const Icon(Icons.arrow_forward_rounded,
+                  color: Colors.white, size: 22),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
@@ -250,104 +338,153 @@ class _CategoryCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: Colors.transparent,
-      borderRadius: BorderRadius.circular(20),
-      child: InkWell(
-        borderRadius: BorderRadius.circular(20),
-        onTap: () => Navigator.push(
-          context,
-          MaterialPageRoute(builder: (_) => tile.build()),
-        ),
-        child: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: tile.gradient,
-            ),
-            borderRadius: BorderRadius.circular(20),
-            boxShadow: [
-              BoxShadow(
-                color: tile.gradient.last.withAlpha(100),
-                blurRadius: 18,
-                offset: const Offset(0, 8),
-              ),
-            ],
+    return _Pressable(
+      onTap: () => Navigator.push(
+        context,
+        MaterialPageRoute(builder: (_) => tile.build()),
+      ),
+      child: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: tile.gradient,
           ),
-          padding: const EdgeInsets.all(16),
+          borderRadius: BorderRadius.circular(AppRadius.lg),
+          boxShadow: [
+            BoxShadow(
+              color: tile.palette.glow(0.38),
+              blurRadius: 20,
+              offset: const Offset(0, 10),
+            ),
+          ],
+        ),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(AppRadius.lg),
           child: Stack(
-            clipBehavior: Clip.hardEdge,
             children: [
+              // 상단 광택
               Positioned(
-                right: -18,
-                bottom: -24,
-                child: Opacity(
-                  opacity: 0.28,
-                  child: Transform.rotate(
-                    angle: -0.25,
-                    child: Text(
-                      tile.emoji,
-                      style: const TextStyle(fontSize: 130),
+                top: -40,
+                left: -20,
+                right: -20,
+                height: 120,
+                child: Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                      colors: [
+                        Colors.white.withValues(alpha: 0.22),
+                        Colors.white.withValues(alpha: 0.0),
+                      ],
                     ),
                   ),
                 ),
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                          color: Colors.white.withAlpha(45),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Text(
-                          tile.emoji,
-                          style: const TextStyle(fontSize: 22),
-                        ),
-                      ),
-                      const Spacer(),
-                      Container(
-                        padding: const EdgeInsets.all(4),
-                        decoration: BoxDecoration(
-                          color: Colors.white.withAlpha(45),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: const Icon(
-                          Icons.arrow_forward,
-                          color: Colors.white,
-                          size: 16,
-                        ),
-                      ),
-                    ],
+              // 이모지 워터마크
+              Positioned(
+                right: -16,
+                bottom: -22,
+                child: Opacity(
+                  opacity: 0.30,
+                  child: Transform.rotate(
+                    angle: -0.22,
+                    child: Text(tile.emoji,
+                        style: const TextStyle(fontSize: 124)),
                   ),
-                  const Spacer(),
-                  Text(
-                    tile.label,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 24,
-                      fontWeight: FontWeight.w900,
-                      letterSpacing: -0.3,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(AppSpace.md),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.all(8),
+                          decoration: BoxDecoration(
+                            color: Colors.white.withValues(alpha: 0.22),
+                            borderRadius:
+                                BorderRadius.circular(AppRadius.sm),
+                            border: Border.all(
+                                color: Colors.white
+                                    .withValues(alpha: 0.28)),
+                          ),
+                          child: Text(tile.emoji,
+                              style: const TextStyle(fontSize: 22)),
+                        ),
+                        const Spacer(),
+                        Icon(
+                          Icons.arrow_outward_rounded,
+                          color: Colors.white.withValues(alpha: 0.85),
+                          size: 20,
+                        ),
+                      ],
                     ),
-                  ),
-                  const SizedBox(height: 2),
-                  Text(
-                    tile.subtitle,
-                    style: TextStyle(
-                      color: Colors.white.withAlpha(220),
-                      fontSize: 12,
-                      fontWeight: FontWeight.w600,
-                      height: 1.3,
+                    const Spacer(),
+                    Text(
+                      tile.label,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 23,
+                        fontWeight: FontWeight.w800,
+                        letterSpacing: -0.3,
+                      ),
                     ),
-                  ),
-                ],
+                    const SizedBox(height: 3),
+                    Text(
+                      tile.subtitle,
+                      style: TextStyle(
+                        color: Colors.white.withValues(alpha: 0.88),
+                        fontSize: 12.5,
+                        fontWeight: FontWeight.w600,
+                        height: 1.3,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class _FooterStats extends StatelessWidget {
+  const _FooterStats();
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: AppSpace.lg),
+      child: Container(
+        padding: const EdgeInsets.symmetric(
+            horizontal: AppSpace.md, vertical: AppSpace.md),
+        decoration: BoxDecoration(
+          color: AppColors.surface,
+          borderRadius: BorderRadius.circular(AppRadius.md),
+          border: Border.all(color: AppColors.border),
+        ),
+        child: Row(
+          children: const [
+            Icon(Icons.dataset_outlined,
+                color: AppColors.textTertiary, size: 18),
+            SizedBox(width: AppSpace.sm),
+            Expanded(
+              child: Text(
+                '6개 도메인 · 51,500+ 데이터 · 2026-06-10 스냅샷',
+                style: TextStyle(
+                  color: AppColors.textTertiary,
+                  fontSize: 12,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );

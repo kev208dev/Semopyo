@@ -16,6 +16,26 @@
 | 의류 핏(체감) | `apparel_perception.csv` | 17 (manual 6) | `../research/03_apparel_research.md` |
 | 제품 맵기(SHU) | `spiciness.csv` | 43 (off 31 / per 12, manual 5) | `../research/04_spiciness_research.md` |
 | 음식 1인분/제공량 | `food_portions.csv` | 18 (off 13 / per 5, manual 4) | `../research/05_food_portions_research.md` |
+| 피자 사이즈(글로벌) | `pizza_sizes_global.csv` | 147 (42개 브랜드·15개국, 딥리서치) | 딥리서치(공식·영양정보) |
+| 피자(냉동/마트) | `pizza_frozen.csv` | 17 (중량 g 기준) | 딥리서치(제품라벨) |
+| 가공식품 영양 | `food_nutrition_master.csv` | 282,296 (식약처 영양DB, 1인분 환산) | API 수집(data.go.kr 15127578) |
+| 유통바코드 | `barcode_i2570.csv` | 51,158 (식약처 I2570, 바코드→제품) | API 수집(식품안전나라) |
+
+### 확장 데이터셋 (대규모 수집, reliability 컬럼 포함)
+
+| 분야 | 파일 | 행 | 비고 |
+|------|------|----|------|
+| 음료 용량(확장) | `beverages_expanded.csv` | 107 | 국내+글로벌 30+개 브랜드(버블티 포함), hot/iced 분리, mL |
+| 맵기(확장) | `spiciness_expanded.csv` + `spiciness_wave2.csv` | 32+31 | 라면·핫소스·스낵·고추 SHU(범위 min/max), 슈퍼핫 품종 포함 |
+| 신발 변환표 | `shoes_conversion.csv` | 35 | ISO19407 mondopoint, 남녀 foot_mm↔KR/US/UK/EU |
+| 신발 브랜드 핏 | `shoes_brand_fit.csv` | 12 | 브랜드별 정/크게/작게 + 보정 mm |
+| 1인분(확장) | `food_portions_expanded.csv` | 72 | 식약처+글로벌 패스트푸드/베이커리 중량, min/max·kcal |
+| 의류 단면(확장) | `apparel_expanded.csv` | 50 | 커버낫·디네댓 + Gildan/Champion/AA/Bella/NextLevel/Carhartt 공식 스펙시트(단면 실측) |
+| 매운 프랜차이즈 | `kr_franchise_spicy.csv` | 24 | 디진다돈까스·엽기떡볶이·신전·청년다방·탕화쿵푸 맵기 단계(rank)+가격 |
+| 한국 프랜차이즈 1인분 | `kr_franchise_portions.csv` | 58 | 한식·분식·버거·치킨(소비자원 실측)·디저트빙수(배스킨라빈스 등) 중량 |
+| 편의점 간편식 | `kr_convenience_food.csv` | 24 | 도시락·삼각김밥·김밥·컵라면·핫바 표시중량(g) |
+
+> 확장 CSV는 전부 `reliability`(high/med/low)와 `source` 컬럼을 가진다. 공개 API가 없는 분야(음료·맵기·신발·옷·피자)는 공식 사이트/영양정보 기반이라 신뢰도 등급 필참.
 
 생성·검증:
 ```bash
@@ -30,6 +50,7 @@ python3 scripts/validate_extra.py                   # 나머지 4분야 검증
 - **apparel**: official(단면 실측 cm: shoulder/chest_half/length/sleeve/waist_half/rise/thigh/hem)과 perception(fit_tendency/recommend_adjustment/silhouette) 두 파일로 분리. Wilson Korea 라벨→단면 매핑을 골든 레퍼런스로 시드.
 - **spiciness**: `scoville_shu` 또는 `scoville_min/max`(범위), `measured_on`(스프/소스/완성품/원물), `version_year`, `spice_level_label`, `perceived_level`(perception 전용). SHU는 스프·소스 측정값이라 볶음/국물 체감차를 note에 분리.
 - **food_portions**: `portion_type`(섭취참고량/제공량/완제품/1인분)로 식약처 국가표준·브랜드 완제품·식당 1인분을 절대 혼동 금지. `amount_value`+`amount_unit`(g/mL), 매장 편차는 `amount_min/max`.
+- **pizza_sizes_global**: `brand`/`country`/`size_label` 단위 행. `diameter_inch`·`diameter_cm`(둘 중 하나는 환산), `area_cm2`·`slice_area_cm2`(파생, "한 조각이 얼마나 큰가" 비교축), `slices`, `price`+`currency`, `calories_per_slice`, **`reliability`(high/med/low)**, `source`. 공개 API 없어 공식 사이트/영양정보 기반 → 신뢰도 컬럼 필수 참고(한국 도미노·피자헛 cm는 비공식). 앱 에셋: `assets/pizza_global.json`.
 
 ## 브랜드 로고 (`brand_domain` 컬럼)
 

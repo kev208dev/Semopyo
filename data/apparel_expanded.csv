@@ -1,0 +1,51 @@
+﻿brand,garment,size_label,shoulder_cm,chest_half_cm,length_cm,sleeve_cm,reliability,source
+커버낫,반팔티(어센틱로고),XS,47.5,49,63,19,high,covernat.co.kr
+커버낫,반팔티(어센틱로고),S,49,51.5,65,20,high,covernat.co.kr
+커버낫,반팔티(어센틱로고),M,51,55,69,21.5,high,covernat.co.kr
+커버낫,반팔티(어센틱로고),L,52.5,57.5,71,22.5,high,covernat.co.kr
+커버낫,반팔티(어센틱로고),XL,54,60,73,23.5,high,covernat.co.kr
+커버낫,반팔티(어센틱로고),XXL,55.5,62.5,74,24.5,high,covernat.co.kr
+디스이즈네버댓,맨투맨(Arch-Logo),S,47,57,64,64,med,thisisneverthat
+디스이즈네버댓,맨투맨(Arch-Logo),M,49,59.5,66.5,65.5,med,thisisneverthat
+디스이즈네버댓,맨투맨(Arch-Logo),L,51,62,69,67,med,thisisneverthat
+디스이즈네버댓,맨투맨(Arch-Logo),XL,53,64.5,71.5,68.5,med,thisisneverthat
+Gildan,t-shirt,S,,45.7,71.1,39.7,high,Gildan스펙시트
+Gildan,t-shirt,M,,50.8,73.7,43.2,high,Gildan스펙시트
+Gildan,t-shirt,L,,55.9,76.2,47.0,high,Gildan스펙시트
+Gildan,t-shirt,XL,,61.0,78.7,50.8,high,Gildan스펙시트
+Gildan,t-shirt,XXL,,66.0,81.3,54.6,high,Gildan스펙시트
+Gildan,sweatshirt,S,,50.8,68.6,,high,Gildan18000
+Gildan,sweatshirt,M,,55.9,71.1,,high,Gildan18000
+Gildan,sweatshirt,L,,61.0,73.7,,high,Gildan18000
+Gildan,sweatshirt,XL,,66.0,76.2,,high,Gildan18000
+Champion,t-shirt,S,,45.7,71.1,42.5,high,ChampionT425
+Champion,t-shirt,M,,50.8,73.7,45.7,high,ChampionT425
+Champion,t-shirt,L,,55.9,76.2,48.9,high,ChampionT425
+Champion,t-shirt,XL,,61.0,78.7,52.1,high,ChampionT425
+Champion,t-shirt,XXL,,66.0,83.8,56.5,high,ChampionT425
+Champion,sweatshirt,S,,57.8,68.6,,high,ChampionRW
+Champion,sweatshirt,M,,62.9,71.1,,high,ChampionRW
+Champion,sweatshirt,L,,67.9,73.7,,high,ChampionRW
+Champion,sweatshirt,XL,,73.0,76.2,,high,ChampionRW
+American Apparel,t-shirt,S,,45.7,72.1,,high,AA2001
+American Apparel,t-shirt,M,,50.8,73.4,21.6,high,AA2001
+American Apparel,t-shirt,L,,55.9,76.2,22.2,high,AA2001
+American Apparel,t-shirt,XL,,61.0,78.7,22.9,high,AA2001
+American Apparel,t-shirt,XXL,,66.0,81.6,23.5,high,AA2001
+Bella+Canvas,t-shirt,XS,,43.2,69.9,19.7,high,BC3001C
+Bella+Canvas,t-shirt,S,,47.0,72.4,20.3,high,BC3001C
+Bella+Canvas,t-shirt,M,,50.8,74.9,21.6,high,BC3001C
+Bella+Canvas,t-shirt,L,,54.6,77.5,22.9,high,BC3001C
+Bella+Canvas,t-shirt,XL,,58.4,80.0,24.1,high,BC3001C
+Bella+Canvas,t-shirt,XXL,,62.2,82.6,25.4,high,BC3001C
+Next Level,t-shirt,XS,,44.5,68.6,,high,NL3600
+Next Level,t-shirt,S,,48.3,71.1,,high,NL3600
+Next Level,t-shirt,M,,52.1,73.7,,high,NL3600
+Next Level,t-shirt,L,,55.9,76.2,,high,NL3600
+Next Level,t-shirt,XL,,61.0,78.7,,high,NL3600
+Next Level,t-shirt,XXL,,66.0,81.3,,high,NL3600
+Carhartt,t-shirt,S,,53.3,74.3,,high,Carhartt공식
+Carhartt,t-shirt,M,,58.4,75.6,,high,Carhartt공식
+Carhartt,t-shirt,L,,63.5,76.8,,high,Carhartt공식
+Carhartt,t-shirt,XL,,68.6,79.4,,high,Carhartt공식
+Carhartt,t-shirt,XXL,,78.7,84.5,,high,Carhartt공식

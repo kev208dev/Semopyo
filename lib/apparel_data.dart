@@ -1,6 +1,9 @@
 // data/apparel_official.csv + apparel_perception.csv 요약.
 // 상의 기준만 (남성 95 라벨 ≈ M 표준 매핑).
 
+import 'dart:convert';
+import 'package:flutter/services.dart' show rootBundle;
+
 /// 의류 기본 이미지(흰 와이셔츠). 카테고리 매칭 안 되는 브랜드용.
 const String kApparelDefaultImage = 'assets/products/apparel_default.png';
 
@@ -190,4 +193,45 @@ String fitPhrase(FitTendency f) {
   if (f.tendency == '크게') return '크게 나오는 편';
   if (f.tendency == '작게') return '작게 나오는 편';
   return '정사이즈';
+}
+
+/// 확장 의류 실측 데이터셋 (assets/data/apparel_global.json, 50건).
+/// 브랜드별 단일 사이즈 행. UI에서 brand+garment 그룹화 사용.
+class ApparelMeasure {
+  final String brand;
+  final String garment;
+  final String sizeLabel;
+  final double? shoulder;
+  final double? chestHalf;
+  final double? length;
+  final double? sleeve;
+  final String source;
+  const ApparelMeasure({
+    required this.brand,
+    required this.garment,
+    required this.sizeLabel,
+    this.shoulder,
+    this.chestHalf,
+    this.length,
+    this.sleeve,
+    this.source = '',
+  });
+}
+
+Future<List<ApparelMeasure>> loadGlobalApparel() async {
+  final raw = await rootBundle.loadString('assets/data/apparel_global.json');
+  final list = jsonDecode(raw) as List;
+  return list.map<ApparelMeasure>((e) {
+    final m = e as Map<String, dynamic>;
+    return ApparelMeasure(
+      brand: (m['brand'] ?? '').toString(),
+      garment: (m['garment'] ?? '').toString(),
+      sizeLabel: (m['size_label'] ?? '').toString(),
+      shoulder: (m['shoulder_cm'] as num?)?.toDouble(),
+      chestHalf: (m['chest_half_cm'] as num?)?.toDouble(),
+      length: (m['length_cm'] as num?)?.toDouble(),
+      sleeve: (m['sleeve_cm'] as num?)?.toDouble(),
+      source: (m['source'] ?? '').toString(),
+    );
+  }).toList();
 }

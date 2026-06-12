@@ -5,14 +5,23 @@ import 'brand_logo.dart';
 const Color _bg = Color(0xFF111111);
 
 class BeveragesPage extends StatefulWidget {
-  const BeveragesPage({super.key});
+  final String? scannedName;
+  const BeveragesPage({super.key, this.scannedName});
   @override
   State<BeveragesPage> createState() => _BeveragesPageState();
 }
 
 class _BeveragesPageState extends State<BeveragesPage> {
-  BevBrand _brand = beverageBrands[0];
-  late BevSize _size = _brand.sizes[1];
+  late BevBrand _brand;
+  late BevSize _size;
+
+  @override
+  void initState() {
+    super.initState();
+    _brand = matchBeverageBrandFromName(widget.scannedName) ??
+        beverageBrands[0];
+    _size = _brand.sizes.length > 1 ? _brand.sizes[1] : _brand.sizes[0];
+  }
 
   @override
   Widget build(BuildContext context) {

@@ -7,6 +7,9 @@
 //   - '1업'                          → offset -10
 //   - '정사이즈'                      → offset 0
 
+import 'dart:convert';
+import 'package:flutter/services.dart' show rootBundle;
+
 class FitInfo {
   final int offsetMm; // + 크게 나옴 / - 작게 나옴
   final String toebox; // 좁음 | 표준 | 넓음
@@ -92,4 +95,67 @@ String verdictPhrase(FitInfo f) {
     default:
       return '정사이즈';
   }
+}
+
+/// ISO19407 변환표 (assets/data/shoes_conversion.json, 35건).
+/// 성별 + 발길이mm → KR/US/UK/EU 사이즈 매핑.
+class ShoeConversion {
+  final String gender;
+  final int footMm;
+  final int krMm;
+  final double? us;
+  final double? uk;
+  final double? eu;
+  const ShoeConversion({
+    required this.gender,
+    required this.footMm,
+    required this.krMm,
+    this.us,
+    this.uk,
+    this.eu,
+  });
+}
+
+Future<List<ShoeConversion>> loadShoesConversion() async {
+  final raw = await rootBundle.loadString('assets/data/shoes_conversion.json');
+  final list = jsonDecode(raw) as List;
+  return list.map<ShoeConversion>((e) {
+    final m = e as Map<String, dynamic>;
+    return ShoeConversion(
+      gender: (m['gender'] ?? '').toString(),
+      footMm: (m['foot_mm'] as num).toInt(),
+      krMm: (m['kr_mm'] as num).toInt(),
+      us: (m['us'] as num?)?.toDouble(),
+      uk: (m['uk'] as num?)?.toDouble(),
+      eu: (m['eu'] as num?)?.toDouble(),
+    );
+  }).toList();
+}
+
+/// 브랜드별 핏 경향 (assets/data/shoes_fit.json, 12건).
+class ShoeFitRule {
+  final String brand;
+  final String tendency; // 작게 | 정사이즈 | 크게
+  final int adjustMm;
+  final String note;
+  const ShoeFitRule({
+    required this.brand,
+    required this.tendency,
+    required this.adjustMm,
+    required this.note,
+  });
+}
+
+Future<List<ShoeFitRule>> loadShoesFit() async {
+  final raw = await rootBundle.loadString('assets/data/shoes_fit.json');
+  final list = jsonDecode(raw) as List;
+  return list.map<ShoeFitRule>((e) {
+    final m = e as Map<String, dynamic>;
+    return ShoeFitRule(
+      brand: (m['brand'] ?? '').toString(),
+      tendency: (m['fit_tendency'] ?? '').toString(),
+      adjustMm: (m['adjust_mm'] as num?)?.toInt() ?? 0,
+      note: (m['note'] ?? '').toString(),
+    );
+  }).toList();
 }

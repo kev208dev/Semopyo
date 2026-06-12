@@ -1,6 +1,9 @@
 // data/beverages.csv 에서 카페체인별 size_label + volume_ml 만 뽑아 정리.
 // HOT/ICE 구분: hot/iced/공용. 공식 우선 + 체감 보강.
 
+import 'dart:convert';
+import 'package:flutter/services.dart' show rootBundle;
+
 /// 카페/음료 기본 이미지(아이스 컵 아이콘).
 /// 파일을 assets/products/beverage_default.png 에 두면 자동 표시.
 const String kBeverageDefaultImage = 'assets/products/beverage_default.png';
@@ -94,4 +97,52 @@ BevSize closestSize(BevBrand brand, int targetMl, String temp) {
   pool.sort((a, b) =>
       (a.ml - targetMl).abs().compareTo((b.ml - targetMl).abs()));
   return pool.first;
+}
+
+String _normalizeBev(String s) =>
+    s.toLowerCase().replaceAll(RegExp(r'[\s\(\)\[\]\.\-_/]+'), '');
+
+/// 확장된 글로벌 음료 DB 1회 로드.
+/// assets/data/beverages_global.json (107건) → BevBrand 리스트로 그룹화.
+Future<List<BevBrand>> loadGlobalBeverages() async {
+  final raw = await rootBundle.loadString('assets/data/beverages_global.json');
+  final list = jsonDecode(raw) as List;
+  final byBrand = <String, List<BevSize>>{};
+  for (final e in list) {
+    final m = e as Map<String, dynamic>;
+    final brand = (m['brand'] ?? '').toString();
+    final label = (m['size_label'] ?? '').toString();
+    final ml = (m['volume_ml'] as num?)?.toInt() ?? 0;
+    final temp = (m['temp'] ?? '공용').toString();
+    if (brand.isEmpty || ml <= 0) continue;
+    byBrand.putIfAbsent(brand, () => []).add(BevSize(label, ml, temp));
+  }
+  return byBrand.entries
+      .map((e) => BevBrand(e.key, _emojiForBrand(e.key), e.value))
+      .toList();
+}
+
+String _emojiForBrand(String name) {
+  for (final b in beverageBrands) {
+    if (b.name == name) return b.emoji;
+  }
+  return '🥤';
+}
+
+/// 스캔된 제품명에서 beverageBrands 항목을 찾는다. 가장 긴 매치 우선.
+BevBrand? matchBeverageBrandFromName(String? scanned) {
+  if (scanned == null || scanned.isEmpty) return null;
+  final n = _normalizeBev(scanned);
+  if (n.isEmpty) return null;
+  BevBrand? best;
+  int bestLen = 0;
+  for (final b in beverageBrands) {
+    final bn = _normalizeBev(b.name);
+    if (bn.length < 2) continue;
+    if (n.contains(bn) && bn.length > bestLen) {
+      best = b;
+      bestLen = bn.length;
+    }
+  }
+  return best;
 }

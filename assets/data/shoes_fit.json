@@ -1,0 +1,86 @@
+[
+  {
+    "brand": "Nike",
+    "fit_tendency": "작게",
+    "adjust_mm": 5,
+    "note": "좁은 last, half size up 권장",
+    "source": "RunRepeat"
+  },
+  {
+    "brand": "Adidas",
+    "fit_tendency": "정사이즈",
+    "adjust_mm": 0,
+    "note": "Nike대비 0.5 크게",
+    "source": "RunRepeat"
+  },
+  {
+    "brand": "New Balance",
+    "fit_tendency": "정사이즈~약간크게",
+    "adjust_mm": 0,
+    "note": "와이드 폭옵션 풍부",
+    "source": "RunRepeat"
+  },
+  {
+    "brand": "Converse",
+    "fit_tendency": "크게",
+    "adjust_mm": -5,
+    "note": "Chuck 0.5 다운 권장",
+    "source": "Converse공식"
+  },
+  {
+    "brand": "Vans",
+    "fit_tendency": "정사이즈",
+    "adjust_mm": 0,
+    "note": "클래식 대체로 정사이즈",
+    "source": "RunRepeat"
+  },
+  {
+    "brand": "Asics",
+    "fit_tendency": "작게",
+    "adjust_mm": 5,
+    "note": "좁은 핏, 0.5 업",
+    "source": "FootwearMag"
+  },
+  {
+    "brand": "Salomon",
+    "fit_tendency": "작게",
+    "adjust_mm": 5,
+    "note": "EU last, 짧고 좁음",
+    "source": "SoleSupplier"
+  },
+  {
+    "brand": "Hoka",
+    "fit_tendency": "정사이즈(폭좁음)",
+    "adjust_mm": 0,
+    "note": "Clifton/Bondi는 +5",
+    "source": "HOKA공식"
+  },
+  {
+    "brand": "On",
+    "fit_tendency": "작게",
+    "adjust_mm": 5,
+    "note": "Cloud 작고 좁음",
+    "source": "RunRepeat"
+  },
+  {
+    "brand": "Birkenstock",
+    "fit_tendency": "크게",
+    "adjust_mm": 0,
+    "note": "EU사이즈, 1다운 권장",
+    "source": "BIRKENSTOCK공식"
+  },
+  {
+    "brand": "Dr.Martens",
+    "fit_tendency": "크게",
+    "adjust_mm": 0,
+    "note": "0.5~1 작게 권장",
+    "source": "Righsize"
+  },
+  {
+    "brand": "Crocs",
+    "fit_tendency": "크게",
+    "adjust_mm": -5,
+    "note": "보통 1다운/정사이즈",
+    "source": "Sizetab"
+  }
+]

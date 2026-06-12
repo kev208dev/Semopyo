@@ -5,25 +5,52 @@ import 'brand_logo.dart';
 
 const Color _bg = Color(0xFF111111);
 
-const double _chartW = 2400;
-const double _chartH = 700;
 const int _shuMin = 300;
 const int _shuMax = 25000;
 
 class SpicinessPage extends StatefulWidget {
-  const SpicinessPage({super.key});
+  final String? scannedName;
+  final String? scannedClassification;
+  const SpicinessPage(
+      {super.key, this.scannedName, this.scannedClassification});
   @override
   State<SpicinessPage> createState() => _SpicinessPageState();
 }
 
 class _SpicinessPageState extends State<SpicinessPage> {
-  SpiceItem _item = spiceItems.firstWhere((s) => s.name == '불닭볶음면');
-  final TransformationController _xform = TransformationController();
+  late SpiceItem _item;
+  List<SpiceItem> _globalSpice = const [];
+  String _query = '';
+
+  List<SpiceItem> get _pool => [...spiceItems, ..._globalSpice];
+
+  List<SpiceItem> _filteredPool() {
+    final sorted = [..._pool]..sort((a, b) => a.shu.compareTo(b.shu));
+    final q = _query.trim().toLowerCase();
+    if (q.isEmpty) return sorted;
+    return sorted
+        .where((s) =>
+            s.name.toLowerCase().contains(q) ||
+            s.brand.toLowerCase().contains(q))
+        .toList();
+  }
 
   @override
-  void dispose() {
-    _xform.dispose();
-    super.dispose();
+  void initState() {
+    super.initState();
+    _item = matchSpiceFromName(widget.scannedName) ??
+        buildEstimatedSpice(
+            widget.scannedName, widget.scannedClassification) ??
+        spiceItems.firstWhere((s) => s.name == '신라면');
+    _loadGlobal();
+  }
+
+  Future<void> _loadGlobal() async {
+    try {
+      final g = await loadGlobalSpice();
+      if (!mounted) return;
+      setState(() => _globalSpice = g);
+    } catch (_) {/* 폴백: 기본 리스트 */}
   }
 
   @override
@@ -53,7 +80,7 @@ class _SpicinessPageState extends State<SpicinessPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
-                '음식을 고르면 스코빌(SHU) 위치를 보여드려요.\n차트는 두 손가락으로 확대·축소·이동 가능해요.',
+                '음식을 고르면 스코빌(SHU) 위치를\n좌(순함)→우(매움) 막대로 보여드려요.',
                 style: TextStyle(
                     color: Colors.white,
                     fontSize: 15,
@@ -66,183 +93,261 @@ class _SpicinessPageState extends State<SpicinessPage> {
               _resultCard(level),
               const SizedBox(height: 18),
               _peppers(level),
+              const SizedBox(height: 22),
+              const Text('스코빌 척도 위치',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w900)),
+              const SizedBox(height: 12),
+              _spectrumBar(),
               const SizedBox(height: 18),
               Row(
                 children: [
-                  const Text('스코빌 척도 탐험',
+                  const Text('맵기 순 항목 (탭하여 선택)',
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 16,
                           fontWeight: FontWeight.w900)),
                   const Spacer(),
-                  TextButton.icon(
-                    onPressed: () =>
-                        _xform.value = Matrix4.identity(),
-                    icon: const Icon(Icons.refresh,
-                        color: Colors.white70, size: 16),
-                    label: const Text('초기화',
-                        style: TextStyle(
-                            color: Colors.white70,
-                            fontWeight: FontWeight.w700)),
+                  Text('${_pool.length}건',
+                      style: const TextStyle(
+                          color: Colors.white38,
+                          fontSize: 11,
+                          fontWeight: FontWeight.w700)),
+                ],
+              ),
+              const SizedBox(height: 10),
+              _searchBar(),
+              const SizedBox(height: 10),
+              _itemStrip(),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _spectrumBar() {
+    return LayoutBuilder(builder: (ctx, c) {
+      final w = c.maxWidth;
+      const barH = 24.0;
+      final selT = _normShu(_item.shu);
+      const refs = <(int, String)>[
+        (570, '안성탕면'),
+        (3400, '신라면'),
+        (4404, '불닭'),
+        (10000, '청양/핵불닭'),
+        (20000, '극강'),
+      ];
+      return Container(
+        padding: const EdgeInsets.fromLTRB(8, 6, 8, 12),
+        decoration: BoxDecoration(
+          color: Colors.white.withAlpha(15),
+          borderRadius: BorderRadius.circular(14),
+          border: Border.all(color: Colors.white24),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(
+              height: 70,
+              child: Stack(
+                clipBehavior: Clip.none,
+                children: [
+                  // 선택 항목 라벨 + 화살표
+                  Positioned(
+                    left: (selT * (w - 16)).clamp(0, w - 16) - 50,
+                    top: 0,
+                    width: 100,
+                    child: Column(
+                      children: [
+                        Text(
+                          _item.name,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w900),
+                        ),
+                        Text('${_item.shu}',
+                            style: const TextStyle(
+                                color: Colors.white70,
+                                fontSize: 10,
+                                fontWeight: FontWeight.w700)),
+                        const Icon(Icons.arrow_drop_down,
+                            color: Colors.white, size: 26),
+                      ],
+                    ),
                   ),
                 ],
               ),
-              const Text('↔ 두 손가락 확대·축소  /  드래그 이동',
-                  style: TextStyle(
-                      color: Colors.white38,
-                      fontSize: 11,
-                      fontWeight: FontWeight.w600)),
-              const SizedBox(height: 8),
-              _chart(),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget _chart() {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.white.withAlpha(15),
-        borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: Colors.white24),
-      ),
-      clipBehavior: Clip.antiAlias,
-      height: 360,
-      child: InteractiveViewer(
-        transformationController: _xform,
-        boundaryMargin: const EdgeInsets.all(200),
-        minScale: 0.4,
-        maxScale: 6.0,
-        constrained: false,
-        child: SizedBox(
-          width: _chartW,
-          height: _chartH,
-          child: Stack(
-            children: [
-              CustomPaint(
-                size: const Size(_chartW, _chartH),
-                painter: _AxisPainter(selectedShu: _item.shu),
-              ),
-              for (int i = 0; i < spiceItems.length; i++)
-                _itemMarker(spiceItems[i], i),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget _itemMarker(SpiceItem s, int idx) {
-    final x = _xLog(s.shu);
-    // Y staggering: 8행 순환, 위/아래 번갈아 0.. row 형태로.
-    final rows = 10;
-    final row = idx % rows;
-    final y = _chartH / 2 + ((row - rows / 2) * 55);
-    final color = spiceColor(spiceLevel(s.shu));
-    final selected = s.name == _item.name;
-    final pinAt = _chartH / 2; // 점은 가운데 축에
-    return Positioned(
-      left: x - 100,
-      top: 0,
-      width: 200,
-      height: _chartH,
-      child: Stack(
-        clipBehavior: Clip.none,
-        children: [
-          // 라벨 박스 → 축까지 연결선.
-          Positioned(
-            left: 99,
-            top: math.min(y, pinAt),
-            child: Container(
-              width: 2,
-              height: (y - pinAt).abs(),
-              color: Colors.white24,
             ),
-          ),
-          // 축 위 점.
-          Positioned(
-            left: 92,
-            top: pinAt - 8,
-            child: Container(
-              width: 16,
-              height: 16,
+            // 그라데이션 바
+            Container(
+              height: barH,
               decoration: BoxDecoration(
-                color: color,
-                shape: BoxShape.circle,
-                border: Border.all(
-                    color: selected ? Colors.white : Colors.black87,
-                    width: selected ? 3 : 2),
-                boxShadow: selected
-                    ? [BoxShadow(color: color, blurRadius: 16)]
-                    : null,
+                gradient: const LinearGradient(colors: [
+                  Color(0xFFFFE082),
+                  Color(0xFFFFB74D),
+                  Color(0xFFFF7043),
+                  Color(0xFFE53935),
+                  Color(0xFF7B1FA2),
+                ]),
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: Colors.white24),
               ),
             ),
-          ),
-          // 라벨.
-          Positioned(
-            left: 0,
-            top: y - 18,
-            width: 200,
-            child: GestureDetector(
-              onTap: () => setState(() => _item = s),
-              child: Center(
-                child: Container(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 8, vertical: 4),
-                  decoration: BoxDecoration(
-                    color: selected ? color : Colors.white,
-                    borderRadius: BorderRadius.circular(8),
-                    border: Border.all(
-                        color: s.reference ? color : Colors.black87,
-                        width: selected ? 2 : 1),
-                    boxShadow: [
-                      BoxShadow(
-                          color: Colors.black54,
-                          blurRadius: 4,
-                          offset: const Offset(0, 2)),
-                    ],
-                  ),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
+            const SizedBox(height: 6),
+            // 기준선 라벨 (포지셔닝)
+            SizedBox(
+              height: 38,
+              child: Stack(
+                clipBehavior: Clip.none,
+                children: [
+                  for (final r in refs)
+                    Positioned(
+                      left: (_normShu(r.$1) * (w - 16)).clamp(0, w - 16) - 36,
+                      top: 0,
+                      width: 72,
+                      child: Column(
                         children: [
-                          BrandLogo(brandName: s.brand, size: 16),
-                          const SizedBox(width: 4),
-                          ConstrainedBox(
-                            constraints:
-                                const BoxConstraints(maxWidth: 130),
-                            child: Text(
-                              s.name,
+                          Container(
+                              width: 1, height: 6, color: Colors.white38),
+                          Text(r.$2,
                               maxLines: 1,
-                              overflow: TextOverflow.ellipsis,
-                              style: TextStyle(
-                                  color: selected
-                                      ? Colors.white
-                                      : Colors.black,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w900),
-                            ),
-                          ),
+                              overflow: TextOverflow.clip,
+                              textAlign: TextAlign.center,
+                              style: const TextStyle(
+                                  color: Colors.white60,
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.w700)),
+                          Text('${r.$1}',
+                              style: const TextStyle(
+                                  color: Colors.white30,
+                                  fontSize: 9,
+                                  fontWeight: FontWeight.w600)),
                         ],
                       ),
-                      Text('${s.shu} SHU',
-                          style: TextStyle(
-                              color: selected
-                                  ? Colors.white70
-                                  : Colors.black54,
-                              fontSize: 10,
-                              fontWeight: FontWeight.w700)),
-                    ],
-                  ),
-                ),
+                    ),
+                ],
               ),
             ),
-          ),
-        ],
+          ],
+        ),
+      );
+    });
+  }
+
+  Widget _searchBar() {
+    return TextField(
+      style: const TextStyle(color: Colors.white),
+      cursorColor: Colors.white,
+      decoration: InputDecoration(
+        hintText: '음식·브랜드 검색 (예: 불닭, 농심, Takis)',
+        hintStyle: const TextStyle(color: Colors.white38),
+        prefixIcon: const Icon(Icons.search, color: Colors.white54),
+        suffixIcon: _query.isEmpty
+            ? null
+            : IconButton(
+                icon: const Icon(Icons.close, color: Colors.white54),
+                onPressed: () => setState(() => _query = ''),
+              ),
+        filled: true,
+        fillColor: Colors.white12,
+        contentPadding: const EdgeInsets.symmetric(vertical: 4),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: BorderSide.none,
+        ),
+      ),
+      onChanged: (v) => setState(() => _query = v),
+    );
+  }
+
+  Widget _itemStrip() {
+    final sorted = _filteredPool();
+    if (sorted.isEmpty) {
+      return Container(
+        height: 110,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          color: Colors.white.withAlpha(10),
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(color: Colors.white12),
+        ),
+        child: const Text('검색 결과 없음',
+            style: TextStyle(
+                color: Colors.white54,
+                fontSize: 13,
+                fontWeight: FontWeight.w700)),
+      );
+    }
+    final selIdx = sorted.indexWhere((s) => s.name == _item.name);
+    final ctrl = ScrollController(
+        initialScrollOffset: (selIdx.clamp(0, sorted.length - 1) * 110.0)
+            .clamp(0, math.max(0, sorted.length * 110.0 - 320)));
+    return SizedBox(
+      height: 110,
+      child: ListView.separated(
+        controller: ctrl,
+        scrollDirection: Axis.horizontal,
+        itemCount: sorted.length,
+        separatorBuilder: (_, __) => const SizedBox(width: 8),
+        itemBuilder: (_, i) {
+          final s = sorted[i];
+          final color = spiceColor(spiceLevel(s.shu));
+          final selected = s.name == _item.name;
+          return GestureDetector(
+            onTap: () => setState(() => _item = s),
+            child: Container(
+              width: 100,
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                color: selected ? color : Colors.white.withAlpha(18),
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(
+                    color: selected ? Colors.white : Colors.white24,
+                    width: selected ? 2 : 1),
+                boxShadow: selected
+                    ? [BoxShadow(color: color, blurRadius: 12)]
+                    : null,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      BrandLogo(brandName: s.brand, size: 18),
+                      const Spacer(),
+                      Container(
+                        width: 8,
+                        height: 8,
+                        decoration: BoxDecoration(
+                            color: color, shape: BoxShape.circle),
+                      ),
+                    ],
+                  ),
+                  const Spacer(),
+                  Text(s.name,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                          color: selected ? Colors.white : Colors.white,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w900)),
+                  Text('${s.shu} SHU',
+                      style: TextStyle(
+                          color: selected ? Colors.white70 : Colors.white54,
+                          fontSize: 10,
+                          fontWeight: FontWeight.w700)),
+                ],
+              ),
+            ),
+          );
+        },
       ),
     );
   }
@@ -300,7 +405,7 @@ class _SpicinessPageState extends State<SpicinessPage> {
         borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
       ),
       builder: (ctx) {
-        final sorted = [...spiceItems]..sort((a, b) => a.shu.compareTo(b.shu));
+        final sorted = [..._pool]..sort((a, b) => a.shu.compareTo(b.shu));
         String query = '';
         return SafeArea(
           child: StatefulBuilder(builder: (ctx, setSheet) {
@@ -475,86 +580,9 @@ class _SpicinessPageState extends State<SpicinessPage> {
   }
 }
 
-double _xLog(int shu) {
+/// SHU → 0..1 정규화 (로그 스케일).
+double _normShu(int shu) {
   final clamped = shu.clamp(_shuMin, _shuMax);
-  final t = (math.log(clamped) - math.log(_shuMin)) /
+  return (math.log(clamped) - math.log(_shuMin)) /
       (math.log(_shuMax) - math.log(_shuMin));
-  // 좌우 50px 패딩.
-  return 50 + t * (_chartW - 100);
-}
-
-class _AxisPainter extends CustomPainter {
-  final int selectedShu;
-  _AxisPainter({required this.selectedShu});
-
-  @override
-  void paint(Canvas canvas, Size s) {
-    final w = s.width;
-    final h = s.height;
-
-    // 배경 어둡게.
-    canvas.drawRect(
-        Rect.fromLTWH(0, 0, w, h), Paint()..color = const Color(0xFF0F0F0F));
-
-    // 그리드: 주요 SHU 눈금에 세로선 + 라벨.
-    final ticks = [500, 1000, 2000, 3000, 5000, 7000, 10000, 15000, 20000];
-    final grid = Paint()
-      ..color = Colors.white12
-      ..strokeWidth = 1;
-    final tickStyle = const TextStyle(
-        color: Colors.white38, fontSize: 11, fontWeight: FontWeight.w700);
-    for (final t in ticks) {
-      final x = _xLog(t);
-      canvas.drawLine(Offset(x, 30), Offset(x, h - 30), grid);
-      final tp = TextPainter(
-        text: TextSpan(text: '$t', style: tickStyle),
-        textDirection: TextDirection.ltr,
-      )..layout();
-      tp.paint(canvas, Offset(x - tp.width / 2, h - 24));
-    }
-
-    // 중앙 축선 (그라데이션).
-    final axisY = h / 2;
-    final axisRect =
-        Rect.fromCenter(center: Offset(w / 2, axisY), width: w - 100, height: 18);
-    final axisPaint = Paint()
-      ..shader = const LinearGradient(colors: [
-        Color(0xFFFFE082),
-        Color(0xFFFFB74D),
-        Color(0xFFFF7043),
-        Color(0xFFE53935),
-        Color(0xFF7B1FA2),
-      ]).createShader(axisRect);
-    canvas.drawRRect(
-      RRect.fromRectAndRadius(axisRect, const Radius.circular(9)),
-      axisPaint,
-    );
-
-    // 선택 강조선.
-    final selX = _xLog(selectedShu);
-    final selPaint = Paint()
-      ..color = Colors.white
-      ..strokeWidth = 2;
-    canvas.drawLine(Offset(selX, 10), Offset(selX, h - 10), selPaint);
-
-    // 단계 라벨 (가운데 위쪽).
-    final levels = [
-      (3500, '매움'),
-      (5500, '많이매움'),
-      (10000, '극강'),
-    ];
-    final lvlStyle = const TextStyle(
-        color: Colors.white54, fontSize: 13, fontWeight: FontWeight.w900);
-    for (final (shu, label) in levels) {
-      final x = _xLog(shu);
-      final tp = TextPainter(
-        text: TextSpan(text: label, style: lvlStyle),
-        textDirection: TextDirection.ltr,
-      )..layout();
-      tp.paint(canvas, Offset(x - tp.width / 2, 6));
-    }
-  }
-
-  @override
-  bool shouldRepaint(_AxisPainter old) => old.selectedShu != selectedShu;
 }

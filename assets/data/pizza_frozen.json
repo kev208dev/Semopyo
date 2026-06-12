@@ -1,0 +1,138 @@
+[
+  {
+    "brand": "오뚜기",
+    "country": "KR",
+    "product": "콤비네이션피자",
+    "diameter_cm": null,
+    "weight_g": 415.0,
+    "source": "오뚜기몰"
+  },
+  {
+    "brand": "CJ고메",
+    "country": "KR",
+    "product": "클래식콤비네이션",
+    "diameter_cm": null,
+    "weight_g": 405.0,
+    "source": "CJ더마켓"
+  },
+  {
+    "brand": "노브랜드",
+    "country": "KR",
+    "product": "콤비네이션피자",
+    "diameter_cm": null,
+    "weight_g": 425.0,
+    "source": "SSG"
+  },
+  {
+    "brand": "노브랜드",
+    "country": "KR",
+    "product": "치즈토마토피자",
+    "diameter_cm": null,
+    "weight_g": 350.0,
+    "source": "emart"
+  },
+  {
+    "brand": "노브랜드",
+    "country": "KR",
+    "product": "4치즈피자",
+    "diameter_cm": null,
+    "weight_g": 345.0,
+    "source": "emart"
+  },
+  {
+    "brand": "풀무원",
+    "country": "KR",
+    "product": "노엣지페퍼로니콤비",
+    "diameter_cm": null,
+    "weight_g": 388.0,
+    "source": "다나와"
+  },
+  {
+    "brand": "풀무원",
+    "country": "KR",
+    "product": "노엣지베이컨5치즈",
+    "diameter_cm": null,
+    "weight_g": 376.0,
+    "source": "다나와"
+  },
+  {
+    "brand": "풀무원",
+    "country": "KR",
+    "product": "노엣지코리안BBQ",
+    "diameter_cm": null,
+    "weight_g": 322.0,
+    "source": "다나와"
+  },
+  {
+    "brand": "Costco(Kirkland)",
+    "country": "US",
+    "product": "Pepperoni(4ct)",
+    "diameter_cm": null,
+    "weight_g": 540.0,
+    "source": "costco.com"
+  },
+  {
+    "brand": "Costco(Kirkland)",
+    "country": "US",
+    "product": "Cheese(4ct)",
+    "diameter_cm": null,
+    "weight_g": 518.0,
+    "source": "costco"
+  },
+  {
+    "brand": "DiGiorno",
+    "country": "US",
+    "product": "RisingCrust Supreme",
+    "diameter_cm": 30.5,
+    "weight_g": 831.0,
+    "source": "소매라벨"
+  },
+  {
+    "brand": "DiGiorno",
+    "country": "US",
+    "product": "RisingCrust 4Cheese",
+    "diameter_cm": 30.5,
+    "weight_g": 799.0,
+    "source": "소매라벨"
+  },
+  {
+    "brand": "DiGiorno",
+    "country": "US",
+    "product": "RisingCrust 3Meat",
+    "diameter_cm": 30.5,
+    "weight_g": 768.0,
+    "source": "소매라벨"
+  },
+  {
+    "brand": "Red Baron",
+    "country": "US",
+    "product": "ClassicCrust Pepperoni",
+    "diameter_cm": 30.5,
+    "weight_g": 584.0,
+    "source": "target"
+  },
+  {
+    "brand": "Red Baron",
+    "country": "US",
+    "product": "ClassicCrust Supreme",
+    "diameter_cm": null,
+    "weight_g": 665.0,
+    "source": "amazon"
+  },
+  {
+    "brand": "Totino's",
+    "country": "US",
+    "product": "Party Pepperoni",
+    "diameter_cm": null,
+    "weight_g": 289.0,
+    "source": "totinos.com"
+  },
+  {
+    "brand": "Totino's",
+    "country": "US",
+    "product": "Party Combination",
+    "diameter_cm": null,
+    "weight_g": 303.0,
+    "source": "totinos.com"
+  }
+]

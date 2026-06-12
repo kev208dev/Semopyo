@@ -1,0 +1,32 @@
+﻿item,category,brand,scoville_min,scoville_max,measured_on,reliability,source
+Takis Fuego,스낵,Barcel/Bimbo,8000,11000,완제품(비공개추정),low,scientifically.blog
+"Paqui One Chip Challenge(2023, Carolina Reaper+Naga Viper)",스낵,Paqui,1400000,1700000,칩(고추기준),med,en.wikipedia.org/One_Chip_Challenge
+Cholula Original,핫소스,Cholula,1000,2000,소스(제조사발표),high,en.wikipedia.org/Cholula_Hot_Sauce
+Cholula Chili Garlic,핫소스,Cholula,1000,10000,소스,med,hotsauce.com
+Cholula Chipotle,핫소스,Cholula,1000,1000,소스,med,webstaurantstore.com
+Tapatio Original,핫소스,Tapatio,3000,3000,소스,high,pepperscale.com/tapatio-hot-sauce
+Tapatio Salsa Picante(Hot),핫소스,Tapatio,4000,4000,소스,med,scovillescale.org
+Frank's RedHot Xtra Hot,핫소스,Frank's RedHot,2000,2000,소스,high,en.wikipedia.org/Frank's_RedHot
+Frank's RedHot Buffalo Wing,핫소스,Frank's RedHot,700,700,소스,med,peppergeek.com
+El Yucateco Green Habanero,핫소스,El Yucateco,7700,8800,소스(제조사발표),high,kingofflavorsince1968.com/scoville-ratings
+El Yucateco XXXtra Hot(Kutbil-ik),핫소스,El Yucateco,11600,11600,소스(제조사발표),high,kingofflavorsince1968.com/scoville-ratings
+El Yucateco Chipotle,핫소스,El Yucateco,1900,2300,소스(제조사발표),high,kingofflavorsince1968.com/scoville-ratings
+삼양 핵불닭소스,핫소스,삼양식품,6000,6000,소스(제조사발표),high,namu.wiki/핵불닭볶음면
+삼양 핵불닭소스 미니,핫소스,삼양식품,12000,12000,소스,med,namu.wiki/핵불닭볶음면
+The Last Dab: Xperience(Pepper X),핫소스,Heatonist,2693000,2693000,소스(라벨/고추),med,scovillescale.org
+Da Bomb Beyond Insanity(재확인),핫소스,Da Bomb,135600,135600,소스(라벨),high,heatonist.com/looking-for-da-bomb
+불닭볶음면 2배 매운맛,라면,삼양식품,10000,10000,완제품,high,extrabux.com
+불닭볶음면 3배 매운맛,라면,삼양식품,13000,13200,완제품,high,extrabux.com/guide/8284775
+Indomie Mi Goreng Hot&Spicy(Pedas),라면,Indofood,12000,12000,완제품,med,theramenrater.com
+태국 쥐똥고추(프릭키누/버드아이),고추,,50000,100000,원물,med,en.wikipedia.org/Bird's_eye_chili
+스카치 보넷,고추,,100000,350000,원물,high,pepperscale.com/hottest-peppers
+Trinidad Moruga Scorpion,고추,,1200000,2009231,원물(NMSU측정),high,researchgate.net/289628472
+Trinidad 7 Pot Douglah,고추,,923889,1853986,원물,med,chilipeppermadness.com
+Naga Viper,고추,,900000,1382118,원물,med,pepperscale.com/hottest-peppers
+Komodo Dragon,고추,,1400000,2200000,원물,low,pepperscale.com/hottest-peppers
+"Bhut Jolokia(고스트, Guinness 2007 인증)",고추,,1001304,1001304,원물(Guinness),high,en.wikipedia.org/Bhut_jolokia
+Apollo(The Last Dab: Apollo 원료),고추,Puckerbutt,2500000,3000000,원물(비공인추정),low,spice.alibaba.com
+Dragon's Breath,고추,,2480000,2480000,원물(비공인주장),low,culinarylore.com
+Aji Charapita,고추,,30000,50000,원물,med,pepperscale.com/aji-charapita
+Fatalii,고추,,125000,325000,원물,med,specialtyproduce.com
+초콜릿 하바네로,고추,,300000,425000,원물,med,knowthepepper.com

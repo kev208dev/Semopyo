@@ -1,0 +1,560 @@
+[
+  {
+    "item": "불닭볶음면(오리지널)",
+    "category": "라면",
+    "brand": "삼양식품",
+    "shu_min": 4404,
+    "shu_max": 4404,
+    "shu": 4404,
+    "source": "삼양/언론"
+  },
+  {
+    "item": "핵불닭볶음면(2018)",
+    "category": "라면",
+    "brand": "삼양식품",
+    "shu_min": 10000,
+    "shu_max": 10000,
+    "shu": 10000,
+    "source": "한국경제"
+  },
+  {
+    "item": "핵불닭볶음면 mini",
+    "category": "라면",
+    "brand": "삼양식품",
+    "shu_min": 12000,
+    "shu_max": 12000,
+    "shu": 12000,
+    "source": "뉴데일리"
+  },
+  {
+    "item": "까르보불닭볶음면",
+    "category": "라면",
+    "brand": "삼양식품",
+    "shu_min": 2400,
+    "shu_max": 2400,
+    "shu": 2400,
+    "source": "bizwatch"
+  },
+  {
+    "item": "신라면",
+    "category": "라면",
+    "brand": "농심",
+    "shu_min": 3400,
+    "shu_max": 3400,
+    "shu": 3400,
+    "source": "namuwiki"
+  },
+  {
+    "item": "신라면 더레드",
+    "category": "라면",
+    "brand": "농심",
+    "shu_min": 7500,
+    "shu_max": 7500,
+    "shu": 7500,
+    "source": "한국경제"
+  },
+  {
+    "item": "진라면(매운맛)",
+    "category": "라면",
+    "brand": "오뚜기",
+    "shu_min": 2000,
+    "shu_max": 3000,
+    "shu": 3000,
+    "source": "namuwiki"
+  },
+  {
+    "item": "틈새라면(빨개면)",
+    "category": "라면",
+    "brand": "팔도",
+    "shu_min": 9413,
+    "shu_max": 9413,
+    "shu": 9413,
+    "source": "namuwiki"
+  },
+  {
+    "item": "열라면",
+    "category": "라면",
+    "brand": "오뚜기",
+    "shu_min": 5013,
+    "shu_max": 5013,
+    "shu": 5013,
+    "source": "kdsn"
+  },
+  {
+    "item": "팔도비빔면",
+    "category": "라면",
+    "brand": "팔도",
+    "shu_min": 2652,
+    "shu_max": 2652,
+    "shu": 2652,
+    "source": "bizwatch"
+  },
+  {
+    "item": "킹뚜껑",
+    "category": "라면",
+    "brand": "팔도",
+    "shu_min": 12000,
+    "shu_max": 12000,
+    "shu": 12000,
+    "source": "newsspace"
+  },
+  {
+    "item": "불마왕라면",
+    "category": "라면",
+    "brand": "금비유통",
+    "shu_min": 14444,
+    "shu_max": 14444,
+    "shu": 14444,
+    "source": "newsspace"
+  },
+  {
+    "item": "염라대왕라면",
+    "category": "라면",
+    "brand": "아름",
+    "shu_min": 21000,
+    "shu_max": 21000,
+    "shu": 21000,
+    "source": "newsspace"
+  },
+  {
+    "item": "프랭크스레드핫",
+    "category": "핫소스",
+    "brand": "Franks RedHot",
+    "shu_min": 450,
+    "shu_max": 450,
+    "shu": 450,
+    "source": "wikipedia"
+  },
+  {
+    "item": "타바스코(오리지널)",
+    "category": "핫소스",
+    "brand": "Tabasco",
+    "shu_min": 2500,
+    "shu_max": 5000,
+    "shu": 5000,
+    "source": "scovillescale"
+  },
+  {
+    "item": "스리라차",
+    "category": "핫소스",
+    "brand": "Huy Fong",
+    "shu_min": 2200,
+    "shu_max": 2200,
+    "shu": 2200,
+    "source": "thedailymeal"
+  },
+  {
+    "item": "엘유카테코 레드하바네로",
+    "category": "핫소스",
+    "brand": "El Yucateco",
+    "shu_min": 5790,
+    "shu_max": 5790,
+    "shu": 5790,
+    "source": "eatthis"
+  },
+  {
+    "item": "Da Bomb Beyond Insanity",
+    "category": "핫소스",
+    "brand": "Da Bomb",
+    "shu_min": 135000,
+    "shu_max": 135000,
+    "shu": 135000,
+    "source": "heatsupply"
+  },
+  {
+    "item": "Mad Dog 357",
+    "category": "핫소스",
+    "brand": "Mad Dog 357",
+    "shu_min": 357000,
+    "shu_max": 357000,
+    "shu": 357000,
+    "source": "pepperscale"
+  },
+  {
+    "item": "Blair's Mega Death",
+    "category": "핫소스",
+    "brand": "Blair's",
+    "shu_min": 550000,
+    "shu_max": 550000,
+    "shu": 550000,
+    "source": "growhotpeppers"
+  },
+  {
+    "item": "포블라노",
+    "category": "고추",
+    "brand": "",
+    "shu_min": 1000,
+    "shu_max": 2000,
+    "shu": 2000,
+    "source": "pepperscale"
+  },
+  {
+    "item": "아나하임",
+    "category": "고추",
+    "brand": "",
+    "shu_min": 500,
+    "shu_max": 2500,
+    "shu": 2500,
+    "source": "pepperscale"
+  },
+  {
+    "item": "할라피뇨",
+    "category": "고추",
+    "brand": "",
+    "shu_min": 2500,
+    "shu_max": 8000,
+    "shu": 8000,
+    "source": "britannica"
+  },
+  {
+    "item": "청양고추",
+    "category": "고추",
+    "brand": "",
+    "shu_min": 4000,
+    "shu_max": 12000,
+    "shu": 12000,
+    "source": "namuwiki"
+  },
+  {
+    "item": "치폴레",
+    "category": "고추",
+    "brand": "",
+    "shu_min": 5000,
+    "shu_max": 10000,
+    "shu": 10000,
+    "source": "chilipeppermadness"
+  },
+  {
+    "item": "세라노",
+    "category": "고추",
+    "brand": "",
+    "shu_min": 8000,
+    "shu_max": 20000,
+    "shu": 20000,
+    "source": "trueleafmarket"
+  },
+  {
+    "item": "카이엔",
+    "category": "고추",
+    "brand": "",
+    "shu_min": 30000,
+    "shu_max": 50000,
+    "shu": 50000,
+    "source": "trueleafmarket"
+  },
+  {
+    "item": "하바네로",
+    "category": "고추",
+    "brand": "",
+    "shu_min": 100000,
+    "shu_max": 350000,
+    "shu": 350000,
+    "source": "britannica"
+  },
+  {
+    "item": "고스트페퍼(부트졸로키아)",
+    "category": "고추",
+    "brand": "",
+    "shu_min": 855000,
+    "shu_max": 1041427,
+    "shu": 1041427,
+    "source": "wikipedia"
+  },
+  {
+    "item": "캐롤라이나 리퍼",
+    "category": "고추",
+    "brand": "",
+    "shu_min": 1400000,
+    "shu_max": 2200000,
+    "shu": 2200000,
+    "source": "wikipedia"
+  },
+  {
+    "item": "페퍼 X",
+    "category": "고추",
+    "brand": "",
+    "shu_min": 2693000,
+    "shu_max": 2693000,
+    "shu": 2693000,
+    "source": "guinness"
+  },
+  {
+    "item": "Takis Fuego",
+    "category": "스낵",
+    "brand": "Barcel/Bimbo",
+    "shu_min": 8000,
+    "shu_max": 11000,
+    "shu": 11000,
+    "source": "scientifically.blog"
+  },
+  {
+    "item": "Paqui One Chip Challenge(2023, Carolina Reaper+Naga Viper)",
+    "category": "스낵",
+    "brand": "Paqui",
+    "shu_min": 1400000,
+    "shu_max": 1700000,
+    "shu": 1700000,
+    "source": "en.wikipedia.org/One_Chip_Challenge"
+  },
+  {
+    "item": "Cholula Original",
+    "category": "핫소스",
+    "brand": "Cholula",
+    "shu_min": 1000,
+    "shu_max": 2000,
+    "shu": 2000,
+    "source": "en.wikipedia.org/Cholula_Hot_Sauce"
+  },
+  {
+    "item": "Cholula Chili Garlic",
+    "category": "핫소스",
+    "brand": "Cholula",
+    "shu_min": 1000,
+    "shu_max": 10000,
+    "shu": 10000,
+    "source": "hotsauce.com"
+  },
+  {
+    "item": "Cholula Chipotle",
+    "category": "핫소스",
+    "brand": "Cholula",
+    "shu_min": 1000,
+    "shu_max": 1000,
+    "shu": 1000,
+    "source": "webstaurantstore.com"
+  },
+  {
+    "item": "Tapatio Original",
+    "category": "핫소스",
+    "brand": "Tapatio",
+    "shu_min": 3000,
+    "shu_max": 3000,
+    "shu": 3000,
+    "source": "pepperscale.com/tapatio-hot-sauce"
+  },
+  {
+    "item": "Tapatio Salsa Picante(Hot)",
+    "category": "핫소스",
+    "brand": "Tapatio",
+    "shu_min": 4000,
+    "shu_max": 4000,
+    "shu": 4000,
+    "source": "scovillescale.org"
+  },
+  {
+    "item": "Frank's RedHot Xtra Hot",
+    "category": "핫소스",
+    "brand": "Frank's RedHot",
+    "shu_min": 2000,
+    "shu_max": 2000,
+    "shu": 2000,
+    "source": "en.wikipedia.org/Frank's_RedHot"
+  },
+  {
+    "item": "Frank's RedHot Buffalo Wing",
+    "category": "핫소스",
+    "brand": "Frank's RedHot",
+    "shu_min": 700,
+    "shu_max": 700,
+    "shu": 700,
+    "source": "peppergeek.com"
+  },
+  {
+    "item": "El Yucateco Green Habanero",
+    "category": "핫소스",
+    "brand": "El Yucateco",
+    "shu_min": 7700,
+    "shu_max": 8800,
+    "shu": 8800,
+    "source": "kingofflavorsince1968.com/scoville-ratings"
+  },
+  {
+    "item": "El Yucateco XXXtra Hot(Kutbil-ik)",
+    "category": "핫소스",
+    "brand": "El Yucateco",
+    "shu_min": 11600,
+    "shu_max": 11600,
+    "shu": 11600,
+    "source": "kingofflavorsince1968.com/scoville-ratings"
+  },
+  {
+    "item": "El Yucateco Chipotle",
+    "category": "핫소스",
+    "brand": "El Yucateco",
+    "shu_min": 1900,
+    "shu_max": 2300,
+    "shu": 2300,
+    "source": "kingofflavorsince1968.com/scoville-ratings"
+  },
+  {
+    "item": "삼양 핵불닭소스",
+    "category": "핫소스",
+    "brand": "삼양식품",
+    "shu_min": 6000,
+    "shu_max": 6000,
+    "shu": 6000,
+    "source": "namu.wiki/핵불닭볶음면"
+  },
+  {
+    "item": "삼양 핵불닭소스 미니",
+    "category": "핫소스",
+    "brand": "삼양식품",
+    "shu_min": 12000,
+    "shu_max": 12000,
+    "shu": 12000,
+    "source": "namu.wiki/핵불닭볶음면"
+  },
+  {
+    "item": "The Last Dab: Xperience(Pepper X)",
+    "category": "핫소스",
+    "brand": "Heatonist",
+    "shu_min": 2693000,
+    "shu_max": 2693000,
+    "shu": 2693000,
+    "source": "scovillescale.org"
+  },
+  {
+    "item": "Da Bomb Beyond Insanity(재확인)",
+    "category": "핫소스",
+    "brand": "Da Bomb",
+    "shu_min": 135600,
+    "shu_max": 135600,
+    "shu": 135600,
+    "source": "heatonist.com/looking-for-da-bomb"
+  },
+  {
+    "item": "불닭볶음면 2배 매운맛",
+    "category": "라면",
+    "brand": "삼양식품",
+    "shu_min": 10000,
+    "shu_max": 10000,
+    "shu": 10000,
+    "source": "extrabux.com"
+  },
+  {
+    "item": "불닭볶음면 3배 매운맛",
+    "category": "라면",
+    "brand": "삼양식품",
+    "shu_min": 13000,
+    "shu_max": 13200,
+    "shu": 13200,
+    "source": "extrabux.com/guide/8284775"
+  },
+  {
+    "item": "Indomie Mi Goreng Hot&Spicy(Pedas)",
+    "category": "라면",
+    "brand": "Indofood",
+    "shu_min": 12000,
+    "shu_max": 12000,
+    "shu": 12000,
+    "source": "theramenrater.com"
+  },
+  {
+    "item": "태국 쥐똥고추(프릭키누/버드아이)",
+    "category": "고추",
+    "brand": "",
+    "shu_min": 50000,
+    "shu_max": 100000,
+    "shu": 100000,
+    "source": "en.wikipedia.org/Bird's_eye_chili"
+  },
+  {
+    "item": "스카치 보넷",
+    "category": "고추",
+    "brand": "",
+    "shu_min": 100000,
+    "shu_max": 350000,
+    "shu": 350000,
+    "source": "pepperscale.com/hottest-peppers"
+  },
+  {
+    "item": "Trinidad Moruga Scorpion",
+    "category": "고추",
+    "brand": "",
+    "shu_min": 1200000,
+    "shu_max": 2009231,
+    "shu": 2009231,
+    "source": "researchgate.net/289628472"
+  },
+  {
+    "item": "Trinidad 7 Pot Douglah",
+    "category": "고추",
+    "brand": "",
+    "shu_min": 923889,
+    "shu_max": 1853986,
+    "shu": 1853986,
+    "source": "chilipeppermadness.com"
+  },
+  {
+    "item": "Naga Viper",
+    "category": "고추",
+    "brand": "",
+    "shu_min": 900000,
+    "shu_max": 1382118,
+    "shu": 1382118,
+    "source": "pepperscale.com/hottest-peppers"
+  },
+  {
+    "item": "Komodo Dragon",
+    "category": "고추",
+    "brand": "",
+    "shu_min": 1400000,
+    "shu_max": 2200000,
+    "shu": 2200000,
+    "source": "pepperscale.com/hottest-peppers"
+  },
+  {
+    "item": "Bhut Jolokia(고스트, Guinness 2007 인증)",
+    "category": "고추",
+    "brand": "",
+    "shu_min": 1001304,
+    "shu_max": 1001304,
+    "shu": 1001304,
+    "source": "en.wikipedia.org/Bhut_jolokia"
+  },
+  {
+    "item": "Apollo(The Last Dab: Apollo 원료)",
+    "category": "고추",
+    "brand": "Puckerbutt",
+    "shu_min": 2500000,
+    "shu_max": 3000000,
+    "shu": 3000000,
+    "source": "spice.alibaba.com"
+  },
+  {
+    "item": "Dragon's Breath",
+    "category": "고추",
+    "brand": "",
+    "shu_min": 2480000,
+    "shu_max": 2480000,
+    "shu": 2480000,
+    "source": "culinarylore.com"
+  },
+  {
+    "item": "Aji Charapita",
+    "category": "고추",
+    "brand": "",
+    "shu_min": 30000,
+    "shu_max": 50000,
+    "shu": 50000,
+    "source": "pepperscale.com/aji-charapita"
+  },
+  {
+    "item": "Fatalii",
+    "category": "고추",
+    "brand": "",
+    "shu_min": 125000,
+    "shu_max": 325000,
+    "shu": 325000,
+    "source": "specialtyproduce.com"
+  },
+  {
+    "item": "초콜릿 하바네로",
+    "category": "고추",
+    "brand": "",
+    "shu_min": 300000,
+    "shu_max": 425000,
+    "shu": 425000,
+    "source": "knowthepepper.com"
+  }
+]

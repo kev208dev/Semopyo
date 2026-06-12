@@ -1,0 +1,858 @@
+[
+  {
+    "brand": "스타벅스",
+    "country": "KR",
+    "size_label": "Short",
+    "volume_ml": 237,
+    "temp": "핫",
+    "source": "스타벅스 공식"
+  },
+  {
+    "brand": "스타벅스",
+    "country": "KR",
+    "size_label": "Tall",
+    "volume_ml": 355,
+    "temp": "공용",
+    "source": "스타벅스 공식"
+  },
+  {
+    "brand": "스타벅스",
+    "country": "KR",
+    "size_label": "Grande",
+    "volume_ml": 473,
+    "temp": "공용",
+    "source": "스타벅스 공식"
+  },
+  {
+    "brand": "스타벅스",
+    "country": "KR",
+    "size_label": "Venti",
+    "volume_ml": 591,
+    "temp": "핫",
+    "source": "스타벅스 공식"
+  },
+  {
+    "brand": "스타벅스",
+    "country": "KR",
+    "size_label": "Trenta",
+    "volume_ml": 888,
+    "temp": "아이스",
+    "source": "namuwiki"
+  },
+  {
+    "brand": "투썸플레이스",
+    "country": "KR",
+    "size_label": "R",
+    "volume_ml": 355,
+    "temp": "핫",
+    "source": "coffee4m2022"
+  },
+  {
+    "brand": "투썸플레이스",
+    "country": "KR",
+    "size_label": "R",
+    "volume_ml": 414,
+    "temp": "아이스",
+    "source": "coffee4m2022"
+  },
+  {
+    "brand": "투썸플레이스",
+    "country": "KR",
+    "size_label": "L",
+    "volume_ml": 474,
+    "temp": "공용",
+    "source": "coffee4m2022"
+  },
+  {
+    "brand": "투썸플레이스",
+    "country": "KR",
+    "size_label": "Max",
+    "volume_ml": 591,
+    "temp": "공용",
+    "source": "coffee4m2022"
+  },
+  {
+    "brand": "이디야",
+    "country": "KR",
+    "size_label": "레귤러",
+    "volume_ml": 384,
+    "temp": "공용",
+    "source": "coffee4m2022"
+  },
+  {
+    "brand": "이디야",
+    "country": "KR",
+    "size_label": "엑스트라",
+    "volume_ml": 651,
+    "temp": "공용",
+    "source": "coffee4m2022"
+  },
+  {
+    "brand": "이디야",
+    "country": "KR",
+    "size_label": "라지(신규기본)",
+    "volume_ml": 532,
+    "temp": "공용",
+    "source": "ZDNet2025"
+  },
+  {
+    "brand": "컴포즈커피",
+    "country": "KR",
+    "size_label": "기본",
+    "volume_ml": 567,
+    "temp": "공용",
+    "source": "비공식20oz"
+  },
+  {
+    "brand": "컴포즈커피",
+    "country": "KR",
+    "size_label": "빅포즈",
+    "volume_ml": 946,
+    "temp": "아이스",
+    "source": "컴포즈 공식"
+  },
+  {
+    "brand": "메가커피",
+    "country": "KR",
+    "size_label": "20oz",
+    "volume_ml": 500,
+    "temp": "핫",
+    "source": "coffee4m2022"
+  },
+  {
+    "brand": "메가커피",
+    "country": "KR",
+    "size_label": "20oz",
+    "volume_ml": 590,
+    "temp": "아이스",
+    "source": "coffee4m2022"
+  },
+  {
+    "brand": "메가커피",
+    "country": "KR",
+    "size_label": "24oz",
+    "volume_ml": 710,
+    "temp": "공용",
+    "source": "coffee4m2022"
+  },
+  {
+    "brand": "메가커피",
+    "country": "KR",
+    "size_label": "32oz",
+    "volume_ml": 980,
+    "temp": "공용",
+    "source": "coffee4m2022"
+  },
+  {
+    "brand": "빽다방",
+    "country": "KR",
+    "size_label": "기본",
+    "volume_ml": 400,
+    "temp": "핫",
+    "source": "coffee4m2022"
+  },
+  {
+    "brand": "빽다방",
+    "country": "KR",
+    "size_label": "기본",
+    "volume_ml": 625,
+    "temp": "아이스",
+    "source": "coffee4m2022"
+  },
+  {
+    "brand": "빽다방",
+    "country": "KR",
+    "size_label": "빽사이즈",
+    "volume_ml": 950,
+    "temp": "아이스",
+    "source": "빽다방 영양정보"
+  },
+  {
+    "brand": "할리스",
+    "country": "KR",
+    "size_label": "레귤러",
+    "volume_ml": 354,
+    "temp": "공용",
+    "source": "coffee4m2022"
+  },
+  {
+    "brand": "할리스",
+    "country": "KR",
+    "size_label": "그란데",
+    "volume_ml": 472,
+    "temp": "공용",
+    "source": "coffee4m2022"
+  },
+  {
+    "brand": "할리스",
+    "country": "KR",
+    "size_label": "벤티",
+    "volume_ml": 591,
+    "temp": "공용",
+    "source": "coffee4m2022"
+  },
+  {
+    "brand": "파스쿠찌",
+    "country": "KR",
+    "size_label": "레귤러",
+    "volume_ml": 290,
+    "temp": "핫",
+    "source": "coffee4m2022"
+  },
+  {
+    "brand": "파스쿠찌",
+    "country": "KR",
+    "size_label": "레귤러",
+    "volume_ml": 370,
+    "temp": "아이스",
+    "source": "coffee4m2022"
+  },
+  {
+    "brand": "파스쿠찌",
+    "country": "KR",
+    "size_label": "라지",
+    "volume_ml": 360,
+    "temp": "핫",
+    "source": "coffee4m2022"
+  },
+  {
+    "brand": "파스쿠찌",
+    "country": "KR",
+    "size_label": "라지",
+    "volume_ml": 470,
+    "temp": "아이스",
+    "source": "coffee4m2022"
+  },
+  {
+    "brand": "파스쿠찌",
+    "country": "KR",
+    "size_label": "벤티",
+    "volume_ml": 580,
+    "temp": "아이스",
+    "source": "coffee4m2022"
+  },
+  {
+    "brand": "폴바셋",
+    "country": "KR",
+    "size_label": "스탠다드(아메)",
+    "volume_ml": 360,
+    "temp": "공용",
+    "source": "coffee4m2022"
+  },
+  {
+    "brand": "폴바셋",
+    "country": "KR",
+    "size_label": "스탠다드(룽고)",
+    "volume_ml": 300,
+    "temp": "공용",
+    "source": "coffee4m2022"
+  },
+  {
+    "brand": "폴바셋",
+    "country": "KR",
+    "size_label": "그랜드(룽고)",
+    "volume_ml": 400,
+    "temp": "공용",
+    "source": "coffee4m2022"
+  },
+  {
+    "brand": "커피빈",
+    "country": "KR",
+    "size_label": "스몰",
+    "volume_ml": 355,
+    "temp": "공용",
+    "source": "coffee4m2022"
+  },
+  {
+    "brand": "커피빈",
+    "country": "KR",
+    "size_label": "레귤러",
+    "volume_ml": 473,
+    "temp": "공용",
+    "source": "coffee4m2022"
+  },
+  {
+    "brand": "커피빈",
+    "country": "KR",
+    "size_label": "라지",
+    "volume_ml": 591,
+    "temp": "공용",
+    "source": "coffee4m2022"
+  },
+  {
+    "brand": "공차",
+    "country": "KR",
+    "size_label": "라지",
+    "volume_ml": 397,
+    "temp": "핫",
+    "source": "공차 영양정보"
+  },
+  {
+    "brand": "공차",
+    "country": "KR",
+    "size_label": "점보",
+    "volume_ml": 454,
+    "temp": "핫",
+    "source": "공차 영양정보"
+  },
+  {
+    "brand": "공차",
+    "country": "KR",
+    "size_label": "라지",
+    "volume_ml": 454,
+    "temp": "아이스",
+    "source": "공차 영양정보"
+  },
+  {
+    "brand": "공차",
+    "country": "KR",
+    "size_label": "점보",
+    "volume_ml": 624,
+    "temp": "아이스",
+    "source": "공차 영양정보"
+  },
+  {
+    "brand": "엔제리너스",
+    "country": "KR",
+    "size_label": "12oz",
+    "volume_ml": 330,
+    "temp": "공용",
+    "source": "coffee4m2022"
+  },
+  {
+    "brand": "엔제리너스",
+    "country": "KR",
+    "size_label": "16oz",
+    "volume_ml": 440,
+    "temp": "공용",
+    "source": "coffee4m2022"
+  },
+  {
+    "brand": "엔제리너스",
+    "country": "KR",
+    "size_label": "20oz",
+    "volume_ml": 550,
+    "temp": "공용",
+    "source": "coffee4m2022"
+  },
+  {
+    "brand": "더벤티",
+    "country": "KR",
+    "size_label": "미디엄",
+    "volume_ml": 420,
+    "temp": "공용",
+    "source": "더벤티 공식QnA"
+  },
+  {
+    "brand": "더벤티",
+    "country": "KR",
+    "size_label": "라지",
+    "volume_ml": 600,
+    "temp": "공용",
+    "source": "더벤티 공식QnA"
+  },
+  {
+    "brand": "더벤티",
+    "country": "KR",
+    "size_label": "점보",
+    "volume_ml": 960,
+    "temp": "공용",
+    "source": "더벤티 공식QnA"
+  },
+  {
+    "brand": "메머드커피",
+    "country": "KR",
+    "size_label": "라지",
+    "volume_ml": 940,
+    "temp": "공용",
+    "source": "나무위키/매머드"
+  },
+  {
+    "brand": "Starbucks",
+    "country": "US",
+    "size_label": "Short",
+    "volume_ml": 237,
+    "temp": "핫",
+    "source": "rd.com"
+  },
+  {
+    "brand": "Starbucks",
+    "country": "US",
+    "size_label": "Tall",
+    "volume_ml": 355,
+    "temp": "공용",
+    "source": "rd.com"
+  },
+  {
+    "brand": "Starbucks",
+    "country": "US",
+    "size_label": "Grande",
+    "volume_ml": 473,
+    "temp": "공용",
+    "source": "rd.com"
+  },
+  {
+    "brand": "Starbucks",
+    "country": "US",
+    "size_label": "Venti",
+    "volume_ml": 591,
+    "temp": "핫",
+    "source": "rd.com"
+  },
+  {
+    "brand": "Starbucks",
+    "country": "US",
+    "size_label": "Venti",
+    "volume_ml": 710,
+    "temp": "아이스",
+    "source": "rd.com"
+  },
+  {
+    "brand": "Starbucks",
+    "country": "US",
+    "size_label": "Trenta",
+    "volume_ml": 917,
+    "temp": "아이스",
+    "source": "rd.com"
+  },
+  {
+    "brand": "Starbucks",
+    "country": "JP",
+    "size_label": "Short",
+    "volume_ml": 240,
+    "temp": "공용",
+    "source": "starbucks.co.jp"
+  },
+  {
+    "brand": "Starbucks",
+    "country": "JP",
+    "size_label": "Tall",
+    "volume_ml": 350,
+    "temp": "공용",
+    "source": "starbucks.co.jp"
+  },
+  {
+    "brand": "Starbucks",
+    "country": "JP",
+    "size_label": "Grande",
+    "volume_ml": 470,
+    "temp": "공용",
+    "source": "starbucks.co.jp"
+  },
+  {
+    "brand": "Starbucks",
+    "country": "JP",
+    "size_label": "Venti",
+    "volume_ml": 590,
+    "temp": "핫",
+    "source": "starbucks.co.jp"
+  },
+  {
+    "brand": "Costa",
+    "country": "UK",
+    "size_label": "Primo",
+    "volume_ml": 355,
+    "temp": "공용",
+    "source": "Costa 공식X"
+  },
+  {
+    "brand": "Costa",
+    "country": "UK",
+    "size_label": "Medio",
+    "volume_ml": 473,
+    "temp": "공용",
+    "source": "Costa 공식X"
+  },
+  {
+    "brand": "Costa",
+    "country": "UK",
+    "size_label": "Massimo",
+    "volume_ml": 591,
+    "temp": "공용",
+    "source": "Costa 공식X"
+  },
+  {
+    "brand": "Tim Hortons",
+    "country": "CA",
+    "size_label": "Small",
+    "volume_ml": 296,
+    "temp": "공용",
+    "source": "ruk.ca"
+  },
+  {
+    "brand": "Tim Hortons",
+    "country": "CA",
+    "size_label": "Medium",
+    "volume_ml": 414,
+    "temp": "공용",
+    "source": "ruk.ca"
+  },
+  {
+    "brand": "Tim Hortons",
+    "country": "CA",
+    "size_label": "Large",
+    "volume_ml": 591,
+    "temp": "공용",
+    "source": "ruk.ca"
+  },
+  {
+    "brand": "Tim Hortons",
+    "country": "CA",
+    "size_label": "XL",
+    "volume_ml": 710,
+    "temp": "공용",
+    "source": "cbc.ca"
+  },
+  {
+    "brand": "Dunkin",
+    "country": "US",
+    "size_label": "Small",
+    "volume_ml": 296,
+    "temp": "핫",
+    "source": "dailycoffeeguide"
+  },
+  {
+    "brand": "Dunkin",
+    "country": "US",
+    "size_label": "Medium",
+    "volume_ml": 414,
+    "temp": "핫",
+    "source": "dailycoffeeguide"
+  },
+  {
+    "brand": "Dunkin",
+    "country": "US",
+    "size_label": "Large",
+    "volume_ml": 591,
+    "temp": "핫",
+    "source": "dailycoffeeguide"
+  },
+  {
+    "brand": "Dunkin",
+    "country": "US",
+    "size_label": "Small",
+    "volume_ml": 473,
+    "temp": "아이스",
+    "source": "dailycoffeeguide"
+  },
+  {
+    "brand": "Dunkin",
+    "country": "US",
+    "size_label": "Medium",
+    "volume_ml": 710,
+    "temp": "아이스",
+    "source": "dailycoffeeguide"
+  },
+  {
+    "brand": "Dunkin",
+    "country": "US",
+    "size_label": "Large",
+    "volume_ml": 946,
+    "temp": "아이스",
+    "source": "dailycoffeeguide"
+  },
+  {
+    "brand": "Peet's",
+    "country": "US",
+    "size_label": "Demi",
+    "volume_ml": 177,
+    "temp": "핫",
+    "source": "caffeinepark"
+  },
+  {
+    "brand": "Peet's",
+    "country": "US",
+    "size_label": "Small",
+    "volume_ml": 237,
+    "temp": "핫",
+    "source": "caffeinepark"
+  },
+  {
+    "brand": "Peet's",
+    "country": "US",
+    "size_label": "Medium",
+    "volume_ml": 473,
+    "temp": "핫",
+    "source": "caffeinepark"
+  },
+  {
+    "brand": "Peet's",
+    "country": "US",
+    "size_label": "Large",
+    "volume_ml": 591,
+    "temp": "핫",
+    "source": "caffeinepark"
+  },
+  {
+    "brand": "Caribou",
+    "country": "US",
+    "size_label": "Small",
+    "volume_ml": 355,
+    "temp": "공용",
+    "source": "foodqanda"
+  },
+  {
+    "brand": "Caribou",
+    "country": "US",
+    "size_label": "Medium",
+    "volume_ml": 473,
+    "temp": "공용",
+    "source": "foodqanda"
+  },
+  {
+    "brand": "Caribou",
+    "country": "US",
+    "size_label": "Large",
+    "volume_ml": 591,
+    "temp": "공용",
+    "source": "foodqanda"
+  },
+  {
+    "brand": "McCafe",
+    "country": "US",
+    "size_label": "Small",
+    "volume_ml": 355,
+    "temp": "핫",
+    "source": "lifeboost"
+  },
+  {
+    "brand": "McCafe",
+    "country": "US",
+    "size_label": "Medium",
+    "volume_ml": 473,
+    "temp": "핫",
+    "source": "lifeboost"
+  },
+  {
+    "brand": "McCafe",
+    "country": "US",
+    "size_label": "Large",
+    "volume_ml": 591,
+    "temp": "핫",
+    "source": "lifeboost"
+  },
+  {
+    "brand": "Gong Cha",
+    "country": "UK",
+    "size_label": "Regular",
+    "volume_ml": 470,
+    "temp": "아이스",
+    "source": "gong-cha.co.uk"
+  },
+  {
+    "brand": "Gong Cha",
+    "country": "UK",
+    "size_label": "Large",
+    "volume_ml": 650,
+    "temp": "아이스",
+    "source": "gong-cha.co.uk"
+  },
+  {
+    "brand": "Gong Cha",
+    "country": "US",
+    "size_label": "Medium",
+    "volume_ml": 473,
+    "temp": "아이스",
+    "source": "gong-cha-usa"
+  },
+  {
+    "brand": "Gong Cha",
+    "country": "US",
+    "size_label": "Large",
+    "volume_ml": 651,
+    "temp": "아이스",
+    "source": "gong-cha-usa"
+  },
+  {
+    "brand": "Gong Cha",
+    "country": "US",
+    "size_label": "XL",
+    "volume_ml": 946,
+    "temp": "아이스",
+    "source": "gongcha-usa"
+  },
+  {
+    "brand": "7-Eleven",
+    "country": "US",
+    "size_label": "Small",
+    "volume_ml": 355,
+    "temp": "아이스",
+    "source": "marketingscoop"
+  },
+  {
+    "brand": "7-Eleven",
+    "country": "US",
+    "size_label": "Medium",
+    "volume_ml": 473,
+    "temp": "아이스",
+    "source": "marketingscoop"
+  },
+  {
+    "brand": "7-Eleven",
+    "country": "US",
+    "size_label": "Large",
+    "volume_ml": 651,
+    "temp": "아이스",
+    "source": "marketingscoop"
+  },
+  {
+    "brand": "7-Eleven",
+    "country": "US",
+    "size_label": "X-Large",
+    "volume_ml": 887,
+    "temp": "아이스",
+    "source": "marketingscoop"
+  },
+  {
+    "brand": "McDonald's",
+    "country": "KR",
+    "size_label": "S(콜라)",
+    "volume_ml": 220,
+    "temp": "아이스",
+    "source": "맥도날드공식PDF"
+  },
+  {
+    "brand": "McDonald's",
+    "country": "KR",
+    "size_label": "M(콜라)",
+    "volume_ml": 310,
+    "temp": "아이스",
+    "source": "맥도날드공식PDF"
+  },
+  {
+    "brand": "McDonald's",
+    "country": "KR",
+    "size_label": "L(콜라)",
+    "volume_ml": 430,
+    "temp": "아이스",
+    "source": "맥도날드공식PDF"
+  },
+  {
+    "brand": "McDonald's",
+    "country": "KR",
+    "size_label": "S(아메리카노)",
+    "volume_ml": 225,
+    "temp": "핫",
+    "source": "맥도날드공식PDF"
+  },
+  {
+    "brand": "McDonald's",
+    "country": "KR",
+    "size_label": "M(아메리카노)",
+    "volume_ml": 330,
+    "temp": "핫",
+    "source": "맥도날드공식PDF"
+  },
+  {
+    "brand": "McDonald's",
+    "country": "KR",
+    "size_label": "M(카페라떼)",
+    "volume_ml": 365,
+    "temp": "핫",
+    "source": "맥도날드공식PDF"
+  },
+  {
+    "brand": "스무디킹",
+    "country": "KR",
+    "size_label": "S",
+    "volume_ml": 360,
+    "temp": "아이스",
+    "source": "나무위키"
+  },
+  {
+    "brand": "스무디킹",
+    "country": "KR",
+    "size_label": "R",
+    "volume_ml": 480,
+    "temp": "아이스",
+    "source": "나무위키"
+  },
+  {
+    "brand": "스무디킹",
+    "country": "KR",
+    "size_label": "L",
+    "volume_ml": 600,
+    "temp": "아이스",
+    "source": "나무위키"
+  },
+  {
+    "brand": "Smoothie King",
+    "country": "US",
+    "size_label": "20oz",
+    "volume_ml": 591,
+    "temp": "아이스",
+    "source": "smoothieking.com"
+  },
+  {
+    "brand": "Smoothie King",
+    "country": "US",
+    "size_label": "32oz",
+    "volume_ml": 946,
+    "temp": "아이스",
+    "source": "smoothieking.com"
+  },
+  {
+    "brand": "Smoothie King",
+    "country": "US",
+    "size_label": "40oz",
+    "volume_ml": 1183,
+    "temp": "아이스",
+    "source": "smoothieking.com"
+  },
+  {
+    "brand": "Chatime",
+    "country": "글로벌",
+    "size_label": "Regular",
+    "volume_ml": 500,
+    "temp": "아이스",
+    "source": "bubbleteaworld"
+  },
+  {
+    "brand": "Chatime",
+    "country": "글로벌",
+    "size_label": "Large",
+    "volume_ml": 700,
+    "temp": "아이스",
+    "source": "bubbleteaworld"
+  },
+  {
+    "brand": "The Alley",
+    "country": "글로벌",
+    "size_label": "Regular",
+    "volume_ml": 500,
+    "temp": "아이스",
+    "source": "kinoi"
+  },
+  {
+    "brand": "The Alley",
+    "country": "글로벌",
+    "size_label": "Large",
+    "volume_ml": 700,
+    "temp": "아이스",
+    "source": "kinoi"
+  },
+  {
+    "brand": "CoCo",
+    "country": "글로벌",
+    "size_label": "Regular(16oz)",
+    "volume_ml": 473,
+    "temp": "아이스",
+    "source": "yelp"
+  },
+  {
+    "brand": "CoCo",
+    "country": "글로벌",
+    "size_label": "Large(22oz)",
+    "volume_ml": 651,
+    "temp": "아이스",
+    "source": "yelp"
+  },
+  {
+    "brand": "Sharetea",
+    "country": "글로벌",
+    "size_label": "Large(24oz)",
+    "volume_ml": 710,
+    "temp": "아이스",
+    "source": "yelp"
+  }
+]

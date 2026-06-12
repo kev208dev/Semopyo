@@ -2,6 +2,9 @@
 // 모든 항목 g 또는 mL 정량 + (있으면) kcal.
 // 기준 앵커: 밥 한공기 210g.
 
+import 'dart:convert';
+import 'package:flutter/services.dart' show rootBundle;
+
 const int riceBowlG = 210;
 
 const String _pImgRice    = 'assets/products/rice.png';
@@ -122,8 +125,191 @@ const List<PortionItem> portionItems = [
   PortionItem(name: '회덮밥', brand: '일식집', amount: 450, unit: 'g', kcal: 550, type: '1인분', emoji: '🍣'),
   PortionItem(name: '초밥 10피스', brand: '일식집', amount: 250, unit: 'g', kcal: 440, type: '1인분', emoji: '🍣'),
   PortionItem(name: '우동 1그릇', brand: '일식집', amount: 600, unit: 'g', kcal: 420, type: '1인분', emoji: '🍜'),
+  // === 한식 추가 ===
+  PortionItem(name: '떡국 1그릇', brand: '한식집', amount: 650, unit: 'g', kcal: 540, type: '1인분', emoji: '🍲'),
+  PortionItem(name: '만둣국 1그릇', brand: '한식집', amount: 650, unit: 'g', kcal: 580, type: '1인분', emoji: '🍲'),
+  PortionItem(name: '삼겹살 1인분', brand: '한식집', amount: 250, unit: 'g', kcal: 660, type: '1인분', emoji: '🥩'),
+  PortionItem(name: '돼지갈비 1인분', brand: '한식집', amount: 300, unit: 'g', kcal: 720, type: '1인분', emoji: '🥩'),
+  PortionItem(name: '소갈비 1인분', brand: '한식집', amount: 250, unit: 'g', kcal: 700, type: '1인분', emoji: '🥩'),
+  PortionItem(name: '닭갈비 1인분', brand: '한식집', amount: 400, unit: 'g', kcal: 600, type: '1인분', emoji: '🍗'),
+  PortionItem(name: '콩나물국밥', brand: '한식집', amount: 650, unit: 'g', kcal: 480, type: '1인분', emoji: '🍲'),
+  PortionItem(name: '순두부찌개 1인분', brand: '한식집', amount: 600, unit: 'g', kcal: 480, type: '1인분', emoji: '🍲'),
+  PortionItem(name: '청국장 1인분', brand: '한식집', amount: 600, unit: 'g', kcal: 510, type: '1인분', emoji: '🍲'),
+  PortionItem(name: '곱창전골 1인분', brand: '한식집', amount: 700, unit: 'g', kcal: 850, type: '1인분', emoji: '🍲'),
+  PortionItem(name: '닭볶음탕 1인분', brand: '한식집', amount: 500, unit: 'g', kcal: 700, type: '1인분', emoji: '🍲'),
+  PortionItem(name: '삼계탕 1그릇', brand: '한식집', amount: 800, unit: 'g', kcal: 800, type: '1인분', emoji: '🍲'),
+  PortionItem(name: '육개장 1그릇', brand: '한식집', amount: 700, unit: 'g', kcal: 530, type: '1인분', emoji: '🍲'),
+  PortionItem(name: '미역국 1그릇', brand: '한식집', amount: 500, unit: 'g', kcal: 280, type: '1인분', emoji: '🍲'),
+  PortionItem(name: '추어탕 1그릇', brand: '한식집', amount: 700, unit: 'g', kcal: 540, type: '1인분', emoji: '🍲'),
+  PortionItem(name: '김치볶음밥', brand: '한식집', amount: 400, unit: 'g', kcal: 720, type: '1인분', emoji: '🍚'),
+  PortionItem(name: '새우볶음밥', brand: '한식집', amount: 400, unit: 'g', kcal: 700, type: '1인분', emoji: '🍚'),
+  PortionItem(name: '잡채밥', brand: '한식집', amount: 400, unit: 'g', kcal: 850, type: '1인분', emoji: '🍚'),
+  PortionItem(name: '카레라이스', brand: '한식집', amount: 500, unit: 'g', kcal: 700, type: '1인분', emoji: '🍚'),
+  PortionItem(name: '오므라이스', brand: '한식집', amount: 400, unit: 'g', kcal: 740, type: '1인분', emoji: '🍚'),
+  PortionItem(name: '햄버그스테이크', brand: '경양식', amount: 400, unit: 'g', kcal: 850, type: '1인분', emoji: '🍱'),
+  // === 분식/간식 추가 ===
+  PortionItem(name: '호떡 1개', brand: '노점', amount: 80, unit: 'g', kcal: 220, type: '완제품', emoji: '🥞'),
+  PortionItem(name: '붕어빵 1개', brand: '노점', amount: 60, unit: 'g', kcal: 160, type: '완제품', emoji: '🐟'),
+  PortionItem(name: '와플 1개', brand: '카페', amount: 120, unit: 'g', kcal: 360, type: '완제품', emoji: '🧇'),
+  PortionItem(name: '토스트 1개', brand: '분식집', amount: 120, unit: 'g', kcal: 320, type: '완제품', emoji: '🍞'),
+  PortionItem(name: '샌드위치 1개', brand: '편의점', amount: 200, unit: 'g', kcal: 380, type: '완제품', emoji: '🥪'),
+  PortionItem(name: '핫도그 1개', brand: '편의점', amount: 100, unit: 'g', kcal: 290, type: '완제품', emoji: '🌭'),
+  PortionItem(name: '크로아상 1개', brand: '카페', amount: 80, unit: 'g', kcal: 320, type: '완제품', emoji: '🥐'),
+  PortionItem(name: '베이글 1개', brand: '카페', amount: 100, unit: 'g', kcal: 280, type: '완제품', emoji: '🥯'),
+  PortionItem(name: '도넛 1개', brand: '던킨', amount: 70, unit: 'g', kcal: 280, type: '완제품', emoji: '🍩'),
+  PortionItem(name: '마카롱 1개', brand: '카페', amount: 30, unit: 'g', kcal: 120, type: '완제품', emoji: '🍪'),
+  // === 중식/양식 추가 ===
+  PortionItem(name: '깐풍기', brand: '중국집', amount: 400, unit: 'g', kcal: 1200, type: '1인분', emoji: '🍗'),
+  PortionItem(name: '마라탕 1인분', brand: '중국집', amount: 700, unit: 'g', kcal: 800, type: '1인분', emoji: '🍲'),
+  PortionItem(name: '마라샹궈', brand: '중국집', amount: 500, unit: 'g', kcal: 1100, type: '1인분', emoji: '🍲'),
+  PortionItem(name: '양꼬치 10꼬치', brand: '중국집', amount: 250, unit: 'g', kcal: 720, type: '1인분', emoji: '🍢'),
+  PortionItem(name: '쌀국수 1그릇', brand: '베트남식', amount: 600, unit: 'g', kcal: 500, type: '1인분', emoji: '🍜'),
+  PortionItem(name: '팟타이 1인분', brand: '태국식', amount: 400, unit: 'g', kcal: 700, type: '1인분', emoji: '🍜'),
+  PortionItem(name: '스파게티 토마토', brand: '면류(파스타)', amount: 400, unit: 'g', kcal: 580, type: '1인분', emoji: '🍝'),
+  PortionItem(name: '까르보나라', brand: '면류(파스타)', amount: 400, unit: 'g', kcal: 920, type: '1인분', emoji: '🍝'),
+  PortionItem(name: '알리오올리오', brand: '면류(파스타)', amount: 350, unit: 'g', kcal: 600, type: '1인분', emoji: '🍝'),
+  PortionItem(name: '리조또', brand: '양식', amount: 400, unit: 'g', kcal: 650, type: '1인분', emoji: '🍚'),
+  // === 일식 추가 ===
+  PortionItem(name: '라멘 1그릇', brand: '일식집', amount: 700, unit: 'g', kcal: 700, type: '1인분', emoji: '🍜'),
+  PortionItem(name: '규동 1그릇', brand: '일식집', amount: 400, unit: 'g', kcal: 720, type: '1인분', emoji: '🍚'),
+  PortionItem(name: '가츠동 1그릇', brand: '일식집', amount: 450, unit: 'g', kcal: 850, type: '1인분', emoji: '🍚'),
+  PortionItem(name: '텐동 1그릇', brand: '일식집', amount: 450, unit: 'g', kcal: 880, type: '1인분', emoji: '🍚'),
+  PortionItem(name: '오니기리 1개', brand: '편의점', amount: 110, unit: 'g', kcal: 180, type: '완제품', emoji: '🍙'),
+  // === 즉석/편의 추가 ===
+  PortionItem(name: '컵라면 작은컵', brand: '편의점', amount: 75, unit: 'g', kcal: 350, type: '완제품', emoji: '🍜'),
+  PortionItem(name: '컵라면 큰컵', brand: '편의점', amount: 110, unit: 'g', kcal: 500, type: '완제품', emoji: '🍜'),
+  PortionItem(name: '컵밥 1개', brand: '편의점', amount: 280, unit: 'g', kcal: 480, type: '완제품', emoji: '🍚'),
+  PortionItem(name: '도시락 1개', brand: '편의점', amount: 400, unit: 'g', kcal: 720, type: '완제품', emoji: '🍱'),
+  PortionItem(name: '냉동만두 10개', brand: '비비고', amount: 200, unit: 'g', kcal: 420, type: '1인분', emoji: '🥟'),
+  PortionItem(name: '냉동피자 1판', brand: '오뚜기', amount: 400, unit: 'g', kcal: 900, type: '완제품', emoji: '🍕'),
+  PortionItem(name: '햇반', brand: 'CJ', amount: 210, unit: 'g', kcal: 310, type: '완제품', emoji: '🍚'),
   // 음료/주류
   PortionItem(name: '소주 1병', brand: '하이트진로', amount: 360, unit: 'mL', kcal: 540, type: '완제품', emoji: '🍶'),
   PortionItem(name: '맥주 500cc', brand: '주점', amount: 500, unit: 'mL', kcal: 200, type: '1인분', emoji: '🍺'),
   PortionItem(name: '막걸리 1병', brand: '서울탁주', amount: 750, unit: 'mL', kcal: 360, type: '완제품', emoji: '🍶'),
 ];
+
+String _normalizePortion(String s) =>
+    s.toLowerCase().replaceAll(RegExp(r'[\s\(\)\[\]\.\-_/]+'), '');
+
+/// DB 분류 + 제품명 기반 추정 PortionItem. 정적 리스트에 없는 5만건 커버용.
+PortionItem? buildEstimatedPortion(String? name, String? classification) {
+  if (name == null || name.isEmpty) return null;
+  final cls = (classification ?? '').toLowerCase();
+  final nm = name.toLowerCase();
+  bool inCls(List<String> kws) => kws.any(cls.contains);
+  bool inName(List<String> kws) => kws.any(nm.contains);
+
+  if (inCls(['음료', '다류'])
+      || inName(['우유', '주스', '탄산', '콜라', '사이다', '커피', '에이드'])) {
+    return PortionItem(name: name, brand: '스캔 제품', amount: 250,
+        unit: 'mL', kcal: 110, type: '완제품(추정)', emoji: '🥤');
+  }
+  if (inCls(['주류']) || inName(['소주', '맥주', '와인', '막걸리'])) {
+    return PortionItem(name: name, brand: '스캔 제품', amount: 360,
+        unit: 'mL', kcal: 220, type: '완제품(추정)', emoji: '🍶');
+  }
+  if (inCls(['면류']) || inName(['라면', '국수', '냉면', '우동'])) {
+    return PortionItem(name: name, brand: '스캔 제품', amount: 120,
+        unit: 'g', kcal: 500, type: '완제품(추정)', emoji: '🍜');
+  }
+  if (inCls(['즉석', '편의'])) {
+    return PortionItem(name: name, brand: '스캔 제품', amount: 280,
+        unit: 'g', kcal: 480, type: '완제품(추정)', emoji: '🍱');
+  }
+  if (inCls(['초콜릿']) || inName(['초콜릿', '초코'])) {
+    return PortionItem(name: name, brand: '스캔 제품', amount: 30,
+        unit: 'g', kcal: 160, type: '완제품(추정)', emoji: '🍫');
+  }
+  if (inCls(['과자', '빵', '떡'])) {
+    return PortionItem(name: name, brand: '스캔 제품', amount: 80,
+        unit: 'g', kcal: 320, type: '완제품(추정)', emoji: '🍪');
+  }
+  if (inCls(['김치', '절임'])) {
+    return PortionItem(name: name, brand: '스캔 제품', amount: 200,
+        unit: 'g', kcal: 60, type: '1인분(추정)', emoji: '🥬');
+  }
+  if (inCls(['수산'])) {
+    return PortionItem(name: name, brand: '스캔 제품', amount: 100,
+        unit: 'g', kcal: 200, type: '완제품(추정)', emoji: '🐟');
+  }
+  if (inCls(['장류', '소스'])) {
+    return PortionItem(name: name, brand: '스캔 제품', amount: 15,
+        unit: 'g', kcal: 30, type: '섭취량(추정)', emoji: '🥫');
+  }
+  if (inCls(['아이스크림', '빙과'])) {
+    return PortionItem(name: name, brand: '스캔 제품', amount: 100,
+        unit: 'g', kcal: 200, type: '완제품(추정)', emoji: '🍨');
+  }
+  if (inCls(['식육', '가공'])) {
+    return PortionItem(name: name, brand: '스캔 제품', amount: 100,
+        unit: 'g', kcal: 250, type: '완제품(추정)', emoji: '🥩');
+  }
+  if (inCls(['두부', '묵', '두유'])) {
+    return PortionItem(name: name, brand: '스캔 제품', amount: 150,
+        unit: 'g', kcal: 100, type: '1인분(추정)', emoji: '🥣');
+  }
+  // 분류 없거나 기타 — 일반 가공식품 평균
+  return PortionItem(name: name, brand: '스캔 제품', amount: 100,
+      unit: 'g', kcal: 250, type: '완제품(추정)', emoji: '🍴');
+}
+
+/// 확장 포션 DB 1회 로드 (assets/data/portions_global.json, 63건).
+Future<List<PortionItem>> loadGlobalPortions() async {
+  final raw = await rootBundle.loadString('assets/data/portions_global.json');
+  final list = jsonDecode(raw) as List;
+  return list.map<PortionItem>((e) {
+    final m = e as Map<String, dynamic>;
+    final amt = (m['amount'] as num?)?.toInt() ?? 0;
+    final unit = (m['amount_unit'] ?? 'g').toString();
+    final cat = (m['category'] ?? '').toString();
+    return PortionItem(
+      name: (m['food'] ?? '').toString(),
+      brand: (m['source'] ?? '').toString(),
+      amount: amt,
+      unit: unit,
+      kcal: (m['kcal'] as num?)?.toInt(),
+      type: (m['portion_type'] ?? '1인분').toString(),
+      emoji: _emojiForCategory(cat),
+    );
+  }).where((p) => p.amount > 0 && p.name.isNotEmpty).toList();
+}
+
+String _emojiForCategory(String cat) {
+  if (cat.contains('밥') || cat.contains('주식')) return '🍚';
+  if (cat.contains('면') || cat.contains('라면')) return '🍜';
+  if (cat.contains('시리얼')) return '🥣';
+  if (cat.contains('아이스크림') || cat.contains('빙수')) return '🍨';
+  if (cat.contains('빵') || cat.contains('제과')) return '🍞';
+  if (cat.contains('우유') || cat.contains('유제품')) return '🥛';
+  if (cat.contains('스낵') || cat.contains('과자')) return '🍿';
+  if (cat.contains('버거') || cat.contains('샌드')) return '🍔';
+  if (cat.contains('김밥') || cat.contains('주먹밥')) return '🍙';
+  if (cat.contains('떡볶이') || cat.contains('떡')) return '🍢';
+  if (cat.contains('치킨')) return '🍗';
+  if (cat.contains('찌개') || cat.contains('국') || cat.contains('탕')) return '🍲';
+  if (cat.contains('초밥') || cat.contains('스시')) return '🍣';
+  if (cat.contains('도시락') || cat.contains('편의')) return '🍱';
+  if (cat.contains('새우') || cat.contains('해산물')) return '🍤';
+  if (cat.contains('주류') || cat.contains('맥주')) return '🍺';
+  if (cat.contains('음료') || cat.contains('다류')) return '🥤';
+  return '🍴';
+}
+
+/// 스캔된 제품명에서 portionItems 항목을 찾는다. 가장 긴 매치 우선.
+PortionItem? matchPortionFromName(String? scanned) {
+  if (scanned == null || scanned.isEmpty) return null;
+  final n = _normalizePortion(scanned);
+  if (n.isEmpty) return null;
+  PortionItem? best;
+  int bestLen = 0;
+  for (final p in portionItems) {
+    final pn = _normalizePortion(p.name);
+    if (pn.length < 2) continue;
+    if (n.contains(pn) && pn.length > bestLen) {
+      best = p;
+      bestLen = pn.length;
+    }
+  }
+  return best;
+}

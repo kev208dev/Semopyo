@@ -1,0 +1,502 @@
+[
+  {
+    "brand": "커버낫",
+    "garment": "반팔티(어센틱로고)",
+    "size_label": "XS",
+    "shoulder_cm": 47.5,
+    "chest_half_cm": 49.0,
+    "length_cm": 63.0,
+    "sleeve_cm": 19.0,
+    "source": "covernat.co.kr"
+  },
+  {
+    "brand": "커버낫",
+    "garment": "반팔티(어센틱로고)",
+    "size_label": "S",
+    "shoulder_cm": 49.0,
+    "chest_half_cm": 51.5,
+    "length_cm": 65.0,
+    "sleeve_cm": 20.0,
+    "source": "covernat.co.kr"
+  },
+  {
+    "brand": "커버낫",
+    "garment": "반팔티(어센틱로고)",
+    "size_label": "M",
+    "shoulder_cm": 51.0,
+    "chest_half_cm": 55.0,
+    "length_cm": 69.0,
+    "sleeve_cm": 21.5,
+    "source": "covernat.co.kr"
+  },
+  {
+    "brand": "커버낫",
+    "garment": "반팔티(어센틱로고)",
+    "size_label": "L",
+    "shoulder_cm": 52.5,
+    "chest_half_cm": 57.5,
+    "length_cm": 71.0,
+    "sleeve_cm": 22.5,
+    "source": "covernat.co.kr"
+  },
+  {
+    "brand": "커버낫",
+    "garment": "반팔티(어센틱로고)",
+    "size_label": "XL",
+    "shoulder_cm": 54.0,
+    "chest_half_cm": 60.0,
+    "length_cm": 73.0,
+    "sleeve_cm": 23.5,
+    "source": "covernat.co.kr"
+  },
+  {
+    "brand": "커버낫",
+    "garment": "반팔티(어센틱로고)",
+    "size_label": "XXL",
+    "shoulder_cm": 55.5,
+    "chest_half_cm": 62.5,
+    "length_cm": 74.0,
+    "sleeve_cm": 24.5,
+    "source": "covernat.co.kr"
+  },
+  {
+    "brand": "디스이즈네버댓",
+    "garment": "맨투맨(Arch-Logo)",
+    "size_label": "S",
+    "shoulder_cm": 47.0,
+    "chest_half_cm": 57.0,
+    "length_cm": 64.0,
+    "sleeve_cm": 64.0,
+    "source": "thisisneverthat"
+  },
+  {
+    "brand": "디스이즈네버댓",
+    "garment": "맨투맨(Arch-Logo)",
+    "size_label": "M",
+    "shoulder_cm": 49.0,
+    "chest_half_cm": 59.5,
+    "length_cm": 66.5,
+    "sleeve_cm": 65.5,
+    "source": "thisisneverthat"
+  },
+  {
+    "brand": "디스이즈네버댓",
+    "garment": "맨투맨(Arch-Logo)",
+    "size_label": "L",
+    "shoulder_cm": 51.0,
+    "chest_half_cm": 62.0,
+    "length_cm": 69.0,
+    "sleeve_cm": 67.0,
+    "source": "thisisneverthat"
+  },
+  {
+    "brand": "디스이즈네버댓",
+    "garment": "맨투맨(Arch-Logo)",
+    "size_label": "XL",
+    "shoulder_cm": 53.0,
+    "chest_half_cm": 64.5,
+    "length_cm": 71.5,
+    "sleeve_cm": 68.5,
+    "source": "thisisneverthat"
+  },
+  {
+    "brand": "Gildan",
+    "garment": "t-shirt",
+    "size_label": "S",
+    "shoulder_cm": null,
+    "chest_half_cm": 45.7,
+    "length_cm": 71.1,
+    "sleeve_cm": 39.7,
+    "source": "Gildan스펙시트"
+  },
+  {
+    "brand": "Gildan",
+    "garment": "t-shirt",
+    "size_label": "M",
+    "shoulder_cm": null,
+    "chest_half_cm": 50.8,
+    "length_cm": 73.7,
+    "sleeve_cm": 43.2,
+    "source": "Gildan스펙시트"
+  },
+  {
+    "brand": "Gildan",
+    "garment": "t-shirt",
+    "size_label": "L",
+    "shoulder_cm": null,
+    "chest_half_cm": 55.9,
+    "length_cm": 76.2,
+    "sleeve_cm": 47.0,
+    "source": "Gildan스펙시트"
+  },
+  {
+    "brand": "Gildan",
+    "garment": "t-shirt",
+    "size_label": "XL",
+    "shoulder_cm": null,
+    "chest_half_cm": 61.0,
+    "length_cm": 78.7,
+    "sleeve_cm": 50.8,
+    "source": "Gildan스펙시트"
+  },
+  {
+    "brand": "Gildan",
+    "garment": "t-shirt",
+    "size_label": "XXL",
+    "shoulder_cm": null,
+    "chest_half_cm": 66.0,
+    "length_cm": 81.3,
+    "sleeve_cm": 54.6,
+    "source": "Gildan스펙시트"
+  },
+  {
+    "brand": "Gildan",
+    "garment": "sweatshirt",
+    "size_label": "S",
+    "shoulder_cm": null,
+    "chest_half_cm": 50.8,
+    "length_cm": 68.6,
+    "sleeve_cm": null,
+    "source": "Gildan18000"
+  },
+  {
+    "brand": "Gildan",
+    "garment": "sweatshirt",
+    "size_label": "M",
+    "shoulder_cm": null,
+    "chest_half_cm": 55.9,
+    "length_cm": 71.1,
+    "sleeve_cm": null,
+    "source": "Gildan18000"
+  },
+  {
+    "brand": "Gildan",
+    "garment": "sweatshirt",
+    "size_label": "L",
+    "shoulder_cm": null,
+    "chest_half_cm": 61.0,
+    "length_cm": 73.7,
+    "sleeve_cm": null,
+    "source": "Gildan18000"
+  },
+  {
+    "brand": "Gildan",
+    "garment": "sweatshirt",
+    "size_label": "XL",
+    "shoulder_cm": null,
+    "chest_half_cm": 66.0,
+    "length_cm": 76.2,
+    "sleeve_cm": null,
+    "source": "Gildan18000"
+  },
+  {
+    "brand": "Champion",
+    "garment": "t-shirt",
+    "size_label": "S",
+    "shoulder_cm": null,
+    "chest_half_cm": 45.7,
+    "length_cm": 71.1,
+    "sleeve_cm": 42.5,
+    "source": "ChampionT425"
+  },
+  {
+    "brand": "Champion",
+    "garment": "t-shirt",
+    "size_label": "M",
+    "shoulder_cm": null,
+    "chest_half_cm": 50.8,
+    "length_cm": 73.7,
+    "sleeve_cm": 45.7,
+    "source": "ChampionT425"
+  },
+  {
+    "brand": "Champion",
+    "garment": "t-shirt",
+    "size_label": "L",
+    "shoulder_cm": null,
+    "chest_half_cm": 55.9,
+    "length_cm": 76.2,
+    "sleeve_cm": 48.9,
+    "source": "ChampionT425"
+  },
+  {
+    "brand": "Champion",
+    "garment": "t-shirt",
+    "size_label": "XL",
+    "shoulder_cm": null,
+    "chest_half_cm": 61.0,
+    "length_cm": 78.7,
+    "sleeve_cm": 52.1,
+    "source": "ChampionT425"
+  },
+  {
+    "brand": "Champion",
+    "garment": "t-shirt",
+    "size_label": "XXL",
+    "shoulder_cm": null,
+    "chest_half_cm": 66.0,
+    "length_cm": 83.8,
+    "sleeve_cm": 56.5,
+    "source": "ChampionT425"
+  },
+  {
+    "brand": "Champion",
+    "garment": "sweatshirt",
+    "size_label": "S",
+    "shoulder_cm": null,
+    "chest_half_cm": 57.8,
+    "length_cm": 68.6,
+    "sleeve_cm": null,
+    "source": "ChampionRW"
+  },
+  {
+    "brand": "Champion",
+    "garment": "sweatshirt",
+    "size_label": "M",
+    "shoulder_cm": null,
+    "chest_half_cm": 62.9,
+    "length_cm": 71.1,
+    "sleeve_cm": null,
+    "source": "ChampionRW"
+  },
+  {
+    "brand": "Champion",
+    "garment": "sweatshirt",
+    "size_label": "L",
+    "shoulder_cm": null,
+    "chest_half_cm": 67.9,
+    "length_cm": 73.7,
+    "sleeve_cm": null,
+    "source": "ChampionRW"
+  },
+  {
+    "brand": "Champion",
+    "garment": "sweatshirt",
+    "size_label": "XL",
+    "shoulder_cm": null,
+    "chest_half_cm": 73.0,
+    "length_cm": 76.2,
+    "sleeve_cm": null,
+    "source": "ChampionRW"
+  },
+  {
+    "brand": "American Apparel",
+    "garment": "t-shirt",
+    "size_label": "S",
+    "shoulder_cm": null,
+    "chest_half_cm": 45.7,
+    "length_cm": 72.1,
+    "sleeve_cm": null,
+    "source": "AA2001"
+  },
+  {
+    "brand": "American Apparel",
+    "garment": "t-shirt",
+    "size_label": "M",
+    "shoulder_cm": null,
+    "chest_half_cm": 50.8,
+    "length_cm": 73.4,
+    "sleeve_cm": 21.6,
+    "source": "AA2001"
+  },
+  {
+    "brand": "American Apparel",
+    "garment": "t-shirt",
+    "size_label": "L",
+    "shoulder_cm": null,
+    "chest_half_cm": 55.9,
+    "length_cm": 76.2,
+    "sleeve_cm": 22.2,
+    "source": "AA2001"
+  },
+  {
+    "brand": "American Apparel",
+    "garment": "t-shirt",
+    "size_label": "XL",
+    "shoulder_cm": null,
+    "chest_half_cm": 61.0,
+    "length_cm": 78.7,
+    "sleeve_cm": 22.9,
+    "source": "AA2001"
+  },
+  {
+    "brand": "American Apparel",
+    "garment": "t-shirt",
+    "size_label": "XXL",
+    "shoulder_cm": null,
+    "chest_half_cm": 66.0,
+    "length_cm": 81.6,
+    "sleeve_cm": 23.5,
+    "source": "AA2001"
+  },
+  {
+    "brand": "Bella+Canvas",
+    "garment": "t-shirt",
+    "size_label": "XS",
+    "shoulder_cm": null,
+    "chest_half_cm": 43.2,
+    "length_cm": 69.9,
+    "sleeve_cm": 19.7,
+    "source": "BC3001C"
+  },
+  {
+    "brand": "Bella+Canvas",
+    "garment": "t-shirt",
+    "size_label": "S",
+    "shoulder_cm": null,
+    "chest_half_cm": 47.0,
+    "length_cm": 72.4,
+    "sleeve_cm": 20.3,
+    "source": "BC3001C"
+  },
+  {
+    "brand": "Bella+Canvas",
+    "garment": "t-shirt",
+    "size_label": "M",
+    "shoulder_cm": null,
+    "chest_half_cm": 50.8,
+    "length_cm": 74.9,
+    "sleeve_cm": 21.6,
+    "source": "BC3001C"
+  },
+  {
+    "brand": "Bella+Canvas",
+    "garment": "t-shirt",
+    "size_label": "L",
+    "shoulder_cm": null,
+    "chest_half_cm": 54.6,
+    "length_cm": 77.5,
+    "sleeve_cm": 22.9,
+    "source": "BC3001C"
+  },
+  {
+    "brand": "Bella+Canvas",
+    "garment": "t-shirt",
+    "size_label": "XL",
+    "shoulder_cm": null,
+    "chest_half_cm": 58.4,
+    "length_cm": 80.0,
+    "sleeve_cm": 24.1,
+    "source": "BC3001C"
+  },
+  {
+    "brand": "Bella+Canvas",
+    "garment": "t-shirt",
+    "size_label": "XXL",
+    "shoulder_cm": null,
+    "chest_half_cm": 62.2,
+    "length_cm": 82.6,
+    "sleeve_cm": 25.4,
+    "source": "BC3001C"
+  },
+  {
+    "brand": "Next Level",
+    "garment": "t-shirt",
+    "size_label": "XS",
+    "shoulder_cm": null,
+    "chest_half_cm": 44.5,
+    "length_cm": 68.6,
+    "sleeve_cm": null,
+    "source": "NL3600"
+  },
+  {
+    "brand": "Next Level",
+    "garment": "t-shirt",
+    "size_label": "S",
+    "shoulder_cm": null,
+    "chest_half_cm": 48.3,
+    "length_cm": 71.1,
+    "sleeve_cm": null,
+    "source": "NL3600"
+  },
+  {
+    "brand": "Next Level",
+    "garment": "t-shirt",
+    "size_label": "M",
+    "shoulder_cm": null,
+    "chest_half_cm": 52.1,
+    "length_cm": 73.7,
+    "sleeve_cm": null,
+    "source": "NL3600"
+  },
+  {
+    "brand": "Next Level",
+    "garment": "t-shirt",
+    "size_label": "L",
+    "shoulder_cm": null,
+    "chest_half_cm": 55.9,
+    "length_cm": 76.2,
+    "sleeve_cm": null,
+    "source": "NL3600"
+  },
+  {
+    "brand": "Next Level",
+    "garment": "t-shirt",
+    "size_label": "XL",
+    "shoulder_cm": null,
+    "chest_half_cm": 61.0,
+    "length_cm": 78.7,
+    "sleeve_cm": null,
+    "source": "NL3600"
+  },
+  {
+    "brand": "Next Level",
+    "garment": "t-shirt",
+    "size_label": "XXL",
+    "shoulder_cm": null,
+    "chest_half_cm": 66.0,
+    "length_cm": 81.3,
+    "sleeve_cm": null,
+    "source": "NL3600"
+  },
+  {
+    "brand": "Carhartt",
+    "garment": "t-shirt",
+    "size_label": "S",
+    "shoulder_cm": null,
+    "chest_half_cm": 53.3,
+    "length_cm": 74.3,
+    "sleeve_cm": null,
+    "source": "Carhartt공식"
+  },
+  {
+    "brand": "Carhartt",
+    "garment": "t-shirt",
+    "size_label": "M",
+    "shoulder_cm": null,
+    "chest_half_cm": 58.4,
+    "length_cm": 75.6,
+    "sleeve_cm": null,
+    "source": "Carhartt공식"
+  },
+  {
+    "brand": "Carhartt",
+    "garment": "t-shirt",
+    "size_label": "L",
+    "shoulder_cm": null,
+    "chest_half_cm": 63.5,
+    "length_cm": 76.8,
+    "sleeve_cm": null,
+    "source": "Carhartt공식"
+  },
+  {
+    "brand": "Carhartt",
+    "garment": "t-shirt",
+    "size_label": "XL",
+    "shoulder_cm": null,
+    "chest_half_cm": 68.6,
+    "length_cm": 79.4,
+    "sleeve_cm": null,
+    "source": "Carhartt공식"
+  },
+  {
+    "brand": "Carhartt",
+    "garment": "t-shirt",
+    "size_label": "XXL",
+    "shoulder_cm": null,
+    "chest_half_cm": 78.7,
+    "length_cm": 84.5,
+    "sleeve_cm": null,
+    "source": "Carhartt공식"
+  }
+]
