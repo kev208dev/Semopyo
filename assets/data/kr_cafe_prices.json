@@ -1,0 +1,194 @@
+[
+  {
+    "brand": "스타벅스",
+    "size_label": "Tall",
+    "drink": "아메리카노",
+    "price_krw": 4700,
+    "reliability": "high",
+    "source": "스타벅스인상보도2025"
+  },
+  {
+    "brand": "스타벅스",
+    "size_label": "Grande",
+    "drink": "아메리카노",
+    "price_krw": 5400,
+    "reliability": "med",
+    "source": "서울경제"
+  },
+  {
+    "brand": "스타벅스",
+    "size_label": "Venti",
+    "drink": "아메리카노",
+    "price_krw": 6200,
+    "reliability": "med",
+    "source": "서울경제"
+  },
+  {
+    "brand": "투썸플레이스",
+    "size_label": "Regular",
+    "drink": "아메리카노",
+    "price_krw": 4700,
+    "reliability": "high",
+    "source": "ZDNet"
+  },
+  {
+    "brand": "이디야",
+    "size_label": "Large(기본)",
+    "drink": "아메리카노",
+    "price_krw": 3200,
+    "reliability": "high",
+    "source": "ZDNet2025"
+  },
+  {
+    "brand": "컴포즈커피",
+    "size_label": "Regular(HOT)",
+    "drink": "아메리카노",
+    "price_krw": 2000,
+    "reliability": "med",
+    "source": "컴포즈공식"
+  },
+  {
+    "brand": "컴포즈커피",
+    "size_label": "Regular(ICE)",
+    "drink": "아이스아메리카노",
+    "price_krw": 2400,
+    "reliability": "med",
+    "source": "컴포즈공식"
+  },
+  {
+    "brand": "메가커피",
+    "size_label": "Regular(HOT)",
+    "drink": "아메리카노",
+    "price_krw": 1700,
+    "reliability": "high",
+    "source": "서울신문"
+  },
+  {
+    "brand": "메가커피",
+    "size_label": "Regular(ICE)",
+    "drink": "아이스아메리카노",
+    "price_krw": 2000,
+    "reliability": "med",
+    "source": "메가공식"
+  },
+  {
+    "brand": "빽다방",
+    "size_label": "Regular(HOT)",
+    "drink": "아메리카노",
+    "price_krw": 1700,
+    "reliability": "high",
+    "source": "네이트뉴스"
+  },
+  {
+    "brand": "빽다방",
+    "size_label": "Regular(ICE)",
+    "drink": "아이스아메리카노",
+    "price_krw": 2000,
+    "reliability": "high",
+    "source": "디지털데일리"
+  },
+  {
+    "brand": "빽다방",
+    "size_label": "빅사이즈(ICE)",
+    "drink": "아이스아메리카노",
+    "price_krw": 3300,
+    "reliability": "med",
+    "source": "디지털데일리"
+  },
+  {
+    "brand": "할리스",
+    "size_label": "Regular",
+    "drink": "아메리카노",
+    "price_krw": 4700,
+    "reliability": "high",
+    "source": "pocketo"
+  },
+  {
+    "brand": "파스쿠찌",
+    "size_label": "Regular",
+    "drink": "아메리카노",
+    "price_krw": 4700,
+    "reliability": "high",
+    "source": "이데일리"
+  },
+  {
+    "brand": "파스쿠찌",
+    "size_label": "Large",
+    "drink": "아메리카노",
+    "price_krw": 5300,
+    "reliability": "med",
+    "source": "뉴스핌"
+  },
+  {
+    "brand": "폴바셋",
+    "size_label": "ICE(단일)",
+    "drink": "아이스아메리카노",
+    "price_krw": 4700,
+    "reliability": "med",
+    "source": "한국경제"
+  },
+  {
+    "brand": "커피빈",
+    "size_label": "Small(기본)",
+    "drink": "아메리카노",
+    "price_krw": 5000,
+    "reliability": "high",
+    "source": "pocketo"
+  },
+  {
+    "brand": "엔제리너스",
+    "size_label": "Small",
+    "drink": "아메리카노",
+    "price_krw": 4300,
+    "reliability": "low",
+    "source": "세계일보2018"
+  },
+  {
+    "brand": "더벤티",
+    "size_label": "Large(HOT)",
+    "drink": "아메리카노",
+    "price_krw": 2000,
+    "reliability": "med",
+    "source": "magazineo"
+  },
+  {
+    "brand": "더벤티",
+    "size_label": "Large(ICE)",
+    "drink": "아이스아메리카노",
+    "price_krw": 2500,
+    "reliability": "med",
+    "source": "magazineo"
+  },
+  {
+    "brand": "공차",
+    "size_label": "L",
+    "drink": "아메리카노",
+    "price_krw": 4200,
+    "reliability": "high",
+    "source": "pocketo"
+  },
+  {
+    "brand": "공차",
+    "size_label": "J(점보)",
+    "drink": "아메리카노",
+    "price_krw": 4700,
+    "reliability": "high",
+    "source": "pocketo"
+  },
+  {
+    "brand": "공차",
+    "size_label": "1L",
+    "drink": "아이스아메리카노",
+    "price_krw": 7000,
+    "reliability": "high",
+    "source": "pocketo"
+  },
+  {
+    "brand": "매머드커피",
+    "size_label": "Regular",
+    "drink": "아메리카노",
+    "price_krw": 2100,
+    "reliability": "med",
+    "source": "magazineo"
+  }
+]

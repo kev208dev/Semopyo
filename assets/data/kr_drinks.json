@@ -1,0 +1,290 @@
+[
+  {
+    "brand": "코카콜라",
+    "product": "코카콜라 캔",
+    "category": "탄산",
+    "volume_ml": 350,
+    "price_krw": 2100,
+    "reliability": "high",
+    "source": "문화일보"
+  },
+  {
+    "brand": "코카콜라",
+    "product": "코카콜라 페트",
+    "category": "탄산",
+    "volume_ml": 500,
+    "price_krw": 2400,
+    "reliability": "high",
+    "source": "문화일보"
+  },
+  {
+    "brand": "코카콜라",
+    "product": "코카콜라 페트",
+    "category": "탄산",
+    "volume_ml": 1500,
+    "price_krw": 4000,
+    "reliability": "high",
+    "source": "뉴시스"
+  },
+  {
+    "brand": "코카콜라",
+    "product": "코카콜라 미니캔",
+    "category": "탄산",
+    "volume_ml": 250,
+    "price_krw": 1800,
+    "reliability": "med",
+    "source": "부산올마켓"
+  },
+  {
+    "brand": "펩시",
+    "product": "펩시콜라 캔",
+    "category": "탄산",
+    "volume_ml": 355,
+    "price_krw": null,
+    "reliability": "high",
+    "source": "지마켓"
+  },
+  {
+    "brand": "롯데칠성",
+    "product": "칠성사이다 캔",
+    "category": "탄산",
+    "volume_ml": 355,
+    "price_krw": null,
+    "reliability": "high",
+    "source": "다나와"
+  },
+  {
+    "brand": "롯데칠성",
+    "product": "칠성사이다 미니캔",
+    "category": "탄산",
+    "volume_ml": 250,
+    "price_krw": null,
+    "reliability": "high",
+    "source": "롯데칠성"
+  },
+  {
+    "brand": "코카콜라",
+    "product": "환타 오렌지 캔",
+    "category": "탄산",
+    "volume_ml": 355,
+    "price_krw": null,
+    "reliability": "high",
+    "source": "pyony"
+  },
+  {
+    "brand": "코카콜라",
+    "product": "스프라이트 캔",
+    "category": "탄산",
+    "volume_ml": 355,
+    "price_krw": 1800,
+    "reliability": "high",
+    "source": "뉴시스"
+  },
+  {
+    "brand": "롯데칠성",
+    "product": "마운틴듀 캔",
+    "category": "탄산",
+    "volume_ml": 355,
+    "price_krw": null,
+    "reliability": "high",
+    "source": "롯데칠성"
+  },
+  {
+    "brand": "제주개발공사",
+    "product": "제주삼다수",
+    "category": "생수",
+    "volume_ml": 500,
+    "price_krw": 950,
+    "reliability": "high",
+    "source": "데일리안"
+  },
+  {
+    "brand": "제주개발공사",
+    "product": "제주삼다수",
+    "category": "생수",
+    "volume_ml": 2000,
+    "price_krw": null,
+    "reliability": "high",
+    "source": "삼다수몰"
+  },
+  {
+    "brand": "롯데칠성",
+    "product": "아이시스",
+    "category": "생수",
+    "volume_ml": 500,
+    "price_krw": 850,
+    "reliability": "high",
+    "source": "데일리안"
+  },
+  {
+    "brand": "농심",
+    "product": "백산수",
+    "category": "생수",
+    "volume_ml": 500,
+    "price_krw": 950,
+    "reliability": "high",
+    "source": "데일리안"
+  },
+  {
+    "brand": "서울우유",
+    "product": "나100% 흰우유",
+    "category": "우유",
+    "volume_ml": 1000,
+    "price_krw": 3200,
+    "reliability": "high",
+    "source": "한국경제"
+  },
+  {
+    "brand": "서울우유",
+    "product": "흰우유",
+    "category": "우유",
+    "volume_ml": 200,
+    "price_krw": 1200,
+    "reliability": "high",
+    "source": "스마트에프엔"
+  },
+  {
+    "brand": "서울우유",
+    "product": "흰우유",
+    "category": "우유",
+    "volume_ml": 1800,
+    "price_krw": 6200,
+    "reliability": "high",
+    "source": "스마트에프엔"
+  },
+  {
+    "brand": "매일",
+    "product": "매일우유 흰우유",
+    "category": "우유",
+    "volume_ml": 900,
+    "price_krw": null,
+    "reliability": "med",
+    "source": "SSG"
+  },
+  {
+    "brand": "남양",
+    "product": "맛있는우유GT",
+    "category": "우유",
+    "volume_ml": 900,
+    "price_krw": null,
+    "reliability": "med",
+    "source": "SSG"
+  },
+  {
+    "brand": "코카콜라",
+    "product": "미닛메이드 오렌지",
+    "category": "주스",
+    "volume_ml": 175,
+    "price_krw": null,
+    "reliability": "high",
+    "source": "iffice"
+  },
+  {
+    "brand": "델몬트",
+    "product": "델몬트 오렌지100",
+    "category": "주스",
+    "volume_ml": 1500,
+    "price_krw": null,
+    "reliability": "high",
+    "source": "다나와"
+  },
+  {
+    "brand": "동아제약",
+    "product": "박카스D",
+    "category": "에너지",
+    "volume_ml": 100,
+    "price_krw": null,
+    "reliability": "high",
+    "source": "다나와"
+  },
+  {
+    "brand": "동아제약",
+    "product": "박카스F",
+    "category": "에너지",
+    "volume_ml": 120,
+    "price_krw": 900,
+    "reliability": "high",
+    "source": "글로벌이코노믹"
+  },
+  {
+    "brand": "레드불",
+    "product": "레드불",
+    "category": "에너지",
+    "volume_ml": 250,
+    "price_krw": 2900,
+    "reliability": "high",
+    "source": "namuwiki"
+  },
+  {
+    "brand": "몬스터",
+    "product": "몬스터 에너지",
+    "category": "에너지",
+    "volume_ml": 355,
+    "price_krw": 2900,
+    "reliability": "med",
+    "source": "namuwiki"
+  },
+  {
+    "brand": "롯데칠성",
+    "product": "핫식스",
+    "category": "에너지",
+    "volume_ml": 250,
+    "price_krw": 1000,
+    "reliability": "high",
+    "source": "11번가"
+  },
+  {
+    "brand": "게토레이",
+    "product": "게토레이 레몬",
+    "category": "이온",
+    "volume_ml": 600,
+    "price_krw": 2100,
+    "reliability": "high",
+    "source": "마트로몰"
+  },
+  {
+    "brand": "동아오츠카",
+    "product": "포카리스웨트 캔",
+    "category": "이온",
+    "volume_ml": 245,
+    "price_krw": 1700,
+    "reliability": "high",
+    "source": "머니투데이"
+  },
+  {
+    "brand": "동아오츠카",
+    "product": "포카리스웨트 페트",
+    "category": "이온",
+    "volume_ml": 620,
+    "price_krw": 2400,
+    "reliability": "high",
+    "source": "머니투데이"
+  },
+  {
+    "brand": "동아오츠카",
+    "product": "포카리스웨트 페트",
+    "category": "이온",
+    "volume_ml": 1500,
+    "price_krw": 3600,
+    "reliability": "high",
+    "source": "머니투데이"
+  },
+  {
+    "brand": "코카콜라",
+    "product": "파워에이드 마운틴블라스트",
+    "category": "이온",
+    "volume_ml": 600,
+    "price_krw": 2300,
+    "reliability": "high",
+    "source": "머니S"
+  },
+  {
+    "brand": "광동제약",
+    "product": "비타500",
+    "category": "이온",
+    "volume_ml": 100,
+    "price_krw": 1500,
+    "reliability": "med",
+    "source": "다나와"
+  }
+]

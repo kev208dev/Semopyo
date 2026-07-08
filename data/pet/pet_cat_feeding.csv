@@ -1,0 +1,12 @@
+﻿weight_kg,life_stage,daily_kcal,dry_food_g,reliability,source
+3,adult,192,50,high,RER×1.2/건식380kcal
+4,adult,238,63,high,RER×1.2/건식380kcal
+5,adult,281,74,high,RER×1.2/건식380kcal
+6,adult,322,85,high,RER×1.2/건식380kcal
+7,adult,362,95,high,RER×1.2/건식380kcal
+2,kitten,294,77,med,RER×2.5/건식380kcal
+3,kitten,399,105,med,RER×2.5/건식380kcal
+4,kitten,495,130,med,RER×2.5/건식380kcal
+4,senior,198,52,med,RER×1.0/건식380kcal
+5,senior,234,62,med,RER×1.0/건식380kcal
+6,senior,268,71,med,RER×1.0/건식380kcal

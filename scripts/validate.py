@@ -7,8 +7,12 @@ shoes_sizing.csv 스키마/enum/제약 검증기.
 위반 없으면 "OK: N rows valid" 출력하고 exit code 0.
 """
 import csv
+import os
 import re
 import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from _data_paths import rpath  # noqa: E402  (data/ 하위폴더 경로 해석)
 
 EXPECTED_HEADER = [
     "brand_ko", "brand_en", "origin", "model_line", "data_type",
@@ -114,5 +118,5 @@ def validate(path):
 
 
 if __name__ == "__main__":
-    target = sys.argv[1] if len(sys.argv) > 1 else "data/shoes_sizing.csv"
+    target = sys.argv[1] if len(sys.argv) > 1 else str(rpath("shoes_sizing.csv"))
     sys.exit(validate(target))

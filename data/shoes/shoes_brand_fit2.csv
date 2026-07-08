@@ -1,0 +1,19 @@
+﻿brand,model,fit_tendency,recommend_adjust_mm,note,reliability,source
+Puma,_general,정사이즈,0,토박스 좁은편,med,denimexchange
+Puma,Suede,작게,+5,가장 좁은 라스트,med,denimexchange
+Reebok,_general,정사이즈~약간작게,0,대체로 정사,med,sneakerjagers
+Reebok,Club C 85,정사이즈(좁음),0,좁고 타이트,med,sneakerjagers
+Nike(Jordan),Air Jordan 1,정사이즈,0,다른 나이키보다 약간 좁음,high,soleretriever
+adidas(Yeezy),Boost 350 V2,작게,+5,"좁고 얕은 토박스, 공식 반업",high,solesupplier
+New Balance,990/991/997,작게,+5,좁은 라스트,med,goat
+New Balance,993/2002R/997R,작게,+5,좁은 토박스,med,goat
+New Balance,_general(와이드 2E/4E),정사이즈,0,폭만 넓어짐(길이동일),high,hoodmwr
+adidas,Samba,작게,+5,"좁은 구조, 평균~넓은발 반업",high,adidas공식
+adidas,Gazelle,정사이즈,0,삼바보다 약간 넓음,high,goat
+Gucci,Ace,크게,-5,"풀사이즈 크게, 공식 1다운",med,captaincreps
+Balenciaga,Triple S,크게,-10,"청키, 1사이즈 다운",med,solesupplier
+Dr.Martens,1460,크게,-5,"하프없음, 다운+깔창 권장",high,drmartens공식
+Clarks,Wallabee,크게,-5,스니커보다 크게,med,solesupplier
+Timberland,6인치 프리미엄부츠,크게,-5,"슬림하게 크게, 반다운",high,hibbett
+Rockport,_general,정사이즈,0,대부분 정사,med,workwearcommand
+Clarks,Desert Boot,크게,-5,반다운 권장,med,bootspy

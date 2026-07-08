@@ -285,17 +285,20 @@ class _SpicinessPageState extends State<SpicinessPage> {
                 fontWeight: FontWeight.w700)),
       );
     }
+    const cardW = 130.0;
+    const cardGap = 8.0;
     final selIdx = sorted.indexWhere((s) => s.name == _item.name);
     final ctrl = ScrollController(
-        initialScrollOffset: (selIdx.clamp(0, sorted.length - 1) * 110.0)
-            .clamp(0, math.max(0, sorted.length * 110.0 - 320)));
+        initialScrollOffset:
+            (selIdx.clamp(0, sorted.length - 1) * (cardW + cardGap))
+                .clamp(0, math.max(0, sorted.length * (cardW + cardGap) - 320)));
     return SizedBox(
-      height: 110,
+      height: 130,
       child: ListView.separated(
         controller: ctrl,
         scrollDirection: Axis.horizontal,
         itemCount: sorted.length,
-        separatorBuilder: (_, __) => const SizedBox(width: 8),
+        separatorBuilder: (_, __) => const SizedBox(width: cardGap),
         itemBuilder: (_, i) {
           final s = sorted[i];
           final color = spiceColor(spiceLevel(s.shu));
@@ -303,7 +306,7 @@ class _SpicinessPageState extends State<SpicinessPage> {
           return GestureDetector(
             onTap: () => setState(() => _item = s),
             child: Container(
-              width: 100,
+              width: cardW,
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
                 color: selected ? color : Colors.white.withAlpha(18),
@@ -321,7 +324,20 @@ class _SpicinessPageState extends State<SpicinessPage> {
                   Row(
                     children: [
                       BrandLogo(brandName: s.brand, size: 18),
-                      const Spacer(),
+                      const SizedBox(width: 4),
+                      Expanded(
+                        child: Text(
+                          s.brand,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                              color: selected
+                                  ? Colors.white70
+                                  : Colors.white54,
+                              fontSize: 9,
+                              fontWeight: FontWeight.w700),
+                        ),
+                      ),
                       Container(
                         width: 8,
                         height: 8,
@@ -330,14 +346,17 @@ class _SpicinessPageState extends State<SpicinessPage> {
                       ),
                     ],
                   ),
-                  const Spacer(),
-                  Text(s.name,
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                      style: TextStyle(
-                          color: selected ? Colors.white : Colors.white,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w900)),
+                  const SizedBox(height: 4),
+                  Expanded(
+                    child: Text(s.name,
+                        maxLines: 3,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 12,
+                            height: 1.2,
+                            fontWeight: FontWeight.w900)),
+                  ),
                   Text('${s.shu} SHU',
                       style: TextStyle(
                           color: selected ? Colors.white70 : Colors.white54,
@@ -353,159 +372,61 @@ class _SpicinessPageState extends State<SpicinessPage> {
   }
 
   Widget _picker() {
-    return GestureDetector(
-      onTap: _openPicker,
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-        decoration: BoxDecoration(
-          color: Colors.white.withAlpha(20),
-          borderRadius: BorderRadius.circular(14),
-          border: Border.all(color: Colors.white24),
-        ),
-        child: Row(
-          children: [
-            ProductImage(
-              imageAsset: spiceImageFor(_item),
-              imageUrl: _item.image.startsWith('http') ? _item.image : null,
-              brandName: _item.brand,
-              size: 44,
-              fallbackIcon: Icons.local_fire_department,
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+      decoration: BoxDecoration(
+        color: Colors.white.withAlpha(20),
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: Colors.white24),
+      ),
+      child: Row(
+        children: [
+          ProductImage(
+            imageAsset: spiceImageFor(_item),
+            imageUrl: _item.image.startsWith('http') ? _item.image : null,
+            brandName: _item.brand,
+            size: 44,
+            fallbackIcon: Icons.local_fire_department,
+          ),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(_item.name,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 17,
+                        fontWeight: FontWeight.w900)),
+                Text(_item.brand,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: const TextStyle(
+                        color: Colors.white60,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w600)),
+              ],
             ),
-            const SizedBox(width: 12),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(_item.name,
-                      style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 17,
-                          fontWeight: FontWeight.w900)),
-                  Text(_item.brand,
-                      style: const TextStyle(
-                          color: Colors.white60,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w600)),
-                ],
-              ),
+          ),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+            decoration: BoxDecoration(
+              color: spiceColor(spiceLevel(_item.shu)),
+              borderRadius: BorderRadius.circular(8),
             ),
-            const Icon(Icons.swap_horiz, color: Colors.white70),
-          ],
-        ),
+            child: Text(
+              '${_item.shu} SHU',
+              style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 11,
+                  fontWeight: FontWeight.w900),
+            ),
+          ),
+        ],
       ),
     );
-  }
-
-  Future<void> _openPicker() async {
-    final picked = await showModalBottomSheet<SpiceItem>(
-      context: context,
-      backgroundColor: const Color(0xFF1A1A1A),
-      isScrollControlled: true,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
-      ),
-      builder: (ctx) {
-        final sorted = [..._pool]..sort((a, b) => a.shu.compareTo(b.shu));
-        String query = '';
-        return SafeArea(
-          child: StatefulBuilder(builder: (ctx, setSheet) {
-            final filtered = query.isEmpty
-                ? sorted
-                : sorted
-                    .where((s) =>
-                        s.name.toLowerCase().contains(query.toLowerCase()) ||
-                        s.brand.toLowerCase().contains(query.toLowerCase()))
-                    .toList();
-            return SizedBox(
-              height: MediaQuery.of(ctx).size.height * 0.8,
-              child: Column(
-                children: [
-                  const Padding(
-                    padding: EdgeInsets.fromLTRB(20, 16, 20, 8),
-                    child: Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text('음식 선택',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w900)),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 10),
-                    child: TextField(
-                      autofocus: false,
-                      style: const TextStyle(color: Colors.white),
-                      cursorColor: Colors.white,
-                      decoration: InputDecoration(
-                        hintText: '음식·브랜드 검색 (예: 불닭, 농심)',
-                        hintStyle: const TextStyle(color: Colors.white38),
-                        prefixIcon:
-                            const Icon(Icons.search, color: Colors.white54),
-                        filled: true,
-                        fillColor: Colors.white12,
-                        contentPadding:
-                            const EdgeInsets.symmetric(vertical: 4),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(12),
-                          borderSide: BorderSide.none,
-                        ),
-                      ),
-                      onChanged: (v) => setSheet(() => query = v),
-                    ),
-                  ),
-                  if (filtered.isEmpty)
-                    const Padding(
-                      padding: EdgeInsets.all(40),
-                      child: Text('검색 결과 없음',
-                          style: TextStyle(
-                              color: Colors.white54,
-                              fontWeight: FontWeight.w700)),
-                    ),
-                  Expanded(
-                    child: ListView.builder(
-                      itemCount: filtered.length,
-                      itemBuilder: (_, i) {
-                        final s = filtered[i];
-                        return ListTile(
-                          leading: ProductImage(
-                            imageAsset: spiceImageFor(s),
-                            brandName: s.brand,
-                            size: 30,
-                            fallbackIcon: Icons.local_fire_department,
-                          ),
-                          title: Text(s.name,
-                              style: const TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w800)),
-                          subtitle: Text('${s.brand} · ${s.shu} SHU',
-                              style: const TextStyle(color: Colors.white60)),
-                          trailing: Container(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 8, vertical: 2),
-                            decoration: BoxDecoration(
-                              color: spiceColor(spiceLevel(s.shu)),
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: Text(spiceLabel(spiceLevel(s.shu)),
-                                style: const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 11,
-                                    fontWeight: FontWeight.w800)),
-                          ),
-                          onTap: () => Navigator.pop(ctx, s),
-                        );
-                      },
-                    ),
-                  ),
-                ],
-              ),
-            );
-          }),
-        );
-      },
-    );
-    if (picked != null) setState(() => _item = picked);
   }
 
   Widget _resultCard(int level) {

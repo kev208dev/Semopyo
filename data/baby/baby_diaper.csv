@@ -1,0 +1,33 @@
+﻿brand,country,size_label,type,weight_kg_min,weight_kg_max,age_guide,reliability,source
+하기스,KR,신생아,band,0,5,0~1개월,med,하기스 사이즈가이드
+하기스,KR,소형(S),band,4,8,1~3개월,med,하기스 사이즈가이드
+하기스,KR,중형(M),band,6,11,3~7개월,med,하기스 사이즈가이드
+하기스,KR,대형(L),band,9,14,7~15개월,med,하기스 사이즈가이드
+하기스,KR,특대형(XL),pants,12,17,15~24개월,med,하기스 사이즈가이드
+하기스,KR,점보(XXL),pants,15,25,24개월~,med,하기스 사이즈가이드
+팸퍼스,KR,Newborn,band,0,4.5,0~1개월,high,Pampers size chart
+팸퍼스,KR,Size1,band,2,5,0~2개월,high,Pampers size chart
+팸퍼스,KR,Size2,band,4,8,1~4개월,high,Pampers size chart
+팸퍼스,KR,Size3,band,6,10,4~9개월,high,Pampers size chart
+팸퍼스,KR,Size4,pants,9,14,8~14개월,high,Pampers size chart
+팸퍼스,KR,Size5,pants,11,16,12~24개월,high,Pampers size chart
+팸퍼스,KR,Size6,pants,13,18,24개월~,high,Pampers size chart
+군기저귀,JP,신생아,band,0,5,0~1개월,med,군(Goo.n) 사이즈
+군기저귀,JP,S,band,4,8,1~3개월,med,군(Goo.n) 사이즈
+군기저귀,JP,M,band,6,11,3~7개월,med,군(Goo.n) 사이즈
+군기저귀,JP,L,pants,9,14,7~15개월,med,군(Goo.n) 사이즈
+군기저귀,JP,빅(XL),pants,12,17,15~24개월,med,군(Goo.n) 사이즈
+마미포코,JP,S,band,4,8,1~3개월,med,Mamy Poko 사이즈
+마미포코,JP,M,pants,6,11,3~7개월,med,Mamy Poko 사이즈
+마미포코,JP,L,pants,9,14,7~15개월,med,Mamy Poko 사이즈
+마미포코,JP,빅,pants,12,22,15개월~,med,Mamy Poko 사이즈
+보솜이,KR,신생아,band,0,5,0~1개월,med,보솜이 사이즈
+보솜이,KR,소형,band,4,8,1~3개월,med,보솜이 사이즈
+보솜이,KR,중형,band,6,11,3~7개월,med,보솜이 사이즈
+보솜이,KR,대형,pants,9,14,7~15개월,med,보솜이 사이즈
+보솜이,KR,특대형,pants,12,17,15~24개월,med,보솜이 사이즈
+표준(일반),GLOBAL,신생아,band,0,5,0~1개월,high,업계 일반기준
+표준(일반),GLOBAL,소형(S),band,4,8,1~4개월,high,업계 일반기준
+표준(일반),GLOBAL,중형(M),band,6,11,4~9개월,high,업계 일반기준
+표준(일반),GLOBAL,대형(L),pants,9,14,9~15개월,high,업계 일반기준
+표준(일반),GLOBAL,특대형(XL),pants,12,17,15~24개월,high,업계 일반기준

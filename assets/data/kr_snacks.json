@@ -1,0 +1,232 @@
+[
+  {
+    "brand": "농심",
+    "product": "새우깡",
+    "category": "스낵",
+    "weight_g": 90,
+    "price_krw": 1500,
+    "kcal": 465,
+    "reliability": "high",
+    "source": "fatsecret"
+  },
+  {
+    "brand": "오리온",
+    "product": "포카칩 오리지널",
+    "category": "스낵",
+    "weight_g": 66,
+    "price_krw": 1700,
+    "kcal": 377,
+    "reliability": "high",
+    "source": "fatsecret"
+  },
+  {
+    "brand": "롯데웰푸드",
+    "product": "꼬깔콘 고소한맛",
+    "category": "스낵",
+    "weight_g": 67,
+    "price_krw": 1700,
+    "kcal": 385,
+    "reliability": "high",
+    "source": "inout"
+  },
+  {
+    "brand": "오리온",
+    "product": "오!감자 그라탕",
+    "category": "스낵",
+    "weight_g": 50,
+    "price_krw": 1700,
+    "kcal": 272,
+    "reliability": "high",
+    "source": "hanpoom"
+  },
+  {
+    "brand": "농심",
+    "product": "양파링",
+    "category": "스낵",
+    "weight_g": 84,
+    "price_krw": 1700,
+    "kcal": 400,
+    "reliability": "med",
+    "source": "fatsecret"
+  },
+  {
+    "brand": "한국켈로그",
+    "product": "프링글스 오리지널",
+    "category": "스낵",
+    "weight_g": 110,
+    "price_krw": 3500,
+    "kcal": 575,
+    "reliability": "high",
+    "source": "fatsecret"
+  },
+  {
+    "brand": "농심",
+    "product": "포테토칩 오리지널",
+    "category": "스낵",
+    "weight_g": 60,
+    "price_krw": 1700,
+    "kcal": 345,
+    "reliability": "high",
+    "source": "pillyze"
+  },
+  {
+    "brand": "오리온",
+    "product": "스윙칩 볶음고추장맛",
+    "category": "스낵",
+    "weight_g": 60,
+    "price_krw": 1700,
+    "kcal": 352,
+    "reliability": "high",
+    "source": "fatsecret"
+  },
+  {
+    "brand": "농심",
+    "product": "꿀꽈배기",
+    "category": "스낵",
+    "weight_g": 90,
+    "price_krw": 1700,
+    "kcal": 450,
+    "reliability": "high",
+    "source": "pillyze"
+  },
+  {
+    "brand": "농심",
+    "product": "자갈치",
+    "category": "스낵",
+    "weight_g": 90,
+    "price_krw": 1700,
+    "kcal": 470,
+    "reliability": "med",
+    "source": "농심"
+  },
+  {
+    "brand": "오리온",
+    "product": "초코파이(1개)",
+    "category": "초코",
+    "weight_g": 35,
+    "price_krw": null,
+    "kcal": 172,
+    "reliability": "high",
+    "source": "pillyze"
+  },
+  {
+    "brand": "롯데웰푸드",
+    "product": "빼빼로 오리지널",
+    "category": "비스킷",
+    "weight_g": 54,
+    "price_krw": 1700,
+    "kcal": 270,
+    "reliability": "high",
+    "source": "fatsecret"
+  },
+  {
+    "brand": "해태제과",
+    "product": "홈런볼 초코",
+    "category": "비스킷",
+    "weight_g": 46,
+    "price_krw": 1700,
+    "kcal": 270,
+    "reliability": "high",
+    "source": "pillyze"
+  },
+  {
+    "brand": "롯데웰푸드",
+    "product": "칸쵸",
+    "category": "비스킷",
+    "weight_g": 54,
+    "price_krw": 1700,
+    "kcal": 260,
+    "reliability": "high",
+    "source": "fatsecret"
+  },
+  {
+    "brand": "해태제과",
+    "product": "에이스 크래커",
+    "category": "비스킷",
+    "weight_g": 121,
+    "price_krw": 2000,
+    "kcal": 650,
+    "reliability": "high",
+    "source": "pillyze"
+  },
+  {
+    "brand": "오리온",
+    "product": "다이제 초코",
+    "category": "비스킷",
+    "weight_g": 225,
+    "price_krw": null,
+    "kcal": 1144,
+    "reliability": "med",
+    "source": "fatsecret"
+  },
+  {
+    "brand": "롯데웰푸드",
+    "product": "마가렛트 오리지널",
+    "category": "비스킷",
+    "weight_g": 176,
+    "price_krw": 3000,
+    "kcal": null,
+    "reliability": "high",
+    "source": "fatsecret"
+  },
+  {
+    "brand": "동서식품",
+    "product": "오레오 오리지널",
+    "category": "비스킷",
+    "weight_g": 100,
+    "price_krw": 2000,
+    "kcal": 480,
+    "reliability": "low",
+    "source": "fatsecret"
+  },
+  {
+    "brand": "롯데웰푸드",
+    "product": "몽쉘 카카오",
+    "category": "초코",
+    "weight_g": 384,
+    "price_krw": 4000,
+    "kcal": null,
+    "reliability": "high",
+    "source": "inout"
+  },
+  {
+    "brand": "크라운제과",
+    "product": "마이쮸 사과",
+    "category": "젤리",
+    "weight_g": 44,
+    "price_krw": 1000,
+    "kcal": 182,
+    "reliability": "high",
+    "source": "pillyze"
+  },
+  {
+    "brand": "하리보",
+    "product": "골드베렌",
+    "category": "젤리",
+    "weight_g": 100,
+    "price_krw": 2500,
+    "kcal": 302,
+    "reliability": "med",
+    "source": "inout"
+  },
+  {
+    "brand": "오리온",
+    "product": "왕꿈틀이",
+    "category": "젤리",
+    "weight_g": 45,
+    "price_krw": null,
+    "kcal": 136,
+    "reliability": "med",
+    "source": "다나와"
+  },
+  {
+    "brand": "오뚜기",
+    "product": "뿌셔뿌셔 불고기맛",
+    "category": "스낵",
+    "weight_g": 90,
+    "price_krw": 1500,
+    "kcal": 415,
+    "reliability": "high",
+    "source": "pillyze"
+  }
+]

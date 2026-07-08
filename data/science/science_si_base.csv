@@ -1,0 +1,8 @@
+﻿quantity_ko,quantity_en,unit,symbol,defining_constant,defining_value,reliability,source
+시간,time,초,s,세슘133 초미세전이 진동수 ΔνCs,9192631770 Hz,high,SI 2019 정의
+길이,length,미터,m,광속 c,299792458 m/s,high,SI 2019 정의
+질량,mass,킬로그램,kg,플랑크상수 h,6.62607015e-34 J·s,high,SI 2019 정의
+전류,electric current,암페어,A,기본전하 e,1.602176634e-19 C,high,SI 2019 정의
+온도,thermodynamic temperature,켈빈,K,볼츠만상수 k,1.380649e-23 J/K,high,SI 2019 정의
+물질량,amount of substance,몰,mol,아보가드로수 NA,6.02214076e23 /mol,high,SI 2019 정의
+광도,luminous intensity,칸델라,cd,발광효율 Kcd,683 lm/W,high,SI 2019 정의

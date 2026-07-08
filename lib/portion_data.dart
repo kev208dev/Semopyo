@@ -254,25 +254,120 @@ PortionItem? buildEstimatedPortion(String? name, String? classification) {
       unit: 'g', kcal: 250, type: '완제품(추정)', emoji: '🍴');
 }
 
-/// 확장 포션 DB 1회 로드 (assets/data/portions_global.json, 63건).
+/// 확장 포션 DB 1회 로드.
+/// 3개 데이터셋 병합:
+/// - portions_global.json (한국 식약처 기준 63)
+/// - kr_franchise_portions.json (프랜차이즈 메뉴 58)
+/// - kr_convenience_food.json (편의점 도시락/식품 24)
 Future<List<PortionItem>> loadGlobalPortions() async {
+  final out = <PortionItem>[];
+
   final raw = await rootBundle.loadString('assets/data/portions_global.json');
   final list = jsonDecode(raw) as List;
-  return list.map<PortionItem>((e) {
+  for (final e in list) {
     final m = e as Map<String, dynamic>;
     final amt = (m['amount'] as num?)?.toInt() ?? 0;
-    final unit = (m['amount_unit'] ?? 'g').toString();
+    if (amt <= 0) continue;
+    final name = (m['food'] ?? '').toString();
+    if (name.isEmpty) continue;
     final cat = (m['category'] ?? '').toString();
-    return PortionItem(
-      name: (m['food'] ?? '').toString(),
-      brand: (m['source'] ?? '').toString(),
+    out.add(PortionItem(
+      name: name,
+      brand: cat.isEmpty ? '기준 데이터' : cat,
       amount: amt,
-      unit: unit,
+      unit: (m['amount_unit'] ?? 'g').toString(),
       kcal: (m['kcal'] as num?)?.toInt(),
       type: (m['portion_type'] ?? '1인분').toString(),
       emoji: _emojiForCategory(cat),
-    );
-  }).where((p) => p.amount > 0 && p.name.isNotEmpty).toList();
+    ));
+  }
+
+  try {
+    final frRaw =
+        await rootBundle.loadString('assets/data/kr_franchise_portions.json');
+    final frList = jsonDecode(frRaw) as List;
+    for (final e in frList) {
+      final m = e as Map<String, dynamic>;
+      final amt = (m['amount_value'] as num?)?.toInt() ?? 0;
+      if (amt <= 0) continue;
+      final menu = (m['menu'] ?? '').toString();
+      final brand = (m['brand'] ?? '').toString();
+      if (menu.isEmpty) continue;
+      final cat = (m['category'] ?? '').toString();
+      out.add(PortionItem(
+        name: '$brand · $menu',
+        brand: brand,
+        amount: amt,
+        unit: (m['amount_unit'] ?? 'g').toString(),
+        kcal: (m['kcal'] as num?)?.toInt(),
+        type: '프랜차이즈 1인분',
+        emoji: _emojiForCategory(cat),
+      ));
+    }
+  } catch (_) {/* 폴백 */}
+
+  try {
+    final cvRaw =
+        await rootBundle.loadString('assets/data/kr_convenience_food.json');
+    final cvList = jsonDecode(cvRaw) as List;
+    for (final e in cvList) {
+      final m = e as Map<String, dynamic>;
+      final amt = (m['weight_g'] as num?)?.toInt() ?? 0;
+      if (amt <= 0) continue;
+      final product = (m['product'] ?? '').toString();
+      final brand = (m['brand'] ?? '').toString();
+      if (product.isEmpty) continue;
+      final cat = (m['category'] ?? '').toString();
+      out.add(PortionItem(
+        name: '$brand · $product',
+        brand: brand,
+        amount: amt,
+        unit: 'g',
+        kcal: (m['kcal'] as num?)?.toInt(),
+        type: '편의점 완제품',
+        emoji: _emojiForCategory(cat),
+      ));
+    }
+  } catch (_) {/* 폴백 */}
+
+  return out;
+}
+
+/// 라면/스낵 가격표 (assets/data/kr_ramen_snack_prices.json, 20건).
+/// price_krw + 1봉 단위. UI에서 가격 비교 시 사용.
+class RamenSnackPrice {
+  final String item;
+  final String category;
+  final int priceKrw;
+  final String unit;
+  const RamenSnackPrice({
+    required this.item,
+    required this.category,
+    required this.priceKrw,
+    required this.unit,
+  });
+}
+
+Future<List<RamenSnackPrice>> loadRamenSnackPrices() async {
+  try {
+    final raw = await rootBundle
+        .loadString('assets/data/kr_ramen_snack_prices.json');
+    final list = jsonDecode(raw) as List;
+    return list
+        .map<RamenSnackPrice>((e) {
+          final m = e as Map<String, dynamic>;
+          return RamenSnackPrice(
+            item: (m['item'] ?? '').toString(),
+            category: (m['category'] ?? '').toString(),
+            priceKrw: (m['price_krw'] as num?)?.toInt() ?? 0,
+            unit: (m['unit'] ?? '').toString(),
+          );
+        })
+        .where((r) => r.item.isNotEmpty)
+        .toList();
+  } catch (_) {
+    return const [];
+  }
 }
 
 String _emojiForCategory(String cat) {

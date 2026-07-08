@@ -231,12 +231,13 @@ SpiceItem? matchSpiceFromName(String? scanned) {
   return best;
 }
 
-/// 확장 맵기 DB 1회 로드 (assets/data/spiciness_global.json, 62건).
-/// 한글 매핑이 없는 글로벌 항목 다수 포함.
+/// 확장 맵기 DB 1회 로드.
+/// - assets/data/spiciness_global.json (글로벌 62건)
+/// - assets/data/kr_franchise_spicy.json (KR 프랜차이즈 매운 메뉴, scoville 있는 항목만)
 Future<List<SpiceItem>> loadGlobalSpice() async {
   final raw = await rootBundle.loadString('assets/data/spiciness_global.json');
   final list = jsonDecode(raw) as List;
-  return list.map<SpiceItem>((e) {
+  final base = list.map<SpiceItem>((e) {
     final m = e as Map<String, dynamic>;
     final shu = (m['shu'] as num?)?.toInt() ?? 0;
     return SpiceItem(
@@ -246,6 +247,55 @@ Future<List<SpiceItem>> loadGlobalSpice() async {
       emoji: _emojiForShu(shu, (m['category'] ?? '').toString()),
     );
   }).where((s) => s.shu > 0 && s.name.isNotEmpty).toList();
+
+  try {
+    final krRaw =
+        await rootBundle.loadString('assets/data/kr_franchise_spicy.json');
+    final krList = jsonDecode(krRaw) as List;
+    for (final e in krList) {
+      final m = e as Map<String, dynamic>;
+      int shu = (m['scoville_shu'] as num?)?.toInt() ?? 0;
+      // SHU 없으면 단계 랭크에서 추정 (디진다 10단계 등 노출 보장)
+      if (shu <= 0) {
+        final rank = (m['spice_level_rank'] as num?)?.toInt();
+        shu = _shuFromRank(rank);
+      }
+      if (shu <= 0) continue;
+      final menu = (m['menu'] ?? '').toString();
+      final brand = (m['brand'] ?? '').toString();
+      if (menu.isEmpty) continue;
+      base.add(SpiceItem(
+        name: menu,
+        brand: brand,
+        shu: shu,
+        emoji: _emojiForShu(shu, '프랜차이즈'),
+      ));
+    }
+  } catch (_) {/* 폴백 무시 */}
+  return base;
+}
+
+/// 단계 랭크 0~10 → 추정 SHU.
+int _shuFromRank(int? rank) {
+  if (rank == null) return 0;
+  switch (rank) {
+    case 0:
+      return 200;
+    case 1:
+      return 1500;
+    case 2:
+      return 3500;
+    case 3:
+      return 6000;
+    case 4:
+      return 9000;
+    case 5:
+      return 13000;
+    case 10:
+      return 50000;
+  }
+  if (rank >= 6) return 13000 + (rank - 5) * 5000;
+  return 0;
 }
 
 String _emojiForShu(int shu, String cat) {

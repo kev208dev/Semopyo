@@ -1,0 +1,210 @@
+[
+  {
+    "brand": "도미노피자",
+    "size_label": "L",
+    "menu": "페퍼로니",
+    "price_krw": 27900,
+    "reliability": "high",
+    "source": "도미노공식"
+  },
+  {
+    "brand": "도미노피자",
+    "size_label": "M",
+    "menu": "페퍼로니",
+    "price_krw": 20500,
+    "reliability": "high",
+    "source": "도미노공식"
+  },
+  {
+    "brand": "도미노피자",
+    "size_label": "L",
+    "menu": "포테이토",
+    "price_krw": 25900,
+    "reliability": "high",
+    "source": "도미노공식"
+  },
+  {
+    "brand": "도미노피자",
+    "size_label": "M",
+    "menu": "포테이토",
+    "price_krw": 18500,
+    "reliability": "high",
+    "source": "도미노공식"
+  },
+  {
+    "brand": "도미노피자",
+    "size_label": "L",
+    "menu": "슈퍼슈프림",
+    "price_krw": 27900,
+    "reliability": "high",
+    "source": "도미노공식"
+  },
+  {
+    "brand": "도미노피자",
+    "size_label": "S",
+    "menu": "페퍼로니Subzza",
+    "price_krw": 7900,
+    "reliability": "high",
+    "source": "도미노공식"
+  },
+  {
+    "brand": "파파존스",
+    "size_label": "L",
+    "menu": "페퍼로니",
+    "price_krw": 25500,
+    "reliability": "high",
+    "source": "파파존스공식"
+  },
+  {
+    "brand": "파파존스",
+    "size_label": "F",
+    "menu": "페퍼로니",
+    "price_krw": 30900,
+    "reliability": "high",
+    "source": "파파존스공식"
+  },
+  {
+    "brand": "파파존스",
+    "size_label": "L",
+    "menu": "수퍼파파스",
+    "price_krw": 28500,
+    "reliability": "high",
+    "source": "파파존스공식"
+  },
+  {
+    "brand": "파파존스",
+    "size_label": "F",
+    "menu": "수퍼파파스",
+    "price_krw": 33900,
+    "reliability": "high",
+    "source": "파파존스공식"
+  },
+  {
+    "brand": "파파존스",
+    "size_label": "L",
+    "menu": "아이리쉬포테이토",
+    "price_krw": 27500,
+    "reliability": "high",
+    "source": "파파존스공식"
+  },
+  {
+    "brand": "파파존스",
+    "size_label": "L",
+    "menu": "올미트",
+    "price_krw": 29500,
+    "reliability": "high",
+    "source": "파파존스공식"
+  },
+  {
+    "brand": "반올림피자",
+    "size_label": "L",
+    "menu": "페퍼로니",
+    "price_krw": 21900,
+    "reliability": "high",
+    "source": "반올림공식"
+  },
+  {
+    "brand": "반올림피자",
+    "size_label": "R",
+    "menu": "페퍼로니",
+    "price_krw": 17900,
+    "reliability": "high",
+    "source": "반올림공식"
+  },
+  {
+    "brand": "반올림피자",
+    "size_label": "L",
+    "menu": "콤비네이션",
+    "price_krw": 21900,
+    "reliability": "high",
+    "source": "반올림공식"
+  },
+  {
+    "brand": "반올림피자",
+    "size_label": "R",
+    "menu": "콤비네이션",
+    "price_krw": 17900,
+    "reliability": "high",
+    "source": "반올림공식"
+  },
+  {
+    "brand": "반올림피자",
+    "size_label": "L",
+    "menu": "포테이토",
+    "price_krw": 23900,
+    "reliability": "high",
+    "source": "반올림공식"
+  },
+  {
+    "brand": "미스터피자",
+    "size_label": "L",
+    "menu": "포테이토골드",
+    "price_krw": 38500,
+    "reliability": "high",
+    "source": "미스터피자공식"
+  },
+  {
+    "brand": "미스터피자",
+    "size_label": "M",
+    "menu": "포테이토골드",
+    "price_krw": 31500,
+    "reliability": "high",
+    "source": "미스터피자공식"
+  },
+  {
+    "brand": "미스터피자",
+    "size_label": "L",
+    "menu": "콤비네이션",
+    "price_krw": 28900,
+    "reliability": "med",
+    "source": "네이트"
+  },
+  {
+    "brand": "피자헛",
+    "size_label": "L",
+    "menu": "프리미엄(오리지널엣지)",
+    "price_krw": 35900,
+    "reliability": "med",
+    "source": "limeade"
+  },
+  {
+    "brand": "피자헛",
+    "size_label": "M",
+    "menu": "프리미엄(오리지널엣지)",
+    "price_krw": 29900,
+    "reliability": "med",
+    "source": "limeade"
+  },
+  {
+    "brand": "7번가피자",
+    "size_label": "L",
+    "menu": "슈퍼콤비네이션",
+    "price_krw": 23300,
+    "reliability": "med",
+    "source": "HNS"
+  },
+  {
+    "brand": "빽보이피자",
+    "size_label": "L",
+    "menu": "슈퍼콤비네이션",
+    "price_krw": 19900,
+    "reliability": "med",
+    "source": "magazineo"
+  },
+  {
+    "brand": "피자알볼로",
+    "size_label": "R",
+    "menu": "콤비네이션",
+    "price_krw": 19000,
+    "reliability": "low",
+    "source": "magazineo"
+  },
+  {
+    "brand": "피자알볼로",
+    "size_label": "R",
+    "menu": "페퍼로니",
+    "price_krw": 18000,
+    "reliability": "low",
+    "source": "magazineo"
+  }
+]

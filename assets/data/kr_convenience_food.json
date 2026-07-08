@@ -1,0 +1,242 @@
+[
+  {
+    "brand": "GS25",
+    "product": "혜자도시락(기본)",
+    "category": "도시락",
+    "weight_g": 411,
+    "price_krw": null,
+    "kcal": 723,
+    "reliability": "high",
+    "source": "pillyze"
+  },
+  {
+    "brand": "GS25",
+    "product": "완전크닭혜자도시락",
+    "category": "도시락",
+    "weight_g": 449,
+    "price_krw": null,
+    "kcal": null,
+    "reliability": "high",
+    "source": "pillyze"
+  },
+  {
+    "brand": "GS25",
+    "product": "혜자로운집밥도시락",
+    "category": "도시락",
+    "weight_g": 480,
+    "price_krw": null,
+    "kcal": null,
+    "reliability": "high",
+    "source": "pillyze"
+  },
+  {
+    "brand": "GS25",
+    "product": "엄마의6찬도시락",
+    "category": "도시락",
+    "weight_g": 362,
+    "price_krw": null,
+    "kcal": 706,
+    "reliability": "high",
+    "source": "fatsecret"
+  },
+  {
+    "brand": "CU",
+    "product": "백종원백반한판",
+    "category": "도시락",
+    "weight_g": 412,
+    "price_krw": 4000,
+    "kcal": 699,
+    "reliability": "high",
+    "source": "fatsecret"
+  },
+  {
+    "brand": "CU",
+    "product": "급식대가도시락의정석",
+    "category": "도시락",
+    "weight_g": 415,
+    "price_krw": null,
+    "kcal": null,
+    "reliability": "high",
+    "source": "pillyze"
+  },
+  {
+    "brand": "세븐일레븐",
+    "product": "맛장우도시락고기올인원",
+    "category": "도시락",
+    "weight_g": 409,
+    "price_krw": null,
+    "kcal": 840,
+    "reliability": "high",
+    "source": "fatsecret"
+  },
+  {
+    "brand": "세븐일레븐",
+    "product": "이딸라도시락",
+    "category": "도시락",
+    "weight_g": 201,
+    "price_krw": null,
+    "kcal": 390,
+    "reliability": "high",
+    "source": "fatsecret"
+  },
+  {
+    "brand": "이마트24",
+    "product": "참치마요삼각김밥",
+    "category": "삼각김밥",
+    "weight_g": 110,
+    "price_krw": null,
+    "kcal": 185,
+    "reliability": "high",
+    "source": "inout"
+  },
+  {
+    "brand": "이마트24",
+    "product": "더빅더블삼각김밥",
+    "category": "삼각김밥",
+    "weight_g": 287,
+    "price_krw": null,
+    "kcal": 465,
+    "reliability": "high",
+    "source": "pillyze"
+  },
+  {
+    "brand": "CU",
+    "product": "소고기고추장삼각김밥",
+    "category": "삼각김밥",
+    "weight_g": 115,
+    "price_krw": null,
+    "kcal": 184,
+    "reliability": "high",
+    "source": "inout"
+  },
+  {
+    "brand": "CU",
+    "product": "리치참치마요삼각김밥",
+    "category": "삼각김밥",
+    "weight_g": 173,
+    "price_krw": null,
+    "kcal": 340,
+    "reliability": "high",
+    "source": "inout"
+  },
+  {
+    "brand": "CU",
+    "product": "편의점김밥(기본)",
+    "category": "김밥",
+    "weight_g": 245,
+    "price_krw": null,
+    "kcal": 388,
+    "reliability": "high",
+    "source": "inout"
+  },
+  {
+    "brand": "CU",
+    "product": "압도적참치김밥",
+    "category": "김밥",
+    "weight_g": 268,
+    "price_krw": null,
+    "kcal": 521,
+    "reliability": "high",
+    "source": "fatsecret"
+  },
+  {
+    "brand": "농심",
+    "product": "신라면컵(소)",
+    "category": "컵라면",
+    "weight_g": 65,
+    "price_krw": null,
+    "kcal": null,
+    "reliability": "high",
+    "source": "namuwiki"
+  },
+  {
+    "brand": "농심",
+    "product": "신라면큰사발면",
+    "category": "컵라면",
+    "weight_g": 114,
+    "price_krw": null,
+    "kcal": null,
+    "reliability": "high",
+    "source": "코스트코제품"
+  },
+  {
+    "brand": "농심",
+    "product": "육개장사발면(소)",
+    "category": "컵라면",
+    "weight_g": 86,
+    "price_krw": null,
+    "kcal": 375,
+    "reliability": "high",
+    "source": "inout"
+  },
+  {
+    "brand": "농심",
+    "product": "육개장큰사발면",
+    "category": "컵라면",
+    "weight_g": 110,
+    "price_krw": null,
+    "kcal": 490,
+    "reliability": "high",
+    "source": "pillyze"
+  },
+  {
+    "brand": "오뚜기",
+    "product": "진라면컵",
+    "category": "컵라면",
+    "weight_g": 65,
+    "price_krw": null,
+    "kcal": null,
+    "reliability": "high",
+    "source": "미스미제품"
+  },
+  {
+    "brand": "오뚜기",
+    "product": "진라면매운맛큰사발",
+    "category": "컵라면",
+    "weight_g": 110,
+    "price_krw": null,
+    "kcal": 505,
+    "reliability": "high",
+    "source": "pillyze"
+  },
+  {
+    "brand": "GS25",
+    "product": "에그마요샌드위치",
+    "category": "샌드위치",
+    "weight_g": 145,
+    "price_krw": null,
+    "kcal": null,
+    "reliability": "high",
+    "source": "pillyze"
+  },
+  {
+    "brand": "CU",
+    "product": "국민불고기버거",
+    "category": "버거",
+    "weight_g": 184,
+    "price_krw": null,
+    "kcal": 443,
+    "reliability": "high",
+    "source": "fatsecret"
+  },
+  {
+    "brand": "CU",
+    "product": "득템핫바매콤",
+    "category": "핫바",
+    "weight_g": 180,
+    "price_krw": null,
+    "kcal": 432,
+    "reliability": "high",
+    "source": "pillyze"
+  },
+  {
+    "brand": "CU",
+    "product": "핫바(일반)",
+    "category": "핫바",
+    "weight_g": 100,
+    "price_krw": null,
+    "kcal": 268,
+    "reliability": "med",
+    "source": "pillyze"
+  }
+]

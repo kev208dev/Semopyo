@@ -18,6 +18,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from brand_domains import domain_for
+from _data_paths import dpath  # data/ 하위폴더 경로 해석
 
 COLLECTED = "2026-06-09"
 
@@ -198,9 +199,8 @@ def write_csv(path, records):
 
 
 def main():
-    here = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    all_path = os.path.join(here, "data", "shoes_sizing.csv")
-    todo_path = os.path.join(here, "data", "manual_todo.csv")
+    all_path = str(dpath("shoes_sizing.csv"))
+    todo_path = str(dpath("manual_todo.csv"))
 
     write_csv(all_path, _R)
 

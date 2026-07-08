@@ -1,0 +1,122 @@
+[
+  {
+    "brand": "Dickies",
+    "garment": "874워크팬츠",
+    "size_label": "W28",
+    "waist_inch": 28,
+    "waist_circumference_cm": 71,
+    "inseam_cm": 76,
+    "reliability": "high",
+    "source": "Dickies EU공식"
+  },
+  {
+    "brand": "Dickies",
+    "garment": "874워크팬츠",
+    "size_label": "W30",
+    "waist_inch": 30,
+    "waist_circumference_cm": 76,
+    "inseam_cm": 81,
+    "reliability": "high",
+    "source": "Dickies EU공식"
+  },
+  {
+    "brand": "Dickies",
+    "garment": "874워크팬츠",
+    "size_label": "W32",
+    "waist_inch": 32,
+    "waist_circumference_cm": 81,
+    "inseam_cm": 81,
+    "reliability": "high",
+    "source": "Dickies EU공식"
+  },
+  {
+    "brand": "Dickies",
+    "garment": "874워크팬츠",
+    "size_label": "W34",
+    "waist_inch": 34,
+    "waist_circumference_cm": 86,
+    "inseam_cm": 81,
+    "reliability": "high",
+    "source": "Dickies EU공식"
+  },
+  {
+    "brand": "Dickies",
+    "garment": "874워크팬츠",
+    "size_label": "W36",
+    "waist_inch": 36,
+    "waist_circumference_cm": 91,
+    "inseam_cm": 86,
+    "reliability": "high",
+    "source": "Dickies EU공식"
+  },
+  {
+    "brand": "Dickies",
+    "garment": "874워크팬츠",
+    "size_label": "W38",
+    "waist_inch": 38,
+    "waist_circumference_cm": 97,
+    "inseam_cm": 86,
+    "reliability": "high",
+    "source": "Dickies EU공식"
+  },
+  {
+    "brand": "Levi's",
+    "garment": "남성진",
+    "size_label": "W28",
+    "waist_inch": 28,
+    "waist_circumference_cm": 71,
+    "inseam_cm": 81,
+    "reliability": "med",
+    "source": "Levi's공식(신체)"
+  },
+  {
+    "brand": "Levi's",
+    "garment": "남성진",
+    "size_label": "W30",
+    "waist_inch": 30,
+    "waist_circumference_cm": 76,
+    "inseam_cm": 81,
+    "reliability": "med",
+    "source": "Levi's공식(신체)"
+  },
+  {
+    "brand": "Levi's",
+    "garment": "남성진",
+    "size_label": "W32",
+    "waist_inch": 32,
+    "waist_circumference_cm": 81,
+    "inseam_cm": 81,
+    "reliability": "med",
+    "source": "Levi's공식(신체)"
+  },
+  {
+    "brand": "Levi's",
+    "garment": "남성진",
+    "size_label": "W34",
+    "waist_inch": 34,
+    "waist_circumference_cm": 86,
+    "inseam_cm": 81,
+    "reliability": "med",
+    "source": "Levi's공식(신체)"
+  },
+  {
+    "brand": "Levi's",
+    "garment": "남성진",
+    "size_label": "W36",
+    "waist_inch": 36,
+    "waist_circumference_cm": 91,
+    "inseam_cm": 81,
+    "reliability": "med",
+    "source": "Levi's공식(신체)"
+  },
+  {
+    "brand": "Levi's",
+    "garment": "남성진",
+    "size_label": "W38",
+    "waist_inch": 38,
+    "waist_circumference_cm": 97,
+    "inseam_cm": 81,
+    "reliability": "med",
+    "source": "Levi's공식(신체)"
+  }
+]

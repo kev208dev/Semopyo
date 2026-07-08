@@ -1,0 +1,25 @@
+﻿name_ko,name_en,symbol,factor,power_of_10,reliability,source
+퀘타,quetta,Q,1000000000000000000000000000000,30,high,BIPM SI접두어
+론나,ronna,R,1000000000000000000000000000,27,high,BIPM SI접두어
+요타,yotta,Y,1000000000000000000000000,24,high,BIPM SI접두어
+제타,zetta,Z,1000000000000000000000,21,high,BIPM SI접두어
+엑사,exa,E,1000000000000000000,18,high,BIPM SI접두어
+페타,peta,P,1000000000000000,15,high,BIPM SI접두어
+테라,tera,T,1000000000000,12,high,BIPM SI접두어
+기가,giga,G,1000000000,9,high,BIPM SI접두어
+메가,mega,M,1000000,6,high,BIPM SI접두어
+킬로,kilo,k,1000,3,high,BIPM SI접두어
+헥토,hecto,h,100,2,high,BIPM SI접두어
+데카,deca,da,10,1,high,BIPM SI접두어
+데시,deci,d,0.1,-1,high,BIPM SI접두어
+센티,centi,c,0.01,-2,high,BIPM SI접두어
+밀리,milli,m,0.001,-3,high,BIPM SI접두어
+마이크로,micro,µ,0.000001,-6,high,BIPM SI접두어
+나노,nano,n,0.000000001,-9,high,BIPM SI접두어
+피코,pico,p,0.000000000001,-12,high,BIPM SI접두어
+펨토,femto,f,0.000000000000001,-15,high,BIPM SI접두어
+아토,atto,a,0.000000000000000001,-18,high,BIPM SI접두어
+젭토,zepto,z,0.000000000000000000001,-21,high,BIPM SI접두어
+욕토,yocto,y,0.000000000000000000000001,-24,high,BIPM SI접두어
+론토,ronto,r,0.000000000000000000000000001,-27,high,BIPM SI접두어
+퀙토,quecto,q,0.000000000000000000000000000001,-30,high,BIPM SI접두어

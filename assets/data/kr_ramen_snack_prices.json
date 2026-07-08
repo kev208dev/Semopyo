@@ -1,0 +1,162 @@
+[
+  {
+    "item": "불닭볶음면(봉지)",
+    "category": "라면",
+    "price_krw": 1250,
+    "unit": "140g·1봉",
+    "reliability": "high",
+    "source": "에누리GS25"
+  },
+  {
+    "item": "불닭볶음면(5입)",
+    "category": "라면",
+    "price_krw": 5520,
+    "unit": "140g·5입",
+    "reliability": "high",
+    "source": "다나와"
+  },
+  {
+    "item": "불닭볶음면(대컵)",
+    "category": "라면",
+    "price_krw": 1800,
+    "unit": "105g·1개",
+    "reliability": "high",
+    "source": "롯데아이몰"
+  },
+  {
+    "item": "핵불닭볶음면(5입)",
+    "category": "라면",
+    "price_krw": 5520,
+    "unit": "140g·5입",
+    "reliability": "med",
+    "source": "다나와"
+  },
+  {
+    "item": "까르보불닭볶음면(5입)",
+    "category": "라면",
+    "price_krw": 5520,
+    "unit": "130g·5입",
+    "reliability": "med",
+    "source": "다나와"
+  },
+  {
+    "item": "불닭볶음탕면(4입)",
+    "category": "라면",
+    "price_krw": 5980,
+    "unit": "145g·4입",
+    "reliability": "high",
+    "source": "이마트에브리데이"
+  },
+  {
+    "item": "신라면(5입)",
+    "category": "라면",
+    "price_krw": 4900,
+    "unit": "120g·5입",
+    "reliability": "high",
+    "source": "동원몰"
+  },
+  {
+    "item": "신라면(소컵)",
+    "category": "라면",
+    "price_krw": 1250,
+    "unit": "65g·1개",
+    "reliability": "high",
+    "source": "서울경제"
+  },
+  {
+    "item": "신라면큰사발",
+    "category": "라면",
+    "price_krw": 1500,
+    "unit": "114g·1개",
+    "reliability": "high",
+    "source": "서울경제"
+  },
+  {
+    "item": "신라면더레드(4입)",
+    "category": "라면",
+    "price_krw": 5800,
+    "unit": "123g·4입",
+    "reliability": "high",
+    "source": "롯데아이몰"
+  },
+  {
+    "item": "진라면매운맛(20입)",
+    "category": "라면",
+    "price_krw": 15680,
+    "unit": "120g·20입",
+    "reliability": "high",
+    "source": "오뚜기몰"
+  },
+  {
+    "item": "열라면(5입)",
+    "category": "라면",
+    "price_krw": 3500,
+    "unit": "120g·5입",
+    "reliability": "med",
+    "source": "다나와"
+  },
+  {
+    "item": "틈새라면빨계떡(4입)",
+    "category": "라면",
+    "price_krw": 5180,
+    "unit": "120g·4입",
+    "reliability": "med",
+    "source": "홈플러스"
+  },
+  {
+    "item": "팔도비빔면(5입)",
+    "category": "라면",
+    "price_krw": 7800,
+    "unit": "130g·5입",
+    "reliability": "med",
+    "source": "컬리"
+  },
+  {
+    "item": "킹뚜껑(컵)",
+    "category": "라면",
+    "price_krw": 3500,
+    "unit": "110g·1개",
+    "reliability": "med",
+    "source": "다나와"
+  },
+  {
+    "item": "타바스코핫소스",
+    "category": "핫소스",
+    "price_krw": 4780,
+    "unit": "60ml·1병",
+    "reliability": "high",
+    "source": "이마트몰"
+  },
+  {
+    "item": "스리라차(후이퐁)",
+    "category": "핫소스",
+    "price_krw": 11500,
+    "unit": "481g·1병",
+    "reliability": "high",
+    "source": "이마트몰"
+  },
+  {
+    "item": "프랭크스레드핫",
+    "category": "핫소스",
+    "price_krw": 9980,
+    "unit": "354ml·1병",
+    "reliability": "med",
+    "source": "쿠팡"
+  },
+  {
+    "item": "삼양핵불닭소스",
+    "category": "핫소스",
+    "price_krw": 2450,
+    "unit": "200g·1병",
+    "reliability": "med",
+    "source": "다나와"
+  },
+  {
+    "item": "농심먹태청양마요소스",
+    "category": "핫소스",
+    "price_krw": 5200,
+    "unit": "250g·1병",
+    "reliability": "high",
+    "source": "이마트몰"
+  }
+]

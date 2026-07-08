@@ -280,20 +280,32 @@ Widget pizzaBrandLogo(String brand, double size, {bool ring = false}) {
   );
 }
 
-/// 전세계 피자 JSON 1회 로드 + 기존 schema로 변환.
+/// 전세계 피자 JSON 1회 로드 + KR 가격표 병합.
+/// - pizza_global.json (145건 사이즈/지름/추정가)
+/// - kr_pizza_prices.json (26건 KR 실제 메뉴/가격) → brand+size_label 매칭 시 가격/메뉴명 덮어쓰기
 Future<List<Map<String, dynamic>>> loadGlobalPizzas() async {
+  final krPrices = await _loadKrPizzaPriceMap();
   final raw = await rootBundle.loadString('assets/data/pizza_global.json');
   final list = jsonDecode(raw) as List;
   return list.map<Map<String, dynamic>>((e) {
     final m = e as Map<String, dynamic>;
     final brand = (m['brand'] ?? '').toString();
+    final size = (m['size_label'] ?? '').toString();
     final dia = (m['diameter_cm'] as num).toDouble();
-    final priceRaw = m['price'];
-    final price = (priceRaw is num) ? priceRaw.toInt() : 0;
+    int price = (m['price'] is num) ? (m['price'] as num).toInt() : 0;
+    String pizzaName = (m['brand_en'] ?? '').toString();
+    final krKey = '$brand|$size';
+    final kr = krPrices[krKey];
+    if (kr != null) {
+      final krPrice = (kr['price_krw'] as num?)?.toInt() ?? 0;
+      if (krPrice > 0) price = krPrice;
+      final krMenu = (kr['menu'] ?? '').toString();
+      if (krMenu.isNotEmpty) pizzaName = krMenu;
+    }
     return {
       'name': brand,
-      'pizzaName': (m['brand_en'] ?? '').toString(),
-      'size': (m['size_label'] ?? '').toString(),
+      'pizzaName': pizzaName,
+      'size': size,
       'diameter': dia,
       'price': price,
       'thumbnail': pizzaThumbnailFor(brand),
@@ -305,6 +317,25 @@ Future<List<Map<String, dynamic>>> loadGlobalPizzas() async {
       'source': 'global',
     };
   }).toList();
+}
+
+Future<Map<String, Map<String, dynamic>>> _loadKrPizzaPriceMap() async {
+  try {
+    final raw =
+        await rootBundle.loadString('assets/data/kr_pizza_prices.json');
+    final list = jsonDecode(raw) as List;
+    final m = <String, Map<String, dynamic>>{};
+    for (final e in list) {
+      final r = e as Map<String, dynamic>;
+      final brand = (r['brand'] ?? '').toString();
+      final size = (r['size_label'] ?? '').toString();
+      if (brand.isEmpty || size.isEmpty) continue;
+      m['$brand|$size'] = r;
+    }
+    return m;
+  } catch (_) {
+    return const {};
+  }
 }
 
 /// 냉동피자 17종 로드. 기존 피자 schema와 호환.

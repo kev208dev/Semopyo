@@ -18,13 +18,13 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from brand_domains import domain_for
+from _data_paths import dpath  # data/ 하위폴더 경로 해석
 
 COLLECTED = "2026-06-10"
-DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
 
 
 def write_csv(name, columns, rows):
-    path = os.path.join(DATA_DIR, name)
+    path = str(dpath(name))
     with open(path, "w", encoding="utf-8-sig", newline="") as f:
         w = csv.writer(f)
         w.writerow(columns)

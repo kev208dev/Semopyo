@@ -1,0 +1,262 @@
+[
+  {
+    "brand": "하이트진로",
+    "product": "참이슬 후레쉬",
+    "category": "소주",
+    "volume_ml": 360,
+    "abv_percent": 16,
+    "price_krw": 1900,
+    "reliability": "high",
+    "source": "뉴시스2024"
+  },
+  {
+    "brand": "하이트진로",
+    "product": "참이슬 오리지널",
+    "category": "소주",
+    "volume_ml": 360,
+    "abv_percent": 20,
+    "price_krw": 1900,
+    "reliability": "high",
+    "source": "비즈니스포스트"
+  },
+  {
+    "brand": "롯데칠성",
+    "product": "처음처럼",
+    "category": "소주",
+    "volume_ml": 360,
+    "abv_percent": 16,
+    "price_krw": 1900,
+    "reliability": "high",
+    "source": "파이낸셜뉴스"
+  },
+  {
+    "brand": "롯데칠성",
+    "product": "새로",
+    "category": "소주",
+    "volume_ml": 360,
+    "abv_percent": 16,
+    "price_krw": 1900,
+    "reliability": "high",
+    "source": "한국일보"
+  },
+  {
+    "brand": "하이트진로",
+    "product": "진로(이즈백)",
+    "category": "소주",
+    "volume_ml": 360,
+    "abv_percent": 16,
+    "price_krw": 1900,
+    "reliability": "high",
+    "source": "한국일보"
+  },
+  {
+    "brand": "무학",
+    "product": "좋은데이",
+    "category": "소주",
+    "volume_ml": 360,
+    "abv_percent": 16,
+    "price_krw": 1900,
+    "reliability": "high",
+    "source": "이투데이"
+  },
+  {
+    "brand": "대선주조",
+    "product": "대선",
+    "category": "소주",
+    "volume_ml": 360,
+    "abv_percent": 16,
+    "price_krw": 1900,
+    "reliability": "med",
+    "source": "bellus64"
+  },
+  {
+    "brand": "오비맥주",
+    "product": "카스 후레쉬",
+    "category": "맥주",
+    "volume_ml": 500,
+    "abv_percent": 4,
+    "price_krw": 2250,
+    "reliability": "med",
+    "source": "dailyshot"
+  },
+  {
+    "brand": "오비맥주",
+    "product": "카스 후레쉬",
+    "category": "맥주",
+    "volume_ml": 355,
+    "abv_percent": 4,
+    "price_krw": 2250,
+    "reliability": "med",
+    "source": "뉴시스"
+  },
+  {
+    "brand": "하이트진로",
+    "product": "테라",
+    "category": "맥주",
+    "volume_ml": 500,
+    "abv_percent": 4,
+    "price_krw": 2250,
+    "reliability": "high",
+    "source": "뉴시스"
+  },
+  {
+    "brand": "하이트진로",
+    "product": "테라",
+    "category": "맥주",
+    "volume_ml": 355,
+    "abv_percent": 4,
+    "price_krw": 2250,
+    "reliability": "high",
+    "source": "뉴시스"
+  },
+  {
+    "brand": "하이트진로",
+    "product": "켈리",
+    "category": "맥주",
+    "volume_ml": 500,
+    "abv_percent": 4,
+    "price_krw": 2250,
+    "reliability": "high",
+    "source": "뉴시스"
+  },
+  {
+    "brand": "롯데칠성",
+    "product": "클라우드",
+    "category": "맥주",
+    "volume_ml": 500,
+    "abv_percent": 5,
+    "price_krw": null,
+    "reliability": "high",
+    "source": "롯데칠성공식"
+  },
+  {
+    "brand": "하이트진로",
+    "product": "필라이트",
+    "category": "기타(발포주)",
+    "volume_ml": 500,
+    "abv_percent": 4,
+    "price_krw": 1600,
+    "reliability": "med",
+    "source": "파이낸셜타임스"
+  },
+  {
+    "brand": "칭다오",
+    "product": "칭다오",
+    "category": "맥주",
+    "volume_ml": 500,
+    "abv_percent": 4,
+    "price_krw": 4500,
+    "reliability": "med",
+    "source": "머니S"
+  },
+  {
+    "brand": "아사히",
+    "product": "아사히 슈퍼드라이",
+    "category": "맥주",
+    "volume_ml": 500,
+    "abv_percent": 5,
+    "price_krw": 4900,
+    "reliability": "med",
+    "source": "아사히공식"
+  },
+  {
+    "brand": "하이네켄",
+    "product": "하이네켄",
+    "category": "맥주",
+    "volume_ml": 500,
+    "abv_percent": 5,
+    "price_krw": null,
+    "reliability": "med",
+    "source": "머니S"
+  },
+  {
+    "brand": "기네스",
+    "product": "기네스 드래프트",
+    "category": "맥주",
+    "volume_ml": 440,
+    "abv_percent": 4,
+    "price_krw": null,
+    "reliability": "med",
+    "source": "리뷰블로그"
+  },
+  {
+    "brand": "서울장수",
+    "product": "장수 생막걸리",
+    "category": "막걸리",
+    "volume_ml": 750,
+    "abv_percent": 6,
+    "price_krw": 1680,
+    "reliability": "high",
+    "source": "이마트에브리데이"
+  },
+  {
+    "brand": "지평주조",
+    "product": "지평 생막걸리",
+    "category": "막걸리",
+    "volume_ml": 750,
+    "abv_percent": 5,
+    "price_krw": 1900,
+    "reliability": "med",
+    "source": "bellus64"
+  },
+  {
+    "brand": "배상면주가",
+    "product": "느린마을 막걸리",
+    "category": "막걸리",
+    "volume_ml": 750,
+    "abv_percent": 6,
+    "price_krw": 3400,
+    "reliability": "med",
+    "source": "rorajumak"
+  },
+  {
+    "brand": "(일반)",
+    "product": "와인 표준병",
+    "category": "와인",
+    "volume_ml": 750,
+    "abv_percent": 12,
+    "price_krw": null,
+    "reliability": "med",
+    "source": "wikipedia"
+  },
+  {
+    "brand": "(일반)",
+    "product": "위스키 표준병",
+    "category": "위스키",
+    "volume_ml": 700,
+    "abv_percent": 40,
+    "price_krw": null,
+    "reliability": "med",
+    "source": "roetell"
+  },
+  {
+    "brand": "산토리",
+    "product": "짐빔 하이볼",
+    "category": "기타(하이볼)",
+    "volume_ml": 350,
+    "abv_percent": 5,
+    "price_krw": 3000,
+    "reliability": "med",
+    "source": "namuwiki"
+  },
+  {
+    "brand": "롯데칠성",
+    "product": "청하",
+    "category": "기타(청주)",
+    "volume_ml": 300,
+    "abv_percent": 13,
+    "price_krw": 2080,
+    "reliability": "med",
+    "source": "bellus64"
+  },
+  {
+    "brand": "국순당",
+    "product": "백세주",
+    "category": "기타(약주)",
+    "volume_ml": 375,
+    "abv_percent": 13,
+    "price_krw": null,
+    "reliability": "med",
+    "source": "bellus64"
+  }
+]

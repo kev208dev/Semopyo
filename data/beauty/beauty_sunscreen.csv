@@ -1,0 +1,10 @@
+﻿metric,level,uvb_block_pct,pfa_min,pfa_max,protection_note,reliability,source
+SPF,SPF10,90,,,자외선차단지수 UVB,high,FDA/식약처기준
+SPF,SPF15,93,,,UVB 약 93% 차단,high,FDA/식약처기준
+SPF,SPF30,97,,,UVB 약 96.7% 차단,high,FDA/식약처기준
+SPF,SPF50,98,,,UVB 약 98% 차단,high,FDA/식약처기준
+SPF,SPF50+,98,,,SPF60 이상 표기상한 50+,high,식약처기준
+PA,PA+,,2,4,UVA 차단 PFA 2~4,high,일본/한국 PA기준
+PA,PA++,,4,8,UVA 차단 PFA 4~8,high,일본/한국 PA기준
+PA,PA+++,,8,16,UVA 차단 PFA 8~16,high,일본/한국 PA기준
+PA,PA++++,,16,,UVA 차단 PFA 16 이상,high,일본/한국 PA기준

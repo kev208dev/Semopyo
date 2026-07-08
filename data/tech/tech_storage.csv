@@ -1,0 +1,11 @@
+﻿labeled_capacity,labeled_bytes,os_shown_gib,os_shown_label,note,reliability,source
+16GB,16000000000,14.9,14.9 GiB,표기는 10진(10^9) OS는 2진(2^30),high,IEC/JEDEC 단위차
+32GB,32000000000,29.8,29.8 GiB,표기-실표시 차이,high,IEC/JEDEC 단위차
+64GB,64000000000,59.6,59.6 GiB,표기-실표시 차이,high,IEC/JEDEC 단위차
+128GB,128000000000,119.2,119.2 GiB,표기-실표시 차이,high,IEC/JEDEC 단위차
+256GB,256000000000,238.4,238.4 GiB,표기-실표시 차이,high,IEC/JEDEC 단위차
+512GB,512000000000,476.8,476.8 GiB,표기-실표시 차이,high,IEC/JEDEC 단위차
+1TB,1000000000000,931.3,931.3 GiB,1TB=931GiB,high,IEC/JEDEC 단위차
+2TB,2000000000000,1862.6,1862.6 GiB,표기-실표시 차이,high,IEC/JEDEC 단위차
+4TB,4000000000000,3725.3,3725.3 GiB,표기-실표시 차이,high,IEC/JEDEC 단위차
+8TB,8000000000000,7450.6,7450.6 GiB,표기-실표시 차이,high,IEC/JEDEC 단위차

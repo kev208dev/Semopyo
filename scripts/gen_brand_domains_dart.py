@@ -11,9 +11,12 @@ lib/brand_domains.dart (Dart const Map) 을 생성한다.
 """
 import csv
 import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from _data_paths import rpath  # noqa: E402  (data/ 하위폴더 경로 해석)
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA = os.path.join(ROOT, "data")
 OUT = os.path.join(ROOT, "lib", "brand_domains.dart")
 
 CSVS = [
@@ -31,7 +34,7 @@ ALIASES = {
 def main():
     m = {}
     for f in CSVS:
-        with open(os.path.join(DATA, f), encoding="utf-8-sig") as fh:
+        with open(rpath(f), encoding="utf-8-sig") as fh:
             for r in csv.DictReader(fh):
                 d = (r.get("brand_domain") or "").strip()
                 if not d:

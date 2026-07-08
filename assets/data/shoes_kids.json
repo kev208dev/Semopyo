@@ -1,0 +1,135 @@
+[
+  {
+    "foot_mm": 70,
+    "us_kids": "1C",
+    "eu_kids": 16,
+    "reliability": "high",
+    "source": "Nike공식"
+  },
+  {
+    "foot_mm": 80,
+    "us_kids": "2C",
+    "eu_kids": 17,
+    "reliability": "high",
+    "source": "Nike공식"
+  },
+  {
+    "foot_mm": 90,
+    "us_kids": "3C",
+    "eu_kids": 18,
+    "reliability": "high",
+    "source": "Nike공식"
+  },
+  {
+    "foot_mm": 100,
+    "us_kids": "4C",
+    "eu_kids": 19,
+    "reliability": "high",
+    "source": "Nike공식"
+  },
+  {
+    "foot_mm": 110,
+    "us_kids": "5C",
+    "eu_kids": 21,
+    "reliability": "high",
+    "source": "Nike공식"
+  },
+  {
+    "foot_mm": 120,
+    "us_kids": "6C",
+    "eu_kids": 22,
+    "reliability": "high",
+    "source": "Nike공식"
+  },
+  {
+    "foot_mm": 130,
+    "us_kids": "7C",
+    "eu_kids": 23,
+    "reliability": "high",
+    "source": "Nike공식"
+  },
+  {
+    "foot_mm": 140,
+    "us_kids": "8C",
+    "eu_kids": 25,
+    "reliability": "high",
+    "source": "Nike공식"
+  },
+  {
+    "foot_mm": 150,
+    "us_kids": "9C",
+    "eu_kids": 26,
+    "reliability": "high",
+    "source": "Nike공식"
+  },
+  {
+    "foot_mm": 160,
+    "us_kids": "10C",
+    "eu_kids": 27,
+    "reliability": "high",
+    "source": "Nike공식"
+  },
+  {
+    "foot_mm": 170,
+    "us_kids": "11C",
+    "eu_kids": 28,
+    "reliability": "high",
+    "source": "Nike공식"
+  },
+  {
+    "foot_mm": 180,
+    "us_kids": "12C",
+    "eu_kids": 29,
+    "reliability": "high",
+    "source": "Nike공식"
+  },
+  {
+    "foot_mm": 190,
+    "us_kids": "13C",
+    "eu_kids": 31,
+    "reliability": "high",
+    "source": "Nike공식"
+  },
+  {
+    "foot_mm": 200,
+    "us_kids": "1Y",
+    "eu_kids": 32,
+    "reliability": "high",
+    "source": "Nike공식"
+  },
+  {
+    "foot_mm": 210,
+    "us_kids": "2Y",
+    "eu_kids": 33,
+    "reliability": "high",
+    "source": "Nike공식"
+  },
+  {
+    "foot_mm": 220,
+    "us_kids": "3Y",
+    "eu_kids": 35,
+    "reliability": "high",
+    "source": "Nike공식"
+  },
+  {
+    "foot_mm": 230,
+    "us_kids": "4Y",
+    "eu_kids": 36,
+    "reliability": "high",
+    "source": "Nike공식"
+  },
+  {
+    "foot_mm": 240,
+    "us_kids": "5.5Y",
+    "eu_kids": 38,
+    "reliability": "high",
+    "source": "Nike공식"
+  },
+  {
+    "foot_mm": 250,
+    "us_kids": "7Y",
+    "eu_kids": 40,
+    "reliability": "high",
+    "source": "Nike공식"
+  }
+]

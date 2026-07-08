@@ -17,8 +17,11 @@
 import csv
 import os
 import re
+import sys
 
-DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from _data_paths import rpath  # noqa: E402  (data/ 하위폴더 경로 해석)
+
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 REL_OK = {"상", "중", "하"}
 DT_OK = {"official_spec", "perception"}
@@ -65,7 +68,7 @@ SPECS = {
 
 
 def validate(fname, header, int_cols):
-    path = os.path.join(DATA_DIR, fname)
+    path = str(rpath(fname))
     viol = []
     with open(path, "r", encoding="utf-8-sig", newline="") as f:
         rows = list(csv.reader(f))

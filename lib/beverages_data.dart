@@ -129,6 +129,42 @@ String _emojiForBrand(String name) {
   return '🥤';
 }
 
+/// 카페 가격표 (assets/data/kr_cafe_prices.json, 24건).
+/// brand+size_label → 음료별 가격. UI에서 평균/대표가 산출 시 사용.
+class CafePrice {
+  final String brand;
+  final String sizeLabel;
+  final String drink;
+  final int priceKrw;
+  const CafePrice({
+    required this.brand,
+    required this.sizeLabel,
+    required this.drink,
+    required this.priceKrw,
+  });
+}
+
+Future<List<CafePrice>> loadCafePrices() async {
+  try {
+    final raw = await rootBundle.loadString('assets/data/kr_cafe_prices.json');
+    final list = jsonDecode(raw) as List;
+    return list
+        .map<CafePrice>((e) {
+          final m = e as Map<String, dynamic>;
+          return CafePrice(
+            brand: (m['brand'] ?? '').toString(),
+            sizeLabel: (m['size_label'] ?? '').toString(),
+            drink: (m['drink'] ?? '').toString(),
+            priceKrw: (m['price_krw'] as num?)?.toInt() ?? 0,
+          );
+        })
+        .where((c) => c.brand.isNotEmpty && c.priceKrw > 0)
+        .toList();
+  } catch (_) {
+    return const [];
+  }
+}
+
 /// 스캔된 제품명에서 beverageBrands 항목을 찾는다. 가장 긴 매치 우선.
 BevBrand? matchBeverageBrandFromName(String? scanned) {
   if (scanned == null || scanned.isEmpty) return null;

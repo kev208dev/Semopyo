@@ -6,6 +6,7 @@ import 'beverages_page.dart';
 import 'apparel_page.dart';
 import 'spiciness_page.dart';
 import 'portions_page.dart';
+import 'pc_builder_page.dart';
 import 'barcode_scan_page.dart';
 
 void main() {
@@ -97,6 +98,13 @@ class MyHomePage extends StatelessWidget {
         emoji: '🍚',
         gradient: const [Color(0xFF63C766), Color(0xFF2E7D32)],
         build: () => const PortionsPage(),
+      ),
+      _Tile(
+        label: 'PC 견적',
+        subtitle: '부품 조합 성능 예측',
+        emoji: '🖥️',
+        gradient: const [Color(0xFF34D399), Color(0xFF0F766E)],
+        build: () => const PcBuilderPage(),
       ),
     ];
 
@@ -476,7 +484,7 @@ class _FooterStats extends StatelessWidget {
             SizedBox(width: AppSpace.sm),
             Expanded(
               child: Text(
-                '6개 도메인 · 51,500+ 데이터 · 2026-06-10 스냅샷',
+                '7개 도메인 · 51,500+ 데이터 · 2026-06-10 스냅샷',
                 style: TextStyle(
                   color: AppColors.textTertiary,
                   fontSize: 12,

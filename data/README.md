@@ -6,6 +6,34 @@
 
 > 루트 `README.md` 는 Flutter 프로젝트 readme라 건드리지 않고, 데이터셋 문서는 여기 `data/README.md` 에 둠.
 
+## 폴더 구조 (2026-07 재정리)
+
+CSV는 카테고리 하위 폴더로 묶여 있다. 스크립트는 파일명만 알면 되고, 실제 경로는
+`scripts/_data_paths.py` 의 해석기(`rpath`=읽기 / `dpath`=쓰기)가 카테고리를 붙여 찾는다.
+즉 파일을 폴더 간 옮겨도 접두어 규칙만 맞으면 파이프라인이 자동 대응한다.
+
+```
+data/
+├── food/        food_*                (영양·1인분)
+├── beverage/    beverages*, alcohol   (음료·주류)
+├── apparel/     apparel_*             (의류 사이즈)
+├── shoes/       shoes_*               (신발 사이즈)
+├── spiciness/   spiciness*            (맵기)
+├── pizza/       pizza_*               (피자 크기)
+├── kr/          kr_*                  (국내 프랜차이즈·가격)
+├── baby/        baby_*                (유아용품)
+├── beauty/      beauty_*              (뷰티)
+├── pet/         pet_*                 (반려동물 급여)
+├── car/         car_*                 (차량 크기·연비)
+├── science/     science_*            (단위·상수)
+├── tech/        tech_*                (해상도·저장·TV·충전기)
+├── pc_parts/    cpu/gpu/ram/ssd/hdd/wifi (컴퓨터 부품 — 성능 시뮬)
+└── misc/        airline_baggage, living_pyeong, manual_todo, barcode_i2570
+```
+
+접두어 → 폴더 매핑 규칙은 `scripts/_data_paths.py` 의 `_PREFIX_RULES` 참고. 새 파일은
+같은 접두어를 쓰면 자동으로 해당 폴더로 읽기/쓰기된다.
+
 ## 분야별 산출물 (스냅샷 2026-06-10)
 
 | 분야 | 파일 | 행 | 원천 리서치 |
@@ -34,8 +62,47 @@
 | 매운 프랜차이즈 | `kr_franchise_spicy.csv` | 24 | 디진다돈까스·엽기떡볶이·신전·청년다방·탕화쿵푸 맵기 단계(rank)+가격 |
 | 한국 프랜차이즈 1인분 | `kr_franchise_portions.csv` | 58 | 한식·분식·버거·치킨(소비자원 실측)·디저트빙수(배스킨라빈스 등) 중량 |
 | 편의점 간편식 | `kr_convenience_food.csv` | 24 | 도시락·삼각김밥·김밥·컵라면·핫바 표시중량(g) |
+| 카페 가격 | `kr_cafe_prices.csv` | 24 | 아메리카노 사이즈별 가격(원) |
+| 피자 가격 | `kr_pizza_prices.csv` | 26 | 브랜드·사이즈·대표메뉴 배달가(원) |
+| 라면·핫소스 가격 | `kr_ramen_snack_prices.csv` | 20 | 편의점/마트 낱개 소매가(원)+용량 |
+| 주류 | `kr_alcohol.csv` | 26 | 소주·맥주·막걸리·와인·위스키 용량·도수(abv)·가격 |
+| 비주류 음료 | `kr_drinks.csv` | 32 | 탄산·생수·우유·주스·에너지·이온 용량·가격 |
+| 과자·스낵 | `kr_snacks.csv` | 23 | 한국 과자 표시중량·가격·kcal |
+| 하의(청바지) 사이즈 | `apparel_bottoms.csv` | 12 | waist 라벨 inch↔둘레cm, 인심(Dickies 공식/Levi's) |
+| 신발 모델별 핏 | `shoes_brand_fit2.csv` | 18 | 푸마·리복·조던·이지·삼바 등 모델 단위 핏+보정 |
+| 키즈 신발 변환 | `shoes_kids.csv` | 19 | 발길이mm↔US키즈↔EU (Nike 공식) |
 
 > 확장 CSV는 전부 `reliability`(high/med/low)와 `source` 컬럼을 가진다. 공개 API가 없는 분야(음료·맵기·신발·옷·피자)는 공식 사이트/영양정보 기반이라 신뢰도 등급 필참.
+
+---
+
+## 📁 폴더 구조 & 빌드 파이프라인 (유지보수용)
+
+```
+Semopyo/
+├── data/          ← 캐노니컬 소스 (CSV) + 리서치 + 이 README. 앱에 직접 안 들어감.
+│   ├── *.csv              비교 데이터 (사람이 읽고 검증하는 원본)
+│   └── food_nutrition*.csv, barcode_i2570.csv   대용량 API 덤프(앱 번들 제외)
+├── assets/
+│   ├── data/      ← 앱이 런타임에 로드하는 JSON. **전부 자동 생성물** (직접 수정 금지)
+│   │   └── *.json         data/의 CSV에서 변환됨 (lib/*_data.dart 가 rootBundle 로 로드)
+│   ├── barcode_db.json    바코드 51k 오프라인 DB (fsk_pull.py 산출, lib/barcode_local_db.dart 가 로드)
+│   └── images/  products/ 브랜드/제품 이미지
+├── lib/           ← 도메인별 (페이지 + 데이터로더) 쌍: <도메인>_page.dart / <도메인>_data.dart
+│   └── barcode_*.dart  바코드 스캔 기능 (api / 로컬DB / 스캔화면)
+└── scripts/
+    ├── csv_to_json_assets.py   ★ data/*.csv → assets/data/*.json  (데이터 바꾸면 이거 실행)
+    ├── fsk_pull.py             식품안전나라 API 수집기
+    ├── build_dataset.py / build_extra_datasets.py  초기 CSV 생성기
+    └── validate.py / validate_extra.py             스키마 검증기
+```
+
+**데이터 수정 워크플로 (중요):**
+1. `data/<파일>.csv` 를 직접 편집/추가 (소스는 항상 CSV).
+2. `python3 scripts/csv_to_json_assets.py` 실행 → `assets/data/*.json` 재생성.
+3. 앱은 `assets/data/*.json` 만 읽는다. **assets/data 의 JSON 을 손으로 고치지 말 것** (다음 빌드 때 덮어써짐).
+
+> ⚠️ `assets/data/` 에 CSV 를 두지 않는다 — 한때 CSV가 섞여 혼란스러웠고, 2026-06 정리하며 JSON 만 남겼다.
 
 생성·검증:
 ```bash

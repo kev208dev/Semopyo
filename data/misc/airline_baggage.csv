@@ -1,0 +1,66 @@
+﻿airline,airline_en,country,type,length_cm,width_cm,height_cm,linear_cm,weight_kg,cabin_class,reliability,source
+대한항공,Korean Air,KR,carry_on,55,40,20,115,10,economy,high,대한항공 수하물규정
+대한항공,Korean Air,KR,checked,,,,158,23,economy,high,대한항공 수하물규정
+대한항공,Korean Air,KR,checked,,,,158,32,business,high,대한항공 수하물규정
+아시아나항공,Asiana Airlines,KR,carry_on,55,40,20,115,10,economy,high,아시아나 수하물규정
+아시아나항공,Asiana Airlines,KR,checked,,,,158,23,economy,high,아시아나 수하물규정
+제주항공,Jeju Air,KR,carry_on,55,40,20,115,10,economy,high,제주항공 수하물규정
+제주항공,Jeju Air,KR,checked,,,,203,15,economy,med,제주항공 운임별
+진에어,Jin Air,KR,carry_on,55,40,20,115,10,economy,high,진에어 수하물규정
+진에어,Jin Air,KR,checked,,,,203,15,economy,med,진에어 수하물규정
+티웨이항공,Tway Air,KR,carry_on,55,40,20,115,10,economy,high,티웨이 수하물규정
+티웨이항공,Tway Air,KR,checked,,,,203,15,economy,med,티웨이 수하물규정
+에어부산,Air Busan,KR,carry_on,55,40,20,115,10,economy,high,에어부산 수하물규정
+에어부산,Air Busan,KR,checked,,,,158,15,economy,med,에어부산 수하물규정
+에어서울,Air Seoul,KR,carry_on,55,40,20,115,10,economy,high,에어서울 수하물규정
+에어프레미아,Air Premia,KR,carry_on,55,40,20,115,12,economy,med,에어프레미아 수하물규정
+에어프레미아,Air Premia,KR,checked,,,,158,23,economy,med,에어프레미아 수하물규정
+에미레이트항공,Emirates,AE,carry_on,55,38,20,113,7,economy,high,Emirates baggage
+에미레이트항공,Emirates,AE,checked,,,,,30,economy,med,Emirates weight concept
+카타르항공,Qatar Airways,QA,carry_on,50,37,25,112,7,economy,high,Qatar Airways baggage
+카타르항공,Qatar Airways,QA,checked,,,,,30,economy,med,Qatar Airways
+에티하드항공,Etihad Airways,AE,carry_on,56,40,25,121,7,economy,med,Etihad baggage
+싱가포르항공,Singapore Airlines,SG,carry_on,55,40,20,115,7,economy,high,Singapore Airlines
+싱가포르항공,Singapore Airlines,SG,checked,,,,158,30,economy,med,Singapore Airlines
+캐세이퍼시픽,Cathay Pacific,HK,carry_on,56,36,23,115,7,economy,high,Cathay Pacific
+캐세이퍼시픽,Cathay Pacific,HK,checked,,,,158,23,economy,med,Cathay Pacific
+전일본공수,ANA,JP,carry_on,55,40,25,120,10,economy,high,ANA baggage
+전일본공수,ANA,JP,checked,,,,158,23,economy,med,ANA baggage
+일본항공,JAL,JP,carry_on,55,40,25,120,10,economy,high,JAL baggage
+일본항공,JAL,JP,checked,,,,203,23,economy,med,JAL baggage
+루프트한자,Lufthansa,DE,carry_on,55,40,23,118,8,economy,high,Lufthansa baggage
+루프트한자,Lufthansa,DE,checked,,,,158,23,economy,high,Lufthansa baggage
+에어프랑스,Air France,FR,carry_on,55,35,25,115,12,economy,med,Air France baggage
+에어프랑스,Air France,FR,checked,,,,158,23,economy,med,Air France baggage
+KLM네덜란드항공,KLM,NL,carry_on,55,35,25,115,12,economy,med,KLM baggage
+브리티시에어웨이즈,British Airways,GB,carry_on,56,45,25,126,23,economy,med,British Airways baggage
+브리티시에어웨이즈,British Airways,GB,checked,,,,,23,economy,high,British Airways baggage
+터키항공,Turkish Airlines,TR,carry_on,55,40,23,118,8,economy,high,Turkish Airlines
+터키항공,Turkish Airlines,TR,checked,,,,158,23,economy,med,Turkish Airlines
+유나이티드항공,United Airlines,US,carry_on,56,35,23,114,,economy,high,United carry-on 22x14x9in
+유나이티드항공,United Airlines,US,checked,,,,158,23,economy,high,United baggage
+델타항공,Delta Air Lines,US,carry_on,56,35,23,114,,economy,high,Delta carry-on 22x14x9in
+델타항공,Delta Air Lines,US,checked,,,,158,23,economy,high,Delta baggage
+아메리칸항공,American Airlines,US,carry_on,56,36,23,115,,economy,high,American 22x14x9in
+아메리칸항공,American Airlines,US,checked,,,,158,23,economy,high,American baggage
+사우스웨스트,Southwest Airlines,US,carry_on,61,41,28,130,,economy,high,Southwest 24x16x10in
+사우스웨스트,Southwest Airlines,US,checked,,,,158,23,economy,med,Southwest baggage
+제트블루,JetBlue,US,carry_on,56,36,23,115,,economy,med,JetBlue baggage
+알래스카항공,Alaska Airlines,US,carry_on,56,36,23,115,,economy,med,Alaska baggage
+콴타스,Qantas,AU,carry_on,56,36,23,115,7,economy,med,Qantas baggage
+에어캐나다,Air Canada,CA,carry_on,55,40,23,118,,economy,high,Air Canada carry-on
+에어캐나다,Air Canada,CA,checked,,,,158,23,economy,med,Air Canada baggage
+라이언에어,Ryanair,IE,carry_on,40,20,25,85,10,small_bag,high,Ryanair free small bag
+라이언에어,Ryanair,IE,carry_on,55,40,20,115,10,priority,high,Ryanair priority cabin bag
+이지젯,easyJet,GB,carry_on,45,36,20,101,15,small_bag,high,easyJet free under-seat
+이지젯,easyJet,GB,carry_on,56,45,25,126,15,large_cabin,med,easyJet large cabin bag
+위즈에어,Wizz Air,HU,carry_on,40,30,20,90,10,free,high,Wizz Air free trolley
+에어아시아,AirAsia,MY,carry_on,56,36,23,115,7,economy,high,AirAsia baggage
+스쿠트,Scoot,SG,carry_on,54,38,23,115,10,economy,med,Scoot baggage
+베트남항공,Vietnam Airlines,VN,carry_on,56,36,23,115,12,economy,med,Vietnam Airlines
+타이항공,Thai Airways,TH,carry_on,56,45,25,126,7,economy,med,Thai Airways
+중국남방항공,China Southern,CN,carry_on,55,40,20,115,10,economy,med,China Southern
+중국동방항공,China Eastern,CN,carry_on,55,40,20,115,10,economy,med,China Eastern
+중국국제항공,Air China,CN,carry_on,55,40,20,115,5,economy,med,Air China
+스피릿항공,Spirit Airlines,US,carry_on,56,46,25,127,,paid,med,Spirit carry-on
+프론티어항공,Frontier Airlines,US,carry_on,56,46,25,127,,paid,med,Frontier carry-on

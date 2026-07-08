@@ -10,15 +10,24 @@
 - shoes_conversion.csv    → assets/data/shoes_conversion.json
 - shoes_brand_fit.csv     → assets/data/shoes_fit.json
 - apparel_expanded.csv    → assets/data/apparel_global.json
+- kr_franchise_spicy.csv     → assets/data/kr_franchise_spicy.json
+- kr_franchise_portions.csv  → assets/data/kr_franchise_portions.json
+- kr_convenience_food.csv    → assets/data/kr_convenience_food.json
+- kr_cafe_prices.csv         → assets/data/kr_cafe_prices.json
+- kr_pizza_prices.csv        → assets/data/kr_pizza_prices.json
+- kr_ramen_snack_prices.csv  → assets/data/kr_ramen_snack_prices.json
 """
 from __future__ import annotations
 import csv
 import json
 import math
+import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from _data_paths import READ as DATA  # noqa: E402  (data/ 하위폴더 경로 해석)
+
 ROOT = Path(__file__).resolve().parent.parent
-DATA = ROOT / "data"
 OUT = ROOT / "assets" / "data"
 OUT.mkdir(parents=True, exist_ok=True)
 
@@ -242,6 +251,32 @@ def apparel():
     return len(out)
 
 
+# ---------- 한국 프랜차이즈 / 가격 (컬럼 그대로 패스스루 + 숫자 coercion) ----------
+_NUM_FIELDS = {"price_krw", "portion_g", "weight_g", "amount_value", "kcal",
+               "scoville_shu", "spice_level_rank", "volume_ml", "abv_percent",
+               "waist_inch", "waist_circumference_cm", "inseam_cm", "foot_mm",
+               "eu_kids"}
+
+
+def _passthrough(csv_name: str, json_name: str) -> int:
+    """단순 CSV → JSON. 숫자 컬럼만 형변환하고 나머지는 문자열 유지."""
+    rows = _read(DATA / csv_name)
+    out = []
+    for r in rows:
+        item = {}
+        for k, v in r.items():
+            key = (k or "").strip()
+            val = (v or "").strip()
+            if key in _NUM_FIELDS:
+                item[key] = _i(val)
+            else:
+                item[key] = val
+        out.append(item)
+    (OUT / json_name).write_text(
+        json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
+    return len(out)
+
+
 if __name__ == "__main__":
     stats = {
         "pizza_global": pizza_global(),
@@ -252,6 +287,26 @@ if __name__ == "__main__":
         "shoes_conv": shoes_conv(),
         "shoes_fit": shoes_fit(),
         "apparel": apparel(),
+        "kr_franchise_spicy": _passthrough(
+            "kr_franchise_spicy.csv", "kr_franchise_spicy.json"),
+        "kr_franchise_portions": _passthrough(
+            "kr_franchise_portions.csv", "kr_franchise_portions.json"),
+        "kr_convenience_food": _passthrough(
+            "kr_convenience_food.csv", "kr_convenience_food.json"),
+        "kr_cafe_prices": _passthrough(
+            "kr_cafe_prices.csv", "kr_cafe_prices.json"),
+        "kr_pizza_prices": _passthrough(
+            "kr_pizza_prices.csv", "kr_pizza_prices.json"),
+        "kr_ramen_snack_prices": _passthrough(
+            "kr_ramen_snack_prices.csv", "kr_ramen_snack_prices.json"),
+        "kr_alcohol": _passthrough("kr_alcohol.csv", "kr_alcohol.json"),
+        "kr_drinks": _passthrough("kr_drinks.csv", "kr_drinks.json"),
+        "kr_snacks": _passthrough("kr_snacks.csv", "kr_snacks.json"),
+        "apparel_bottoms": _passthrough(
+            "apparel_bottoms.csv", "apparel_bottoms.json"),
+        "shoes_brand_fit2": _passthrough(
+            "shoes_brand_fit2.csv", "shoes_brand_fit2.json"),
+        "shoes_kids": _passthrough("shoes_kids.csv", "shoes_kids.json"),
     }
     for k, v in stats.items():
         print(f"{k}: {v}")

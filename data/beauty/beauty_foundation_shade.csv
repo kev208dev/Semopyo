@@ -1,0 +1,13 @@
+﻿shade_code,korean_name,description,undertone,approx_match_global,reliability,source
+13,핑크 아이보리,가장 밝은 톤·핑크빛,cool,Light/Porcelain,med,한국 호수표준
+17,라이트 베이지,밝은 톤,neutral,Light Beige,med,한국 호수표준
+19,라이트 베이지+,밝고 약간 노란기,warm,Light-Medium,med,한국 호수표준
+21,라이트 베이지(표준),한국 표준 밝은톤,neutral,Medium Light,high,한국 호수표준
+21C,쿨 라이트,21호 쿨톤,cool,Medium Light Cool,med,브랜드 표기관행
+21W,웜 라이트,21호 웜톤,warm,Medium Light Warm,med,브랜드 표기관행
+23,내추럴 베이지,한국 표준 자연톤,neutral,Medium,high,한국 호수표준
+23C,쿨 내추럴,23호 쿨톤,cool,Medium Cool,med,브랜드 표기관행
+23W,웜 내추럴,23호 웜톤,warm,Medium Warm,med,브랜드 표기관행
+25,샌드 베이지,약간 어두운톤,warm,Medium-Tan,med,한국 호수표준
+27,탠 베이지,어두운톤,warm,Tan,med,한국 호수표준
+31,딥 베이지,가장 어두운톤,warm,Deep,med,한국 호수표준

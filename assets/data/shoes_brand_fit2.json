@@ -1,0 +1,164 @@
+[
+  {
+    "brand": "Puma",
+    "model": "_general",
+    "fit_tendency": "정사이즈",
+    "recommend_adjust_mm": "0",
+    "note": "토박스 좁은편",
+    "reliability": "med",
+    "source": "denimexchange"
+  },
+  {
+    "brand": "Puma",
+    "model": "Suede",
+    "fit_tendency": "작게",
+    "recommend_adjust_mm": "+5",
+    "note": "가장 좁은 라스트",
+    "reliability": "med",
+    "source": "denimexchange"
+  },
+  {
+    "brand": "Reebok",
+    "model": "_general",
+    "fit_tendency": "정사이즈~약간작게",
+    "recommend_adjust_mm": "0",
+    "note": "대체로 정사",
+    "reliability": "med",
+    "source": "sneakerjagers"
+  },
+  {
+    "brand": "Reebok",
+    "model": "Club C 85",
+    "fit_tendency": "정사이즈(좁음)",
+    "recommend_adjust_mm": "0",
+    "note": "좁고 타이트",
+    "reliability": "med",
+    "source": "sneakerjagers"
+  },
+  {
+    "brand": "Nike(Jordan)",
+    "model": "Air Jordan 1",
+    "fit_tendency": "정사이즈",
+    "recommend_adjust_mm": "0",
+    "note": "다른 나이키보다 약간 좁음",
+    "reliability": "high",
+    "source": "soleretriever"
+  },
+  {
+    "brand": "adidas(Yeezy)",
+    "model": "Boost 350 V2",
+    "fit_tendency": "작게",
+    "recommend_adjust_mm": "+5",
+    "note": "좁고 얕은 토박스, 공식 반업",
+    "reliability": "high",
+    "source": "solesupplier"
+  },
+  {
+    "brand": "New Balance",
+    "model": "990/991/997",
+    "fit_tendency": "작게",
+    "recommend_adjust_mm": "+5",
+    "note": "좁은 라스트",
+    "reliability": "med",
+    "source": "goat"
+  },
+  {
+    "brand": "New Balance",
+    "model": "993/2002R/997R",
+    "fit_tendency": "작게",
+    "recommend_adjust_mm": "+5",
+    "note": "좁은 토박스",
+    "reliability": "med",
+    "source": "goat"
+  },
+  {
+    "brand": "New Balance",
+    "model": "_general(와이드 2E/4E)",
+    "fit_tendency": "정사이즈",
+    "recommend_adjust_mm": "0",
+    "note": "폭만 넓어짐(길이동일)",
+    "reliability": "high",
+    "source": "hoodmwr"
+  },
+  {
+    "brand": "adidas",
+    "model": "Samba",
+    "fit_tendency": "작게",
+    "recommend_adjust_mm": "+5",
+    "note": "좁은 구조, 평균~넓은발 반업",
+    "reliability": "high",
+    "source": "adidas공식"
+  },
+  {
+    "brand": "adidas",
+    "model": "Gazelle",
+    "fit_tendency": "정사이즈",
+    "recommend_adjust_mm": "0",
+    "note": "삼바보다 약간 넓음",
+    "reliability": "high",
+    "source": "goat"
+  },
+  {
+    "brand": "Gucci",
+    "model": "Ace",
+    "fit_tendency": "크게",
+    "recommend_adjust_mm": "-5",
+    "note": "풀사이즈 크게, 공식 1다운",
+    "reliability": "med",
+    "source": "captaincreps"
+  },
+  {
+    "brand": "Balenciaga",
+    "model": "Triple S",
+    "fit_tendency": "크게",
+    "recommend_adjust_mm": "-10",
+    "note": "청키, 1사이즈 다운",
+    "reliability": "med",
+    "source": "solesupplier"
+  },
+  {
+    "brand": "Dr.Martens",
+    "model": "1460",
+    "fit_tendency": "크게",
+    "recommend_adjust_mm": "-5",
+    "note": "하프없음, 다운+깔창 권장",
+    "reliability": "high",
+    "source": "drmartens공식"
+  },
+  {
+    "brand": "Clarks",
+    "model": "Wallabee",
+    "fit_tendency": "크게",
+    "recommend_adjust_mm": "-5",
+    "note": "스니커보다 크게",
+    "reliability": "med",
+    "source": "solesupplier"
+  },
+  {
+    "brand": "Timberland",
+    "model": "6인치 프리미엄부츠",
+    "fit_tendency": "크게",
+    "recommend_adjust_mm": "-5",
+    "note": "슬림하게 크게, 반다운",
+    "reliability": "high",
+    "source": "hibbett"
+  },
+  {
+    "brand": "Rockport",
+    "model": "_general",
+    "fit_tendency": "정사이즈",
+    "recommend_adjust_mm": "0",
+    "note": "대부분 정사",
+    "reliability": "med",
+    "source": "workwearcommand"
+  },
+  {
+    "brand": "Clarks",
+    "model": "Desert Boot",
+    "fit_tendency": "크게",
+    "recommend_adjust_mm": "-5",
+    "note": "반다운 권장",
+    "reliability": "med",
+    "source": "bootspy"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /Users/chaeho/SMP/Semopyo rev-parse --git-common-dir)",
+      "Bash(git -C /Users/chaeho/SMP/Semopyo rev-parse --git-dir)",
+      "Bash(git -C /Users/chaeho/SMP/Semopyo rev-parse HEAD)",
+      "Bash(mkdir -p /Users/chaeho/SMP/Semopyo/.understand-anything/intermediate)",
+      "Bash(mkdir -p /Users/chaeho/SMP/Semopyo/.understand-anything/tmp)"
+    ]
+  }
+}
