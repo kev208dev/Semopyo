@@ -98,6 +98,14 @@ Color rgbCycle(double t) {
 /// 0~1 진행값을 은은한 발광 강도(0~1)로 변환 (화면/링 글로우용).
 double glowPulse(double t) => 0.5 + 0.5 * math.sin(t * 2 * math.pi);
 
+/// [device]의 슬롯 정의에서 [id]에 해당하는 슬롯을 찾는다.
+/// `device_sim_data.dart`의 슬롯 목록과 어긋나면(예: 리네이밍 누락) 화면이 조용히
+/// 죽지 않도록 원인을 알 수 있는 메시지와 함께 던진다.
+DeviceSlot _slotOf(DeviceBuild device, String id) => device.def.slots.firstWhere(
+      (s) => s.id == id,
+      orElse: () => throw StateError('Unknown slot "$id" for ${device.def.category}'),
+    );
+
 // ── 데스크탑 ──────────────────────────────────────────────────────
 
 class DesktopShape extends StatelessWidget {
@@ -105,8 +113,6 @@ class DesktopShape extends StatelessWidget {
   final bool isComplete;
   final SlotTapCallback onSlotTap;
   const DesktopShape({super.key, required this.device, required this.isComplete, required this.onSlotTap});
-
-  DeviceSlot _slot(String id) => device.def.slots.firstWhere((s) => s.id == id);
 
   @override
   Widget build(BuildContext context) {
@@ -204,12 +210,12 @@ class DesktopShape extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(left: 20, top: 16, child: SlotBadge(slot: _slot('cpu'), part: device['cpu'], onTap: () => onSlotTap('cpu'))),
-              Positioned(left: 20, top: 48, child: SlotBadge(slot: _slot('gpu'), part: device['gpu'], onTap: () => onSlotTap('gpu'))),
-              Positioned(right: 20, top: 16, child: SlotBadge(slot: _slot('ram'), part: device['ram'], onTap: () => onSlotTap('ram'))),
-              Positioned(right: 20, top: 48, child: SlotBadge(slot: _slot('storage'), part: device['storage'], onTap: () => onSlotTap('storage'))),
-              Positioned(left: 20, top: 80, child: SlotBadge(slot: _slot('board'), part: device['board'], onTap: () => onSlotTap('board'))),
-              Positioned(right: 20, top: 80, child: SlotBadge(slot: _slot('psu'), part: device['psu'], onTap: () => onSlotTap('psu'))),
+              Positioned(left: 20, top: 16, child: SlotBadge(slot: _slotOf(device, 'cpu'), part: device['cpu'], onTap: () => onSlotTap('cpu'))),
+              Positioned(left: 20, top: 48, child: SlotBadge(slot: _slotOf(device, 'gpu'), part: device['gpu'], onTap: () => onSlotTap('gpu'))),
+              Positioned(right: 20, top: 16, child: SlotBadge(slot: _slotOf(device, 'ram'), part: device['ram'], onTap: () => onSlotTap('ram'))),
+              Positioned(right: 20, top: 48, child: SlotBadge(slot: _slotOf(device, 'storage'), part: device['storage'], onTap: () => onSlotTap('storage'))),
+              Positioned(left: 20, top: 80, child: SlotBadge(slot: _slotOf(device, 'board'), part: device['board'], onTap: () => onSlotTap('board'))),
+              Positioned(right: 20, top: 80, child: SlotBadge(slot: _slotOf(device, 'psu'), part: device['psu'], onTap: () => onSlotTap('psu'))),
             ],
           ),
         );
@@ -266,8 +272,6 @@ class LaptopShape extends StatelessWidget {
   final SlotTapCallback onSlotTap;
   const LaptopShape({super.key, required this.device, required this.isComplete, required this.onSlotTap});
 
-  DeviceSlot _slot(String id) => device.def.slots.firstWhere((s) => s.id == id);
-
   @override
   Widget build(BuildContext context) {
     return PoweredOnTicker(
@@ -276,7 +280,14 @@ class LaptopShape extends StatelessWidget {
         final glowAlpha = isComplete ? (glowPulse(t) * 160).round() : 0;
         return Container(
           height: 260,
-          alignment: Alignment.center,
+          width: double.infinity,
+          // No `alignment:` here on purpose: Container wraps its child in an
+          // Align when alignment is set, and Align *always* loosens the width
+          // constraint it passes to its child (see RenderPositionedBox in the
+          // Flutter SDK) -- which would undo the tight width from `width:
+          // double.infinity` above before it ever reaches the Stack below.
+          // Stack's own `alignment: Alignment.center` already centers the
+          // non-positioned body, so this outer alignment was redundant anyway.
           decoration: BoxDecoration(
             color: const Color(0xFF0D0F14),
             borderRadius: BorderRadius.circular(14),
@@ -312,11 +323,11 @@ class LaptopShape extends StatelessWidget {
                   ),
                 ],
               ),
-              Positioned(left: 30, top: 30, child: SlotBadge(slot: _slot('cpu'), part: device['cpu'], onTap: () => onSlotTap('cpu'))),
-              Positioned(right: 30, top: 30, child: SlotBadge(slot: _slot('gpu'), part: device['gpu'], onTap: () => onSlotTap('gpu'))),
-              Positioned(left: 30, bottom: 40, child: SlotBadge(slot: _slot('ram'), part: device['ram'], onTap: () => onSlotTap('ram'))),
-              Positioned(right: 30, bottom: 40, child: SlotBadge(slot: _slot('storage'), part: device['storage'], onTap: () => onSlotTap('storage'))),
-              Positioned(bottom: 8, child: SlotBadge(slot: _slot('battery'), part: device['battery'], onTap: () => onSlotTap('battery'))),
+              Positioned(left: 30, top: 30, child: SlotBadge(slot: _slotOf(device, 'cpu'), part: device['cpu'], onTap: () => onSlotTap('cpu'))),
+              Positioned(right: 30, top: 30, child: SlotBadge(slot: _slotOf(device, 'gpu'), part: device['gpu'], onTap: () => onSlotTap('gpu'))),
+              Positioned(left: 30, bottom: 40, child: SlotBadge(slot: _slotOf(device, 'ram'), part: device['ram'], onTap: () => onSlotTap('ram'))),
+              Positioned(right: 30, bottom: 40, child: SlotBadge(slot: _slotOf(device, 'storage'), part: device['storage'], onTap: () => onSlotTap('storage'))),
+              Positioned(bottom: 8, child: SlotBadge(slot: _slotOf(device, 'battery'), part: device['battery'], onTap: () => onSlotTap('battery'))),
             ],
           ),
         );
@@ -341,8 +352,6 @@ class _MobileBodyShape extends StatelessWidget {
     required this.bodyHeight,
   });
 
-  DeviceSlot _slot(String id) => device.def.slots.firstWhere((s) => s.id == id);
-
   @override
   Widget build(BuildContext context) {
     return PoweredOnTicker(
@@ -351,7 +360,14 @@ class _MobileBodyShape extends StatelessWidget {
         final glowAlpha = isComplete ? (140 + glowPulse(t) * 100).round() : 0;
         return Container(
           height: 280,
-          alignment: Alignment.center,
+          width: double.infinity,
+          // No `alignment:` here on purpose: Container wraps its child in an
+          // Align when alignment is set, and Align *always* loosens the width
+          // constraint it passes to its child (see RenderPositionedBox in the
+          // Flutter SDK) -- which would undo the tight width from `width:
+          // double.infinity` above before it ever reaches the Stack below.
+          // Stack's own `alignment: Alignment.center` already centers the
+          // non-positioned body, so this outer alignment was redundant anyway.
           decoration: BoxDecoration(
             color: const Color(0xFF0D0F14),
             borderRadius: BorderRadius.circular(14),
@@ -376,10 +392,10 @@ class _MobileBodyShape extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(top: 24, child: SlotBadge(slot: _slot('chipset'), part: device['chipset'], onTap: () => onSlotTap('chipset'))),
-              Positioned(left: 8, child: SlotBadge(slot: _slot('ram'), part: device['ram'], onTap: () => onSlotTap('ram'))),
-              Positioned(right: 8, child: SlotBadge(slot: _slot('storage'), part: device['storage'], onTap: () => onSlotTap('storage'))),
-              Positioned(bottom: 24, child: SlotBadge(slot: _slot('battery'), part: device['battery'], onTap: () => onSlotTap('battery'))),
+              Positioned(top: 24, child: SlotBadge(slot: _slotOf(device, 'chipset'), part: device['chipset'], onTap: () => onSlotTap('chipset'))),
+              Positioned(left: 8, child: SlotBadge(slot: _slotOf(device, 'ram'), part: device['ram'], onTap: () => onSlotTap('ram'))),
+              Positioned(right: 8, child: SlotBadge(slot: _slotOf(device, 'storage'), part: device['storage'], onTap: () => onSlotTap('storage'))),
+              Positioned(bottom: 24, child: SlotBadge(slot: _slotOf(device, 'battery'), part: device['battery'], onTap: () => onSlotTap('battery'))),
             ],
           ),
         );
@@ -418,8 +434,6 @@ class WatchShape extends StatelessWidget {
   final SlotTapCallback onSlotTap;
   const WatchShape({super.key, required this.device, required this.isComplete, required this.onSlotTap});
 
-  DeviceSlot _slot(String id) => device.def.slots.firstWhere((s) => s.id == id);
-
   @override
   Widget build(BuildContext context) {
     return PoweredOnTicker(
@@ -428,7 +442,12 @@ class WatchShape extends StatelessWidget {
         final glowAlpha = isComplete ? (glowPulse(t) * 220).round() : 0;
         return Container(
           height: 260,
-          alignment: Alignment.center,
+          width: double.infinity,
+          // No `alignment:` here on purpose -- see the same note in
+          // LaptopShape/_MobileBodyShape above. WatchShape also has
+          // non-Positioned children below (strap + watch face), so it needs
+          // the same tight-width treatment to keep the chipset/battery/
+          // display badges from crowding into a shrink-wrapped Stack.
           decoration: BoxDecoration(
             color: const Color(0xFF0D0F14),
             borderRadius: BorderRadius.circular(14),
@@ -447,9 +466,9 @@ class WatchShape extends StatelessWidget {
                   boxShadow: isComplete ? [BoxShadow(color: _accent.withAlpha(glowAlpha), blurRadius: 22, spreadRadius: 2)] : null,
                 ),
               ),
-              Positioned(top: 40, child: SlotBadge(slot: _slot('chipset'), part: device['chipset'], onTap: () => onSlotTap('chipset'))),
-              Positioned(bottom: 60, left: 60, child: SlotBadge(slot: _slot('battery'), part: device['battery'], onTap: () => onSlotTap('battery'))),
-              Positioned(bottom: 60, right: 60, child: SlotBadge(slot: _slot('display'), part: device['display'], onTap: () => onSlotTap('display'))),
+              Positioned(top: 40, child: SlotBadge(slot: _slotOf(device, 'chipset'), part: device['chipset'], onTap: () => onSlotTap('chipset'))),
+              Positioned(bottom: 60, left: 60, child: SlotBadge(slot: _slotOf(device, 'battery'), part: device['battery'], onTap: () => onSlotTap('battery'))),
+              Positioned(bottom: 60, right: 60, child: SlotBadge(slot: _slotOf(device, 'display'), part: device['display'], onTap: () => onSlotTap('display'))),
             ],
           ),
         );
