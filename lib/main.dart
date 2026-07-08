@@ -6,7 +6,7 @@ import 'beverages_page.dart';
 import 'apparel_page.dart';
 import 'spiciness_page.dart';
 import 'portions_page.dart';
-import 'pc_builder_page.dart';
+import 'device_category_page.dart';
 import 'barcode_scan_page.dart';
 
 void main() {
@@ -100,11 +100,11 @@ class MyHomePage extends StatelessWidget {
         build: () => const PortionsPage(),
       ),
       _Tile(
-        label: 'PC 견적',
-        subtitle: '부품 조합 성능 예측',
-        emoji: '🖥️',
+        label: '전자기기 성능 비교',
+        subtitle: '부품 배치하고 성능 예측',
+        emoji: '💻',
         gradient: const [Color(0xFF34D399), Color(0xFF0F766E)],
-        build: () => const PcBuilderPage(),
+        build: () => const DeviceCategoryPage(),
       ),
     ];
 
